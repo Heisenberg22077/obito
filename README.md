@@ -1,438 +1,147 @@
 <div align="center">
-  <h1>🎓 The Elite Data Science Curriculum — <strong>v2026.2 Edition</strong></h1>
-  <h3>A PhD-Level Theory Spine + a Full 2026 Production Superstructure — Synthesised from IITM · Harvard · MIT · Cambridge · Stanford</h3>
-  <p><em>Pedagogically resequenced so that no concept is introduced without its mathematical or programming prerequisite — and no graduate leaves without shipping a RAG pipeline, an agentic system, and a causally-evaluated A/B test.</em></p>
-  <br/>
-  <img alt="Curriculum Badge" src="https://img.shields.io/badge/Curriculum-v2026.2%20Production%20Superstructure-blueviolet.svg">
-  <img alt="Modules" src="https://img.shields.io/badge/Modules-26%20%2B%20M0%20(Math%20Bridge)-7f5af0.svg">
-  <img alt="Sources" src="https://img.shields.io/badge/Sources-IITM%20%7C%20Harvard%20%7C%20MIT%20%7C%20Cambridge%20%7C%20Stanford%20%7C%20HF%20%7C%20Anthropic%20MCP-informational.svg">
-  <img alt="Level" src="https://img.shields.io/badge/Level-BSc%20%E2%86%92%20MSc%20%E2%86%92%20PhD%20Prep%20%2B%20Production-critical.svg">
-  <img alt="Framework" src="https://img.shields.io/badge/Frameworks-PyTorch%202.11%20%7C%20JAX%200.10%20%7C%20Polars%201.40%20%7C%20Transformers%20v5.6%20%7C%20sklearn%201.8-orange.svg">
-  <img alt="Production Stack" src="https://img.shields.io/badge/Prod%20Stack-vLLM%200.19%20%7C%20LangGraph%201.1%20%7C%20dbt%201.11%20%7C%20MLflow%203.11%20%7C%20uv%200.11-ff7f50.svg">
-  <img alt="Last Refresh" src="https://img.shields.io/badge/Last%20Refresh-23%20Apr%202026-success.svg">
-  <img alt="Verification" src="https://img.shields.io/badge/URLs%20Live--Verified-150%2B%20%E2%9C%93-brightgreen.svg">
-  <img alt="Gap Closure" src="https://img.shields.io/badge/2026%20Benchmark%20Gaps-13%2F13%20closed-blue.svg">
+
+# Data Science & AI Roadmap
+
+### A rigorous, free-first path from foundations to production AI
+
+[![Modules](https://img.shields.io/badge/modules-27-6f42c1)](#roadmap)
+[![Level](https://img.shields.io/badge/level-beginner%20to%20advanced-0969da)](#who-this-is-for)
+[![Resources](https://img.shields.io/badge/resources-free--first-1a7f37)](#how-to-use-this-roadmap)
+[![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-lightgrey)](LICENSE.md)
+
+**Mathematics · Statistics · Machine Learning · Data Engineering · Deep Learning · LLMs · Production AI**
+
 </div>
 
 ---
 
-## 📜 Preamble from the Master Tutor
+## Goal
 
-> This curriculum is the **union** of the 2025‑26 week‑by‑week syllabi of the **IIT Madras BS in Data Science and Applications** (36,000+ active students, May 2026 qualifier cohort), **Harvard's STAT 110, CS109A/B, and CS 1810 (Spring 2026)**, **MIT's 6.3900 (Spring 2026), 6.7900 (Fall 2025), 6.7960 Deep Learning (Fall 2025 — Isola, Beery, He, Khattab), 6.S191 (2026 edition), and the MITx MicroMasters in Statistics & Data Science**, **Cambridge's Tripos Part IA/IB/II (2025‑26) and the MPhil in Machine Learning and Machine Intelligence (MLMI) 2026 entry with the new Biological Learning track**, and — added in this refresh — **Stanford CS336 Language Modeling from Scratch (Spring 2026)** for the LLM frontier.
->
-> Every granular topic is cited to its university source. **Nothing has been summarised; nothing has been omitted.** Where a university publishes a specific week number, lecture title, or algorithm proof, it appears verbatim below.
->
-> **🔄 April 2026 Refresh:** Every resource link was live‑verified; every framework version bumped to its April 2026 current (PyTorch **2.11.0**, Transformers **v5.x**, JAX **0.7.x**, Polars **1.x**, scikit‑learn **1.7+**); new frontier content added (MCP Nov 2025 spec, DPO / GRPO / RLVR, FlashAttention‑3, Stanford CS336 assignments). See the [Refresh Log](#-april-2026-refresh-log) for full diff.
->
-> **🩺 April 2026 Math-Foundations Hardening Pass:** Added a **15-question diagnostic + remediation map**, a brand-new **Module 0 (Mathematical Maturity Bridge)** covering pre-calculus, logic, proof, and discrete-math primer, **matrix calculus + convex optimisation** integrated into Module 2, **Axler 4e (free, 2024) + Townsend 2024** abstract-track in Module 3, and **concentration inequalities + information theory + measure-theoretic bridge** in Module 5. New free textbooks integrated: Hammack *Book of Proof* (3e, 2018), Velleman *How To Prove It (With Lean)* (2024), Stanley Chan *Probability for Data Science* (2021/2023), MacKay *Information Theory* (2003), Vershynin *High-Dimensional Probability* (2018). See the [§Math-Foundations Diagnostic](#-math-foundations-diagnostic--remediation-map-new--april-2026) and Module 0 for details.
->
-> **🏗️ April 2026.2 — Production Superstructure Pass:** The curriculum's theoretical spine is elite (benchmark score 58/72 against MIT 6.390, Stanford CS336, UC Berkeley MIDS, UMich MADS, CMU MSPPM-DA, HuggingFace Agents Course, MIT AISF, and the 2026 Agentic AI Roadmap). But against **production/modern-stack** reality (LLMOps, agentic AI, causal inference, data engineering, evals, MLOps), the April 2026 benchmark identified **13 specific gaps**. **This pass closes all 13** by adding six new modules — **6½ Causal Inference & Experimentation**, **8a Databases & Warehouses** split from **8b Distributed & Streaming Data Systems**, **21 RAG & Vector DBs**, **22 Agentic AI (LangGraph / CrewAI / MCP / A2A)**, **23 AI Safety / Interpretability / Evals / Policy**, **25 Product DS / Communication & Storytelling** — plus a hard rewrite of the old M19 into a three-tier **M24 MLOps + LLMOps + AgentOps** module, a modernisation of M7/M14/M15/M16/M17/M18, and a published three-track capstone rubric in M20. Every one of **150+ new URLs** was live-HTTP-checked on 23 Apr 2026 (see `audit/VERIFICATION.md`); every framework version is pinned to its PyPI latest (JAX bumped **0.7.x → 0.10.0**, scikit-learn **1.7 → 1.8**, vLLM **0.6 → 0.19**, Transformers **v5.0 → v5.6**). See the [Refresh Log](#-april-2026-refresh-log) for the full diff and the [Gap-Closure Matrix](#-gap-closure-matrix-v20262) for the 13-gap audit.
+This roadmap turns high-quality university syllabi and open learning resources into one prerequisite-aware curriculum. It is designed to help you:
 
----
+- build strong mathematical, statistical, and programming foundations;
+- learn classical machine learning before jumping to frontier models;
+- ship real systems with data engineering, MLOps, RAG, agents, and evaluation;
+- finish with a portfolio-ready research, systems, or applied capstone.
 
-## 🏗️ April 2026.2 — Production Superstructure Pass Log (NEW)
+The curriculum is detailed by design, but the navigation is intentionally simple: **choose a track, follow the modules in order, and build as you learn.**
 
-> **Scope of this pass:** Independent benchmark gap analysis against **7 reference curricula** (Berkeley MIDS · UMich MADS · CMU MSPPM-DA · MIT 6.390 Spring 2026 · Stanford CS336 Spring 2026 · DataCamp Associate DS 2026 · MIT AI Safety Fundamentals Spring 2026) plus the **2026 Agentic AI Roadmap**. The original curriculum scored **58/72 on theoretical rigor** (elite tier, beats Berkeley MIDS / CMU on math) but only **9/30 on production-stack skills**. This pass closes **all 13 gaps** without weakening any theory module.
+## Who this is for
 
-### 🎯 Gap-Closure Matrix (v2026.2)
+- **Beginners** who want a complete path and are willing to fill prerequisite gaps.
+- **Data analysts and data scientists** strengthening statistics, experimentation, and modelling.
+- **ML and AI engineers** building production-grade model and LLM systems.
+- **Experienced practitioners** using individual modules for focused study or interview review.
+- **Research-oriented learners** preparing for graduate-level machine learning work.
 
-| # | 2026 Benchmark Gap | v2026.1 Status | v2026.2 Closure | New Module(s) / Anchors |
-|---:|---|:---:|:---:|---|
-| 1 | **Causal Inference / A/B Testing** (FAANG interview staple) | ❌ absent | ✅ closed | **NEW Module 6½**: Brady Neal course · Harvard CAUSALab · Facure *CIBT* · MIT 14.387 · DoWhy · EconML · CausalML · Kohavi *TOCE* |
-| 2 | **Modern Data Engineering** (Spark / dbt / Airflow / Kafka — #1 hiring gap) | 🟡 thin | ✅ closed | **Module 8 split → 8a (SQL/Warehouses) + 8b (Distributed/Streaming)**: Reis *FDE* · DataExpert.io · dbt · Snowflake · BigQuery · Airflow · Dagster · Kafka · Flink · Iceberg · Delta Lake |
-| 3 | **LLMOps + AgentOps** | ❌ absent | ✅ closed | **Module 24 (full rewrite)**: Langfuse · Arize Phoenix · LangSmith · OTel GenAI · E2B · Daytona · Modal · Llama Guard · NeMo Guardrails |
-| 4 | **Agentic AI** (LangGraph / CrewAI / MCP / A2A) | ❌ absent | ✅ closed | **NEW Module 22**: HF Agents Course · Anthropic *Building Effective Agents* · Berkeley LLM Agents MOOC · MCP 2025-06-18 spec · smolagents · GAIA · SWE-bench |
-| 5 | **RAG + Vector DBs** | ❌ absent | ✅ closed | **NEW Module 21**: Pinecone Learning · LlamaIndex docs · pgvector · Qdrant · Weaviate · Milvus · LanceDB · ColBERT |
-| 6 | **AI Safety / Alignment / Interpretability / Evals / Policy** | 🟡 thin | ✅ closed | **NEW Module 23**: AISF · transformer-circuits.pub · Scaling Monosemanticity (SAEs) · Golden Gate Claude · EleutherAI cookbook · OpenAI evals · lm-eval-harness · EU AI Act · NIST AI RMF |
-| 7 | **Product DS / Business Communication** | ❌ absent | ✅ closed | **NEW Module 25**: Cassie Kozyrkov *Decision Intelligence* · CMU MSPPM-DA · UMich MADS |
-| 8 | **Modern Tooling** (Polars · DuckDB · uv · JAX) | 🟡 scattered | ✅ pinned | Integrated into M7 EDA · M1 Python · M15 DL · **2026 Tooling Appendix** (below) |
-| 9 | **Vision Transformers + Diffusion + SSMs + MoE** | 🟡 mentioned | ✅ expanded | **Module 16 expansion**: DINOv2 · SAM 2 · Mamba · Mamba-2 · RWKV · CLIP · LLaVA · Qwen-VL · flow-matching · rectified flow |
-| 10 | **Time-Series Foundation Models** (Chronos · TimeGPT · Lag-Llama) | ❌ absent | ✅ closed | **Module 14 expansion**: Prophet · NeuralProphet · Nixtla TimeGPT · Amazon Chronos · Lag-Llama · N-BEATS · N-HiTS · TFT |
-| 11 | **Fine-Tuning Playbook** (LoRA · QLoRA · DPO · GRPO · RLVR) | 🟡 mentioned | ✅ expanded | **Module 18 expansion**: Unsloth · Axolotl · TRL · PEFT · DSPy · TextGrad · vLLM · SGLang · TensorRT-LLM · promptfoo · DeepEval · Ragas |
-| 12 | **Mechanistic Interpretability** (SAEs · circuits) | ❌ absent | ✅ closed | Inside **NEW Module 23**: transformer-circuits.pub · Scaling Monosemanticity · Golden Gate Claude |
-| 13 | **Ethics · Privacy · AI Policy** (EU AI Act · NIST AI RMF · model cards) | 🟡 thin | ✅ closed | Inside **NEW Module 23**: EU AI Act · NIST AI RMF · AI.gov |
+> **Expected commitment:** roughly 24–36 months at 20–25 hours per week for the complete path. You do not need to complete every module for a role-focused track.
 
-### ✅ What v2026.2 verified LIVE on 23 Apr 2026 (in addition to the v2026.1 set)
+## How to use this roadmap
 
-- **150+ new URLs** HTTP-checked via `curl` (see `audit/raw_http_checks.txt`); **17 framework latest-version claims** cross-checked against the **PyPI JSON API** (ground truth).
-- **PyTorch 2.11.0** ✅ (released 2026-03-23) · **JAX 0.10.0** ✅ (released 2026-04-16 — **v2026.1 claim of 0.7.x was stale, now corrected**) · **Polars 1.40.1** ✅ · **Transformers 5.6.2** ✅ (v2026.1 claimed v5.0 — bumped) · **scikit-learn 1.8.0** ✅ (v2026.1 claimed 1.7+ — bumped) · **vLLM 0.19.1** ✅ (v2026.1 claimed 0.6+ — bumped) · **uv 0.11.7** · **dbt-core 1.11.8** · **DuckDB 1.5.2** · **MLflow 3.11.1** · **LangGraph 1.1.9** · **smolagents 1.24.0** · **DSPy 3.2.0** · **TRL 1.2.0** · **PEFT 0.19.1** · **Qdrant-client 1.17.1** · **PyMC 5.28.4** · **NumPyro 0.20.1**.
+1. **Take the [math diagnostic](#math-diagnostic).** Complete Module 0 if any foundation is weak.
+2. **Choose a destination** in the role-track table below instead of studying everything by default.
+3. **Respect prerequisites.** Each module states what you should know before starting.
+4. **Use one primary course and one primary book.** Treat the remaining links as alternatives or references.
+5. **Build every mandatory project.** Passive course completion is not enough.
+6. **Track your work** with the [progress checklist](#progress-tracker).
+7. **Finish with a capstone** that matches your intended role.
 
-### ✍️ What v2026.2 CORRECTED
+## Choose your track
 
-| # | Correction | Source |
-|---:|---|---|
-| C1 | **"CMU MADS" → "CMU MSPPM-DA + UMich MADS"**. The benchmark PDF repeatedly cited "CMU MADS", but CMU has no programme called "MADS" — **MADS is the University of Michigan School of Information programme** (*Master of Applied Data Science*). CMU's closest programmes are **MSPPM-DA** (Heinz — Public Policy & Management, Data Analytics) and the **MSCS** (SCS). Corrected throughout. | <https://www.si.umich.edu/programs/master-applied-data-science> (UMich, bot-gated) · <https://www.heinz.cmu.edu/programs/public-policy-management-master/data-analytics> ✅ 200 |
-| C2 | **MIT AI Safety Fundamentals URL** `mitaisafety.com` → `aisafetyfundamentals.com/alignment/`. Former domain no longer resolves (`curl` exit code 000, DNS fail). | <https://aisafetyfundamentals.com/alignment/> ✅ 200 |
-| C3 | **PyTorch FSDP docs URL** `/docs/stable/distributed.fsdp.html` → `/docs/stable/fsdp.html` (former 404s). | <https://pytorch.org/docs/stable/fsdp.html> ✅ 200 |
-| C4 | **JAX version** bumped from 0.7.x / 0.8.x → **0.10.0** (PyPI release 2026-04-16). | PyPI `/pypi/jax/json` |
-| C5 | **scikit-learn** bumped from 1.7+ → **1.8.0** (2025-12-10). | PyPI `/pypi/scikit-learn/json` |
-| C6 | **vLLM** bumped from 0.6+ → **0.19+** (latest 0.19.1 on 2026-04-18). | PyPI `/pypi/vllm/json` |
-| C7 | **Transformers** bumped from v5.0 → **v5.6.2** (2026-04-23). | PyPI `/pypi/transformers/json` |
-
-### 🆕 What v2026.2 ADDED (material, not version bumps)
-
-1. **Module 6½ Causal Inference & Experimentation** — dedicated module because every senior DS interview at FAANG tests CUPED, DAGs, backdoor adjustment, and DiD. Uses Brady Neal's free video course, Facure's free Python handbook, and MIT 14.387 as primary anchors, plus the DoWhy/EconML/CausalML Python stack.
-2. **Module 8 split into 8a + 8b** — Databases & Warehouses (SQL · dbt · Snowflake · BigQuery · DuckDB · Kimball) vs. Distributed & Streaming Systems (Spark · Airflow · Dagster · Kafka · Flink · Iceberg · Delta Lake · lakehouse). Closes the #1 2026 hiring gap.
-3. **Module 21 RAG, Vector DBs & Retrieval Systems** — chunking, hybrid search, rerankers (Cohere / BGE), late chunking, ColBERT / ColPali; pgvector / Qdrant / Weaviate / Milvus / LanceDB; HNSW vs IVF trade-offs.
-4. **Module 22 Agentic AI** — LangGraph, CrewAI, smolagents, Anthropic's "Building Effective Agents", Berkeley LLM Agents MOOC, HF AI Agents Course, MCP 2025-06-18 spec, GAIA, SWE-bench, E2B / Daytona / Modal sandboxing.
-5. **Module 23 AI Safety, Alignment, Interpretability, Evals & Policy** — Anthropic mechanistic interpretability (transformer-circuits.pub, Scaling Monosemanticity, Golden Gate Claude, SAEs), AISF curriculum, EU AI Act, NIST AI RMF, OpenAI evals, EleutherAI lm-eval-harness, HF Open LLM Leaderboard.
-6. **Module 24 MLOps + LLMOps + AgentOps** (full rewrite of old M19) — three explicit tiers: classical MLOps (MLflow · W&B · BentoML · KServe · Feast · Evidently · Arize · WhyLabs), LLMOps (Langfuse · PromptLayer · Helicone · Guardrails · OTel GenAI), AgentOps (LangSmith · Arize Phoenix · W&B Weave · GAIA/SWE-bench harnesses · E2B).
-7. **Module 25 Product DS, Business, Communication & Storytelling** — Cassie Kozyrkov's Decision Intelligence framework, stakeholder comms, business framing (closes the "employability gap" flagged in the benchmark).
-8. **Module 20 Capstone — Three-Track Rubric** (Research · Systems · Applied), each with a 4-dimension 100-point grading scheme cross-referenced to Berkeley MIDS capstone and Stanford CS336 Assignment 5.
-9. **Module 14 — Time-Series Foundation Models** (Chronos · TimeGPT · Lag-Llama) alongside Prophet / NeuralProphet / N-BEATS / N-HiTS / Temporal Fusion Transformer.
-10. **Module 16 — ViT + Diffusion + SSM + MoE expansion** (DINOv2, SAM 2, Mamba/Mamba-2, RWKV, CLIP, LLaVA, Qwen-VL, rectified-flow, MoE named explicitly).
-11. **Module 17 — Modern RL** (PPO / GRPO / DPO / RLVR, offline RL: CQL / IQL / Decision Transformers; CleanRL / Stable-Baselines3 hands-on; Berkeley CS285, Spinning Up).
-12. **Module 18 — Fine-Tuning Playbook + Inference Optimisation + Lifecycle Evals** (LoRA / QLoRA / DoRA · Unsloth · Axolotl · TRL · PEFT · DSPy · TextGrad · vLLM · SGLang · TensorRT-LLM · speculative decoding · KV-cache · promptfoo · DeepEval · Ragas).
-13. **Module 1 — Modern Python Tooling** (type hints + mypy/Pydantic, `uv`, async/asyncio, Git + GitHub Actions, pytest + hypothesis property-based testing).
-14. **Module 7 — 2026 EDA/Viz modernisation** (Polars · DuckDB · Great Expectations · Pandera · Plotly · Altair · Observable Plot · Streamlit · Gradio · Evidently).
-15. **Module 2 — Automatic Differentiation theory** (forward/reverse-mode, JVP/VJP — interview staple; foundational for JAX/PyTorch internals).
-16. **Module 3 — Numerical Linear Algebra** (LU, QR, Householder, CG — Trefethen & Bau).
-17. **Module 4 — Randomized & Approximation Algorithms** (Bloom filters, MinHash, reservoir sampling, amortised analysis).
-18. **Textbook list** — 5 new Tier-1 additions: Kohavi *TOCE* 2020 · Reis & Housley *FDE* 2022 · Pearl/Glymour/Jewell *Causal Inference: A Primer* · Hernán & Robins *Causal Inference: What If* (free) · Goodfellow/Alammar/Grootendorst *Hands-On Large Language Models* (already in Tier-1 — retained).
-19. **Three PDF errors corrected** — see §"What v2026.2 CORRECTED" above.
-
-### 🗃️ Audit trail
-
-- `audit/AUDIT.md` — P0 baseline inventory + gap-to-line traceability matrix.
-- `audit/VERIFICATION.md` — P1 live cross-verification report (150+ URLs, 17 framework versions).
-- `audit/raw_http_checks.txt` — raw `curl` output from the 23 Apr 2026 verification pass.
-- `audit/IMPROVEMENT_SPEC.md` — P2 design spec for the 34 concrete edits applied in P3.
-- `audit/FINAL_AUDIT.md` — P5 post-edit re-verification report.
-
----
-
-## 🔄 April 2026 Refresh Log (v2026.1 — pre-Production-Superstructure)
-
-> **Scope of this refresh:** A ground‑up verification pass across **25+ primary course URLs**, **20 textbook editions**, and **30+ framework releases** conducted on 19 April 2026. Every added item below is traceable to an official source fetched in this session. Nothing was invented; where a syllabus was paywalled or login‑gated, the latest publicly‑visible calendar view was used and the gate was disclosed.
-
-### ✅ What was verified LIVE (HTTP 200 as of 19 Apr 2026)
-
-| Resource | URL | Status |
+| Track | Recommended modules | Portfolio outcome |
 |---|---|---|
-| MIT 6.390 Intro to ML Spring 2026 calendar | <https://introml.mit.edu/spring26> | ✅ 200 |
-| MIT 6.7960 Deep Learning Fall 2025 (15‑week schedule, Beery · He · Khattab) | <https://deeplearning6-7960.github.io/> | ✅ 200 |
-| MIT 6.7900 Graduate ML (last updated Sep 2025) | <https://gradml.mit.edu/> | ✅ 200 |
-| MIT MicroMasters in Statistics & Data Science | <https://micromasters.mit.edu/ds/> | ✅ 200 |
-| MIT 6.S191 Intro to Deep Learning (2026 edition, Amini) | <https://introtodeeplearning.com/> | ✅ 200 |
-| Harvard CS 1810 ML (Spring 2026, Alvarez‑Melis & Du) | <https://harvard-ml-courses.github.io/cs181-web/> | ✅ 200 |
-| Harvard CS50P (2024 edition, evergreen) | <https://cs50.harvard.edu/python/> | ✅ 200 |
-| Cambridge Data Science 2025‑26 (Wischik) | <https://www.cl.cam.ac.uk/teaching/2526/DataSci/> | ✅ 200 |
-| Cambridge ML & Bayesian Inference 2025‑26 (Holden) | <https://www.cl.cam.ac.uk/teaching/2526/MLBayInfer/> | ✅ 200 |
-| Cambridge ML & Real‑World Data 2025‑26 (Teufel) | <https://www.cl.cam.ac.uk/teaching/2526/MLRD/> | ✅ 200 |
-| Cambridge MPhil MLMI course structure (2026 entry, incl. new Biological Learning track) | <https://www.mlmi.eng.cam.ac.uk/about-programme/course-structure> | ✅ 200 |
-| IIT Madras BS DS Academics hub | <https://study.iitm.ac.in/ds/academics.html> | ✅ 200 |
-| IIT Madras Online Degree portal (open applications, May 2026 cohort) | <https://onlinedegree.iitm.ac.in/> | ✅ 200 |
-| IITM BSCS2008 Machine Learning Practice | <https://study.iitm.ac.in/ds/course_pages/BSCS2008.html> | ✅ 200 |
-| IITM BSCS2004 Machine Learning Foundations | <https://study.iitm.ac.in/ds/course_pages/BSCS2004.html> | ✅ 200 |
-| IITM BSCS3003 AI: Search Methods | <https://study.iitm.ac.in/ds/course_pages/BSCS3003.html> | ✅ 200 |
-| IITM BSCS3002 Deep Learning | <https://study.iitm.ac.in/ds/course_pages/BSCS3002.html> | ✅ 200 |
-| **Stanford CS336 Spring 2026** (Hashimoto · Liang — live, opens 30 Mar 2026) | <https://cs336.stanford.edu/> | ✅ 200 |
-| Mathematics for Machine Learning (Deisenroth et al., free PDF) | <https://mml-book.com/> | ✅ 200 |
-| ISLP — Intro to Statistical Learning with Python (2023, 2025 reprint) | <https://www.statlearning.com/> | ✅ 200 |
-| Understanding Deep Learning (Prince, MIT Press 2024, free online) | <https://udlbook.github.io/udlbook/> | ✅ 200 |
-| **Bishop & Bishop — Deep Learning: Foundations and Concepts (Springer 2024, free online)** | <https://bishopbook.com/> | ✅ 200 |
-| Murphy PML1 / PML2 (free PDFs) | <https://probml.github.io/pml-book/book1.html> / <https://probml.github.io/pml-book/book2.html> | ✅ 200 |
-| Dive into Deep Learning (Zhang/Lipton/Li/Smola, 2024) | <https://d2l.ai/> | ✅ 200 |
-| Fast.ai Practical Deep Learning for Coders | <https://course.fast.ai/> | ✅ 200 |
-| Hugging Face Agents Course (free, certified) | <https://huggingface.co/learn/agents-course/> | ✅ 200 |
-| **Model Context Protocol (MCP)** — Nov 2025 anniversary spec | <https://modelcontextprotocol.io/> | ✅ 200 |
-| PyTorch / Polars / JAX homepages | <https://pytorch.org/> · <https://pola.rs/> · <https://docs.jax.dev/> | ✅ 200 |
-| **🆕 Axler — *Linear Algebra Done Right* 4e (Springer 2024, free PDF)** | <https://linear.axler.net/> | ✅ 200 |
-| **🆕 Stanley Chan — *Probability for Data Science* (free HTML+PDF)** | <https://probability4datascience.com/> | ✅ 200 |
-| **🆕 Boyd & Vandenberghe — *Convex Optimization* (free PDF) + EE364A** | <https://stanford.edu/~boyd/cvxbook/> · <https://web.stanford.edu/class/ee364a/> | ✅ 200 / ✅ 200 |
-| **🆕 MIT 18.S096 / 18.063 Matrix Calculus for ML (Edelman & Johnson)** | <https://github.com/mitmath/matrixcalc> | ✅ 200 |
-| **🆕 Velleman — *How To Prove It With Lean* (browser-interactive, 2024)** | <https://djvelleman.github.io/HTPIwL/> | ✅ 200 |
-| **🆕 MacKay — *Information Theory, Inference & Learning Algorithms* (free)** | <https://www.inference.org.uk/itila/> | ✅ 200 |
-| **🆕 Imperial College "Math for ML" Specialization (Coursera, free audit)** | <https://www.coursera.org/specializations/mathematics-machine-learning> | ✅ 200 |
-| **🆕 Hammack — *Book of Proof* 3e (free CC-BY)** | <https://richardhammack.github.io/BookOfProof/> | ✅ 200 |
-| **🆕 Khan Academy Precalculus (Module 0a remediation)** | <https://www.khanacademy.org/math/precalculus> | ✅ 200 |
-| **🆕 MIT 6.042J Mathematics for CS — full free PDF (2015 final)** | <https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/> | ✅ 200 |
+| **Data Analyst** | M1 → M6 → M7 → M8a → M25 → M26 | Reproducible analysis, dashboard, and stakeholder memo |
+| **Data Scientist** | M1–M7 → M9–M14 → M25 → M26 | Validated model plus causal or experimental evaluation |
+| **Data Engineer** | M1 → M4 → M7 → M8a → M8b → M24 → M26 | Tested batch/streaming data platform with observability |
+| **ML Engineer** | M1–M12 → M15–M17 → M24 → M26 | Model served behind an API with CI, monitoring, and SLOs |
+| **AI Engineer** | M1 → M8a → M15–M18 → M21–M24 → M26 | Evaluated RAG or agent system with tracing and guardrails |
+| **Research / PhD prep** | M0–M18 → M23 → M26 Research Track | Reproducible paper, ablations, and public research artifact |
 
-> *Two sites* — `stat110.hsites.harvard.edu` and `projects.iq.harvard.edu/stat110` — *return HTTP 403 to* `curl` *but load normally in a browser (bot‑gated). All Stat 110 content is mirrored in the public YouTube playlist `PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo`, which IS live.*
+## Roadmap
 
-### 🆕 What was ADDED in this refresh
+### Foundations
 
-1. **Stanford CS336 — Language Modeling from Scratch (Spring 2026)** · Tatsunori Hashimoto & Percy Liang. A 17‑lecture, 5‑assignment course that walks students end‑to‑end from tokenizer → Transformer → Triton FlashAttention 2 → distributed training (TP/PP/DP) → Common Crawl data pipeline → SFT + DPO + RLVR (reinforcement learning from verifiable rewards). Integrated into **Module 18** (LLM Frontier). Assignment repos: `assignment1-basics` · `assignment2-systems` · `assignment3-scaling` · `assignment4-data` · `assignment5-alignment` — all public on GitHub under `stanford-cs336/`.
-2. **MIT 6.S191 (2026 edition)** · Alexander Amini — new YouTube series starting 30 Mar 2026. Added as a fast‑track alternative for **Module 15**.
-3. **Hugging Face Agents Course** (+ Smol Course, + Smol Training Playbook) — free, certified coverage of `smolagents`, LangGraph, LlamaIndex, DPO, GRPO, safety alignment. Added to **Modules 18–19**.
-4. **Model Context Protocol (MCP)** — Anthropic's open standard released Nov 2024; cited here with the **Nov 2025 anniversary spec** and the **2025‑06‑18 revision** (structured tool output, OAuth resource‑based auth, code‑execution‑with‑MCP). Integrated into **Module 18** (LLM agents) and **Module 19** (MLOps plumbing).
-5. **Bishop & Bishop — *Deep Learning: Foundations and Concepts*** (Springer 2024, ISBN 978‑3‑031‑45467‑7, 607 pp., free online at [bishopbook.com](https://bishopbook.com/)). Promoted to **primary** text for Modules 15–16; PRML (2006) demoted to supplementary.
-6. **Géron — *Hands‑On Machine Learning with Scikit‑Learn and PyTorch*** (O'Reilly, Oct–Dec 2025, 878 pp.) — the **PyTorch rewrite** of the TensorFlow‑based 3rd ed. GitHub: <https://github.com/ageron/handson-mlp>. Replaces the 3rd ed. as primary for Modules 9–17.
-7. **Alammar & Grootendorst — *Hands‑On Large Language Models*** (O'Reilly, Sep 2024, 428 pp.) — added to Module 18 reading list. Notebooks: <https://github.com/handsOnLLM/Hands-On-Large-Language-Models>.
-8. **Raschka — *Build a Large Language Model (From Scratch)*** (Manning 2024) — kept; complements CS336 beautifully.
-9. **🩺 Math-Foundations Hardening Pack** — full audit of M2/M3/M5 plus a brand-new Module 0:
-   * **Module 0 (NEW)** — *Mathematical Maturity Bridge*: Pre-Calculus & Trig (sub-mod 0a) + Logic, Proof, Number Theory, Discrete Math (sub-mod 0b). Required reading: Hammack *Book of Proof* (3e, free CC-BY) + Velleman *How To Prove It* (3e, 2019) + Velleman *How To Prove It With Lean* (browser, 2024) + MIT 6.042J Mathematics for CS (free PDF, 2015 — still current).
-   * **Module 0 Diagnostic** — 15-question, 60-minute self-assessment with a per-strand remediation table (linked from MIT, Cambridge, and Harvard official diagnostic instruments).
-   * **Module 2 expansion** — added **Matrix Calculus** (MIT 18.S096 / 18.063 Edelman & Johnson IAP 2026 + Parr-Howard arXiv 1802.01528 + Petersen-Pedersen *Matrix Cookbook* 2024) and **Convex Optimisation** (Stanford EE364A + Boyd & Vandenberghe *Convex Optimization* free PDF). Promoted MML *Chapter 7* (Continuous Optimization) to mandatory. Added 5-week sequencing.
-   * **Module 3 expansion** — added the **Two-Pass Pedagogy** (computational Strang → abstract Axler 4e → applications Townsend 2024). New free primary text: **Axler 4e (Springer 2024, free PDF + Kindle)**. Added **numerical-linear-algebra block** (condition number, randomised SVD, Krylov methods) and **5 mandatory mini-projects** (PCA-on-MNIST, image compression, PageRank, regression-four-ways, spectral clustering).
-   * **Module 5 expansion** — added **concentration inequalities** (Hoeffding, McDiarmid, Bernstein, sub-Gaussian, VC bounds), **information-theory primer** (entropy, MI, KL, cross-entropy, f-divergences, Fano), and a **measure-theoretic bridge** (σ-algebras, Lebesgue, Radon-Nikodym, four convergence types, DCT/MCT). New free texts: **Stanley Chan *Probability for Data Science* (2021/2023)**, **MacKay *Information Theory* (2003)**, **Vershynin *High-Dimensional Probability* (2018)**. Added 12-week sequencing + capstone exercise.
-   * **Math Maturity Operating Manual** — 7 explicit habits (quantifier discipline, definition-unfolding, counter-example reflex, proof-template recall, notation hygiene, computational verification, optional Lean exposure) cited from Cambridge IB CST + Harvard Math 22a handbooks.
-10. **Framework version bumps** (all verified April 2026):
-   * **PyTorch 2.11.0** (23 Mar 2026 stable) — successor to 2.7 (Blackwell GPU, Apr 2025) and 2.6 (Jan 2025, Python 3.13 compile support); deeper `torch.compile` coverage, FSDP2 refinements.
-   * **JAX 0.7.2** (Sep 2025) → **0.8.x** (Nov 2025, decorator‑factory pattern) — PyTorch/XLA 2.7 bridge matured.
-   * **Hugging Face Transformers v5.0** (1 Dec 2025) — simplified model definitions; **v4.57.3** (25 Nov 2025) is the final v4 LTS; requires PyTorch 2.4+.
-   * **Polars 1.x** (stable since 1 July 2024) — May 2025 streaming engine PDS‑H benchmarks show **3–7× speed‑up** vs in‑memory; first‑class in scikit‑learn, HF Datasets, DuckDB 1.3+.
-   * **MCP** — 2025‑06‑18 revision + Nov 2025 anniversary spec.
-   * **vLLM 0.6+ / SGLang latest / Unsloth / TRL / PEFT** — DPO, GRPO, RLVR flows.
-   * **DSPy 2.5+** — programmatic prompting kept.
+- [Math diagnostic and remediation](#math-diagnostic)
+- [M0 — Mathematical maturity: pre-calculus, logic, and proof](#module-0)
+- [M1 — Programming foundations and computational thinking](#module-1)
+- [M2 — Calculus, matrix calculus, and convex optimisation](#module-2)
+- [M3 — Linear algebra](#module-3)
+- [M4 — Discrete mathematics, algorithms, and data structures](#module-4)
+- [M5 — Probability theory](#module-5)
 
-### ✍️ What was CORRECTED / UPDATED
+### Statistics and data systems
 
-| Item | Before (prior README) | After (April 2026 verified) |
+- [M6 — Statistical inference](#module-6)
+- [M6½ — Causal inference and experimentation](#module-6-half)
+- [M7 — Data wrangling, EDA, and visualisation](#module-7)
+- [M8a — Databases, SQL, and warehouses](#module-8a)
+- [M8b — Distributed data and streaming systems](#module-8b)
+
+### Classical machine learning
+
+- [M9 — Regression](#module-9)
+- [M10 — Classification and kernel methods](#module-10)
+- [M11 — Unsupervised learning and dimensionality reduction](#module-11)
+- [M12 — Trees, ensembles, and boosting](#module-12)
+
+### Probabilistic and deep learning
+
+- [M13 — Bayesian inference, graphical models, and MCMC](#module-13)
+- [M14 — Sequence modelling and time series](#module-14)
+- [M15 — Deep learning foundations](#module-15)
+- [M16 — Representation learning, transformers, and generative models](#module-16)
+- [M17 — Reinforcement learning and decision-making](#module-17)
+
+### Frontier and production AI
+
+- [M18 — Large language models, RLHF, and alignment](#module-18)
+- [M21 — RAG, vector databases, and retrieval](#module-21)
+- [M22 — Agentic AI, MCP, and A2A](#module-22)
+- [M23 — AI safety, interpretability, evaluations, and policy](#module-23)
+- [M24 — MLOps, LLMOps, and AgentOps](#module-24)
+- [M25 — Product data science and communication](#module-25)
+- [M26 — Capstone: research, systems, or applied](#module-26)
+
+### Reference sections
+
+- [Core textbook list](#books)
+- [Production toolchain](#toolchain)
+- [Progress tracker](#progress-tracker)
+- [Acknowledgements and sources](#acknowledgements)
+- [Verification and audit trail](audit/FINAL_AUDIT.md)
+
+## Curriculum at a glance
+
+| Stage | Modules | Main outcome |
 |---|---|---|
-| MIT 6.7960 instructor list | Isola & Beery | **Sara Beery · Kaiming He · Omar Khattab** (Fall 2025 leads; Isola led Fall 2024 and remains a co‑author of *Foundations of Computer Vision*) |
-| MIT 6.7960 schedule | Fall 2024 (19‑week) | **Fall 2025 — 15 weeks**, with new topics: Foundation Model Pre‑/Post‑training, Representation Learning (rec/sim/info‑theoretic), Neural Information Retrieval, Inference‑time Algorithms (beam search, ToT, test‑time training) |
-| Cambridge ML&BI | 2023‑24 syllabus | **2025‑26 live** (Holden) |
-| HF Transformers | 4.45+ | **v5.x (Dec 2025) / v4.57 LTS** |
-| PyTorch | 2.5+ | **2.11.0 (Mar 2026)** |
-| JAX | 0.4+ | **0.7.x–0.8.x (Sep 2025 – Nov 2025)** |
-| Géron textbook reference | 3rd ed., 2022 (Keras + TF) | **PyTorch rewrite (Oct‑Dec 2025)** |
-| Primary deep‑learning text | PRML (2006) | **Bishop & Bishop 2024** (Springer; free online); PRML kept as reference |
-| Stanford CS336 | absent | **Added — Spring 2026 live** |
-| MCP | absent | **Added — Nov 2025 spec cited** |
-| Transformers course in M16 | Basic coverage | **Expanded** with Stanford CS336 Lecture 3 (architecture), Lecture 4 (MoE), Lecture 6 (Triton kernels), Lecture 9/11 (scaling laws); MIT 6.7960 W7‑W8 (Foundation Models) |
+| **Foundations** | M0–M5 | Proof literacy, Python, calculus, linear algebra, algorithms, probability |
+| **Statistics & data** | M6–M8b | Inference, experimentation, EDA, SQL, warehouses, distributed systems |
+| **Classical ML** | M9–M12 | Regression, classification, unsupervised learning, ensembles |
+| **Probabilistic & deep learning** | M13–M17 | Bayesian modelling, time series, neural networks, transformers, RL |
+| **Frontier & production** | M18, M21–M25 | LLMs, RAG, agents, safety, evaluation, MLOps, product thinking |
+| **Capstone** | M26 | A public, reproducible portfolio project |
 
-### ⚠️ Known gaps / disclosures
+### Suggested study rhythm
 
-* **Harvard CS109A/B 2025 schedules** are **not publicly mirrored** under `harvard-iacs.github.io` (2024 and 2025 paths return 404). The last publicly‑released schedules are 2021 (CS109A) and 2022 (CS109B). Harvard course listings confirm Fall 2025 offerings ran with structurally identical content. Citations "CS109A Lec N" therefore refer to the 2021 public schedule and are consistent with the current offering per `my.harvard`.
-* **MIT 6.390 Spring 2026** full lecture notes and slides are behind a `shimmer.mit.edu` login; the calendar view (which we cite) is public and lists all 12 lecture titles, 12 homeworks, 12 labs, 12 recitations, 2 midterms, and the final exam.
-* **IIT Madras** publishes per‑course week‑by‑week syllabi individually at `study.iitm.ac.in/ds/course_pages/BS{CS|MA|MS|HS|SE}####.html`. Each URL in the Source Matrix was individually verified.
-* **Cambridge Advanced Data Science** — the 2025‑26 specific course page returned 404, so the module is referenced via the MLMI course structure page (which IS live).
-* **MacKay's *Information Theory, Inference & Learning Algorithms* site** (`inference.org.uk/itila/`) — the host returned no HTTP response to `curl` during this April 2026 verification (`code 000`). The book is the de‑facto standard, the link is the canonical one cited by every university course (Cambridge, Stanford CS228, etc.), and the PDF is also mirrored at the [author's archive (Wayback Machine)](https://web.archive.org/web/2024*/inference.org.uk/itila/) — *cited as a fallback in the Module 5 reading list footnote*.
+For each module, use a simple four-step loop:
+
+1. **Learn** — complete the primary course or lecture sequence.
+2. **Read** — work through the listed primary text and exercises.
+3. **Implement** — reproduce core algorithms without relying only on high-level APIs.
+4. **Ship** — complete the module project with tests, documentation, and a short results memo.
+
+> **Resource policy:** free and open resources are preferred. Some books are listed as optional references when no equivalent open source is as strong.
 
 ---
 
-## 📋 Table of Contents
-
-- [🏗️ April 2026.2 — Production Superstructure Pass Log](#️-april-20262--production-superstructure-pass-log-new)
-- [🔄 April 2026 Refresh Log (v2026.1)](#-april-2026-refresh-log-v20261--pre-production-superstructure-pass)
-- [🗺️ The 26-Module Progression Map](#️-the-26-module-progression-map-v20262--27-modules-with-m0)
-- [🎯 Curriculum Meta-Information](#-curriculum-meta-information)
-- [🧭 v2026.2 Architecture Map (README ↔ Benchmark PDF)](#-v20262-architecture-map-readme--benchmark-pdf)
-- [📚 Source Matrix — Universities & Courses](#-source-matrix--universities--courses)
-- **🩺 [Math-Foundations Diagnostic & Remediation Map](#-math-foundations-diagnostic--remediation-map-new--april-2026)**
-- **Foundation Stratum (Modules 0–5)** — Mathematics, CS, Programming
-  - [**🆕 Module 0: Mathematical Maturity Bridge — Pre-Calculus, Logic & Proof**](#module-0-mathematical-maturity-bridge--pre-calculus-logic--proof-new--april-2026)
-  - [Module 1: Programming Foundations & Computational Thinking](#module-1-programming-foundations--computational-thinking)
-  - [Module 2: Calculus + Matrix Calculus + Convex Optimisation](#module-2-single-variable--multivariable-calculus--matrix-calculus--convex-optimisation)
-  - [Module 3: Linear Algebra — Computational, Geometric & Abstract](#module-3-linear-algebra--computational-geometric--abstract)
-  - [Module 4: Discrete Math, Algorithms & Data Structures](#module-4-discrete-math-algorithms--data-structures)
-  - [Module 5: Probability Theory — The Language of Uncertainty](#module-5-probability-theory--the-language-of-uncertainty)
-- **Core Statistics Stratum (Modules 6–8b)**
-  - [Module 6: Statistical Inference](#module-6-statistical-inference)
-  - [**🆕 Module 6½: Causal Inference & Experimentation**](#module-6-causal-inference--experimentation-new--v20262)
-  - [Module 7: Data Wrangling, EDA & Visualisation](#module-7-data-wrangling-eda--visualisation)
-  - [Module 8a: Databases, SQL & Warehouses](#module-8a-databases-sql--warehouses-v20262-split)
-  - [**🆕 Module 8b: Distributed Data & Streaming Systems**](#module-8b-distributed-data--streaming-systems-new--v20262)
-- **Classical Machine Learning Stratum (Modules 9–12)**
-  - [Module 9: Supervised Learning — Regression Family](#module-9-supervised-learning--regression-family)
-  - [Module 10: Supervised Learning — Classification & Kernel Methods](#module-10-supervised-learning--classification--kernel-methods)
-  - [Module 11: Unsupervised Learning, Dimensionality Reduction & Mixture Models](#module-11-unsupervised-learning-dimensionality-reduction--mixture-models)
-  - [Module 12: Ensemble Methods, Tree-Based Learning & Boosting](#module-12-ensemble-methods-treebased-learning--boosting)
-- **Probabilistic & Bayesian Stratum (Modules 13–14)**
-  - [Module 13: Bayesian Inference, Graphical Models & MCMC](#module-13-bayesian-inference-graphical-models--mcmc)
-  - [Module 14: Sequence Modelling — HMMs, Kalman Filters & Time Series](#module-14-sequence-modelling--hmms-kalman-filters--time-series)
-- **Deep Learning Stratum (Modules 15–17)**
-  - [Module 15: Deep Learning Foundations — MLPs, CNNs, Backprop](#module-15-deep-learning-foundations--mlps-cnns-backprop)
-  - [Module 16: Representation Learning, Transformers & Generative Models](#module-16-representation-learning-transformers--generative-models)
-  - [Module 17: Reinforcement Learning & Decision Making](#module-17-reinforcement-learning--decision-making)
-- **Frontier / Production Stratum (Modules 18–25)**
-  - [Module 18: Large Language Models, RLHF & Alignment](#module-18-large-language-models-rlhf--alignment)
-  - [**🆕 Module 21: RAG, Vector DBs & Retrieval Systems**](#module-21-rag-vector-dbs--retrieval-systems-new--v20262)
-  - [**🆕 Module 22: Agentic AI — LangGraph, CrewAI, MCP & A2A**](#module-22-agentic-ai--langgraph-crewai-mcp--a2a-new--v20262)
-  - [**🆕 Module 23: AI Safety, Alignment, Interpretability, Evals & Policy**](#module-23-ai-safety-alignment-interpretability-evals--policy-new--v20262)
-  - [Module 24: MLOps + LLMOps + AgentOps (supersedes old M19)](#module-24-mlops--llmops--agentops-v20262--supersedes-old-m19)
-  - [**🆕 Module 25: Product DS, Business, Communication & Storytelling**](#module-25-product-ds-business-communication--storytelling-new--v20262)
-- **Capstone Stratum**
-  - [Module 26: Capstone — Research / Systems / Applied Tracks](#module-20-capstone--research-dissertation--publishable-project)
-- [📖 Core 2026 Textbook Reading List](#-core-2026-textbook-reading-list)
-- [🛠️ The Elite 2026 Toolchain](#️-the-elite-2026-toolchain)
-- [🗂 2026 Tooling Quick-Reference](#-2026-tooling-quick-reference-v20262)
-- [✅ Progress Tracker](#-progress-tracker)
-- [📄 Legacy OSSU Curriculum](#-legacy-ossu-curriculum-reference-only)
-
----
-
-## 🗺️ The 26-Module Progression Map (v2026.2 — 27 modules with M0)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│ 🆕 MATH-MATURITY BRIDGE (M0)  ── prerequisite for anyone scoring < 70% on diagnostic
-│  0a Pre-Calculus & Trig        │  0b Logic, Proof, Number Theory & Discrete Math
-└──────────────────────────────────────────────────────────────────────────────┘
-┌──────────────────────────────────────────────────────────────────────────────┐
-│ FOUNDATION (M1-M5)             │ CORE STATS (M6-M8b)        │ CLASSICAL ML (M9-M12)
-│  1 Programming + Modern Python │  6  Inference              │   9 Regression
-│  2 Calculus + MatrixCalc       │  🆕 6½ Causal Inf. & A/B   │  10 Classification/SVM
-│    + AutoDiff + Convex Opt     │  7  EDA/Viz + Polars+DuckDB│     + Calibration
-│  3 Linear Algebra + NumLinAlg  │  8a Databases/SQL/dbt      │  11 Unsup/Dim-Red
-│  4 Algos + Randomised + DSA    │  🆕 8b Spark/Kafka/Airflow │  12 Ensembles/Boosting
-│  5 Probability + Concentr.     │                            │
-│    + Info Theory + Measure     │                            │
-└────────────────────────────────┴────────────────────────────┴────────────────┘
-┌──────────────────────────────────────────────────────────────────────────────┐
-│ PROBABILISTIC (M13-M14)   │ DEEP LEARNING (M15-M17)         │ LLM CORE
-│ 13 Bayes / MCMC / PGMs    │ 15 MLPs/CNNs + JAX + FSDP + MP  │ 18 LLMs / RLHF
-│ 14 HMMs / Kalman / TS     │ 16 Transformers + ViT + Diff.   │    + LoRA / DPO /
-│    + TimeGPT / Chronos    │    + SSMs (Mamba) + MoE         │      GRPO / RLVR
-│                           │ 17 RL + PPO/GRPO + Offline RL   │    + vLLM / SGLang
-└───────────────────────────┴─────────────────────────────────┴──────────────────┘
-┌──────────────────────────────────────────────────────────────────────────────┐
-│ 🆕 PRODUCTION FRONTIER (M21-M25)                                            │
-│ 21 RAG + Vector DBs (pgvector · Qdrant · Weaviate · Milvus · LanceDB)       │
-│ 22 Agentic AI (LangGraph · CrewAI · MCP · A2A · smolagents · GAIA/SWE-bench)│
-│ 23 AI Safety + Interpretability (SAEs · circuits) + Evals + Policy (EU AI Act)│
-│ 24 MLOps + LLMOps + AgentOps (MLflow · Langfuse · LangSmith · Phoenix · Weave)│
-│ 25 Product DS · Communication · Decision Intelligence                       │
-└──────────────────────────────────────────────────────────────────────────────┘
-┌──────────────────────────────────────────────────────────────────────────────┐
-│ CAPSTONE (M26)  — 3 tracks: Research / Systems / Applied                    │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🎯 Curriculum Meta-Information
-
-| Attribute | Specification |
-|---|---|
-| **Total Modules** | 26 core + **🆕 Module 0** (Math-Maturity Bridge) = **27** (v2026.2 Production Superstructure) |
-| **Module Layout** | M0 Math Bridge · M1-M5 Foundation · M6/6½/7/8a/8b Stats+Data · M9-M12 Classical ML · M13-M14 Bayesian · M15-M17 DL/RL · M18 LLMs · M21-M25 Production Frontier · M26 Capstone |
-| **Estimated Duration** | 24–36 months (20–25 hrs/week); **+ 6–10 weeks** if Module 0 is required; **+ 8–12 weeks** if new production modules (6½, 8b, 21-25) are tackled end-to-end |
-| **Academic Equivalence** | BSc → MSc → PhD-prep in Data Science + Production ML Engineer / AI Engineer track |
-| **Primary Languages** | Python **3.13+** (3.14 pre‑release compatible), R 4.4+, occasional Julia 1.11+, SQL (ANSI + DuckDB/BigQuery dialects) |
-| **Primary Frameworks (April 23 2026 PyPI-verified)** | **PyTorch 2.11.0** (23 Mar 2026), **JAX 0.10.0** (16 Apr 2026), **Polars 1.40.1**, **scikit‑learn 1.8.0** (10 Dec 2025), **HF Transformers v5.6.2** (23 Apr 2026), **vLLM 0.19.1**, **PyMC 5.28.4**, **NumPyro 0.20.1**, **DuckDB 1.5.2**, **Pandas 2.3+** (Arrow‑backed) |
-| **New 2026.2 Frameworks** | **uv 0.11.7**, **dbt-core 1.11.8**, **MLflow 3.11.1**, **LangGraph 1.1.9**, **smolagents 1.24.0**, **DSPy 3.2.0**, **TRL 1.2.0**, **PEFT 0.19.1**, **Qdrant-client 1.17.1** |
-| **Hardware Assumption** | Local CPU for M1-M12, M6½; GPU/TPU (Colab / Kaggle / Lightning.ai / Modal **$30 free/mo** / RunPod B200 $4.99/hr) for M15+; cloud or local Docker for M8b, M21-M24 |
-| **Open Source Commitment** | Every single linked course is free or offers free audit |
-| **URL Health** | 150+ URLs live‑verified April 23 2026 (see `audit/VERIFICATION.md`) |
-
----
-
-## 🧭 v2026.2 Architecture Map (README ↔ Benchmark PDF)
-
-> **Why this table exists.** The April 2026.2 benchmark PDF recommends a flat 26-module layout. This README preserves the original M0–M20 anchor numbering (so all existing links keep working) and **adds** the new modules as M6½, M8a/M8b, M21–M25, with old M19 explicitly superseded by M24 and old M20 restated as M26. This table is the definitive mapping.
-
-| README Anchor | v2026.2 PDF # | Module | Status | Rationale |
-|---|---|---|---|---|
-| M0 | M0 | Mathematical Maturity Bridge | ✅ Elite (unchanged) | PDF: "rare strength — do not touch" |
-| M1 | M1 | Programming Foundations (+ Modern Python addendum) | ✅ Expanded | Added `uv`, `pydantic`, `hypothesis`, async |
-| M2 | M2 | Calculus + Matrix Calculus + Convex Optimisation (+ AutoDiff) | ✅ Expanded | Added AutoDiff theory (JVP/VJP) |
-| M3 | M3 | Linear Algebra (+ Numerical LA) | ✅ Expanded | Added LU/QR/Householder/CG |
-| M4 | M4 | Discrete Math, Algorithms & DSA | ✅ Expanded | Added randomised, amortised, approximation algos |
-| M5 | M5 | Probability + Concentration + Info Theory + Measure | ✅ Elite (unchanged) | PDF: "stronger than most PhD qualifiers" |
-| M6 | M6 | Statistical Inference | ✅ Unchanged | Cross-links to M6½ |
-| **M6½** | **M7** | **🆕 Causal Inference & Experimentation** | ✅ NEW | Closes Gap #1 (A/B testing + do-calculus) |
-| M7 | M8 | Data Wrangling, EDA & Visualisation (+ Polars/DuckDB) | ✅ Expanded | Closes Gap #8 (Modern tooling) |
-| M8a | M9 | Databases, SQL & Warehouses (+ dbt, Kimball) | ✅ Split | Closes Gap #2a |
-| **M8b** | **M10** | **🆕 Distributed Data & Streaming (Spark, Kafka, Airflow, Iceberg)** | ✅ NEW | Closes Gap #2b |
-| M9–M12 | M11–M14 | Classical ML (regression → ensembles) | ✅ Unchanged + calibration in M10 | PDF: "elite, keep" |
-| M13 | M15 | Bayesian Inference + PyMC 5.28 + NumPyro 0.20 | ✅ Version bumped | — |
-| M14 | M16 | Sequence Modelling + Time-Series Foundation Models | ✅ Expanded | Closes Gap #10 (TimeGPT, Chronos, Lag-Llama) |
-| M15 | M17 | Deep Learning Foundations (+ JAX, FSDP2, mixed-precision) | ✅ Expanded | Closes Gap #8 (DL systems) |
-| M16 | M18 | Transformers + ViT + Diffusion + SSMs + MoE | ✅ Expanded | Closes Gap #9 (ViT + diffusion) |
-| M17 | M19 | RL (+ PPO/GRPO/DPO, RLVR, offline RL) | ✅ Expanded | Closes Gap #11 partial (GRPO/RLVR) |
-| M18 | M20 | LLMs + Fine-Tuning Playbook (LoRA/QLoRA/DoRA/DPO) + vLLM/SGLang + evals | ✅ Expanded | Closes Gap #11 (Fine-Tuning) |
-| **M21** | **M21** | **🆕 RAG + Vector DBs** | ✅ NEW | Closes Gap #5 |
-| **M22** | **M22** | **🆕 Agentic AI — LangGraph/CrewAI/MCP/A2A** | ✅ NEW | Closes Gap #4 |
-| **M23** | **M23** | **🆕 AI Safety + Alignment + Interpretability + Evals + Policy** | ✅ NEW | Closes Gaps #6 + #12 + #13 |
-| M24 | M24 | MLOps + LLMOps + AgentOps (supersedes old M19) | ✅ Rewritten | Closes Gap #3 |
-| **M25** | **M25** | **🆕 Product DS · Communication · Decision Intelligence** | ✅ NEW | Closes Gap #7 |
-| M26 | M26 | Capstone (3 tracks: Research / Systems / Applied) | ✅ Expanded | Three-track rubric added |
-
----
-
-## 📚 Source Matrix — Universities & Courses
-
-> **Academic-year disclosure:** Where a 2026 syllabus is publicly posted, it is used. Otherwise, the latest published year is used and flagged. No content has been fabricated.
-
-### 🇮🇳 IIT Madras — BS in Data Science and Applications (2025–26)
-
-| Code | Course | Level |
-|---|---|---|
-| BSMA1001 | Mathematics for Data Science I | Foundation |
-| BSMA1002 | Statistics for Data Science I | Foundation |
-| BSCS1001 | Computational Thinking | Foundation |
-| BSHS1001 | English I | Foundation |
-| BSMA1003 | Mathematics for Data Science II | Foundation |
-| BSMA1004 | Statistics for Data Science II | Foundation |
-| BSCS1002 | Programming in Python | Foundation |
-| BSCS2001 | Database Management Systems | Diploma |
-| BSCS2002 | PDSA using Python | Diploma |
-| BSCS2003 | Modern Application Development I | Diploma |
-| BSCS2004 | Machine Learning Foundations | Diploma |
-| BSCS2007 | Machine Learning Techniques | Diploma |
-| BSCS2008 | Machine Learning Practice | Diploma |
-| BSMS2001 | Business Data Management | Diploma |
-| BSMS2002 | Business Analytics | Diploma |
-| BSSE2001 | Software Engineering | BSc |
-| BSSE2002 | Software Testing | BSc |
-| BSCS3001 | AI: Search Methods | BS |
-| BSCS3002 | Deep Learning | BS |
-| BSCS3003 | Reinforcement Learning | BS |
-| BSCS3004 | Large Language Models | BS |
-| BSCS3005 | Computer Vision | BS |
-| BSCS3006 | Big Data / Kafka | BS |
-
-### 🇺🇸 Harvard University
-
-| Course | Course Name | AY |
-|---|---|---|
-| STAT 110 | Introduction to Probability (Blitzstein) | 2025–26 |
-| STAT 111 | Statistical Inference | 2025–26 |
-| CS 109A / STAT 109A | Data Science 1 | Fall 2021 (latest public schedule) |
-| CS 109B / STAT 109B | Data Science 2: Advanced Topics | Spring 2022 (latest public schedule) |
-| **CS 1810** (formerly CS 181) | Machine Learning | **Spring 2026** |
-| CS50P | Intro to Programming with Python | 2022–present (evergreen) |
-
-### 🇺🇸 Massachusetts Institute of Technology
-
-| Course | Course Name | AY |
-|---|---|---|
-| 18.01.1/2/3x | Calculus (Differentiation/Integration/Series) | Current |
-| 18.06 | Linear Algebra (Strang) | OCW |
-| 18.02 | Multivariable Calculus | OCW |
-| 6.431x | Probability — Science of Uncertainty | MicroMasters C1 |
-| 18.6501x | Fundamentals of Statistics | MicroMasters C3 |
-| 6.86x | ML with Python: from Linear Models to Deep Learning | 3T2021 (current) |
-| 14.310x | Data Analysis: Time Series | MicroMasters C4 |
-| **6.3900 (6.390)** | Intro to Machine Learning | **Spring 2026** |
-| **6.7900 (6.790)** | Graduate Machine Learning | **Fall 2025** |
-| 6.7960 | Deep Learning (Isola & Beery) | Fall 2024 (Fall 2025 live) |
-| 6.S191 | Intro to Deep Learning bootcamp | 2025 |
-| 15.773 | Hands-on Deep Learning | Spring 2024 |
-
-### 🇬🇧 University of Cambridge
-
-| Course | Course Name | AY |
-|---|---|---|
-| Part IA CST | Machine Learning & Real-world Data (Teufel) | 2023–24 |
-| Part IB CST | Data Science (Wischik) | 2023–24 |
-| Part II CST | Machine Learning & Bayesian Inference (Holden) | **2025–26** |
-| Part II CST | Artificial Intelligence | 2025–26 |
-| MPhil MLMI | Module 1 — Introduction to ML | 2026 entry |
-| MPhil MLMI | Tracks: Speech/Language, CV/Robotics, HCI, ML, **Biological Learning (new 2026)** | 2026 entry |
-| Part II CST | Machine Learning and Real-world Data (Teufel) | 2025–26 |
-| Advanced Data Science | Research-track prereq for MLMI projects | 2025–26 |
-
-### 🇺🇸 Stanford (added April 2026 refresh — frontier LLM track)
-
-| Course | Course Name | AY |
-|---|---|---|
-| **CS 336** | Language Modeling from Scratch (Hashimoto · Liang) — 17 lectures + 5 assignments covering tokenizer → model → scaling → data → RLHF/RLVR | **Spring 2026** (starts 30 Mar 2026) |
-| CS 224N | NLP with Deep Learning | 2025 |
-| CS 229 | Machine Learning (Ng) | 2025 |
-| CS 231N | CNNs for Visual Recognition | 2025 |
-
----
-
-# 🟩 FOUNDATION STRATUM (Modules 0–5)
+# 🟩 FOUNDATION STRATUM — Modules 0–5
 
 > These six modules establish the non-negotiable mathematical and programming substrate. **A weakness in any one will cause silent failure later** — e.g., a shaky grasp of eigenvalues cripples PCA, a shaky grasp of chain rule cripples backprop, a shaky grasp of `∀ / ∃ / ⟹` cripples your ability to read a single PRML proof.
 
 ---
 
-## 🩺 Math-Foundations Diagnostic & Remediation Map (NEW · April 2026)
+<a id="math-diagnostic"></a>
+## 🩺 Math-Foundations Diagnostic & Remediation Map
 
 > **Why this section exists:** Most self-learners fail at Modules 9–17 not because ML is hard, but because they skipped (or mis-sequenced) one of *six* prerequisite skills. Below is a **15-question, 60-minute diagnostic** plus a **remediation table** so you can fix the weakness *before* it metastasises.
 
@@ -471,9 +180,10 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 0: Mathematical Maturity Bridge — Pre-Calculus, Logic & Proof (NEW · April 2026)
+<a id="module-0"></a>
+## Module 0: Mathematical Maturity Bridge — Pre-Calculus, Logic & Proof
 
-> **Status:** Optional **only** if you scored > 70 % on every diagnostic above. Otherwise: **mandatory**. This module did not exist in the prior README; it was added April 2026 after audit feedback that "students hit Module 5 with no proof-writing reflex and silently fail."
+> **Status:** Optional **only** if you scored > 70 % on every diagnostic above. Otherwise: **mandatory**.
 
 * **The Tutor's "Why":** No university teaches *the leap* from procedural high-school math to definition-driven university math — they assume you already made it. The result: 60 %+ of self-learners stall at Module 5 (probability proofs) or Module 9 (regression assumptions). Cambridge's IB CST course explicitly assumes "Mathematics for Natural Sciences" maturity; MIT 6.7960 assumes 18.05 + a proof course; Harvard CS 1810 assumes Math 22a (linear algebra **with proofs**). **This module IS that proof course, compressed and free.**
 
@@ -532,6 +242,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-1"></a>
 ## Module 1: Programming Foundations & Computational Thinking
 
 * **The Tutor's "Why":** All 2026 data-science work is Python-first (with selective Polars/R/Julia). You cannot derive a gradient if you cannot write a loop. This module is the gateway — master it, or every subsequent module becomes guesswork.
@@ -561,7 +272,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Python Crash Course_ (**4th Edition, 2025**) — Eric Matthes — for absolute beginners only.
   * **Practical Implementation:** **Python 3.12+** (pattern matching, improved error messages, per-interpreter GIL awareness). IDE: **VS Code** with `ms-python.python`, `charliermarsh.ruff`, `ms-python.mypy-type-checker`. Dependency manager: **`uv`** (2024-released, now standard).
 
-* **🛠 Modern Python Tooling — 2026.2 Addendum (NEW):**
+* **🛠 Modern Python Tooling:**
   * **Type hints + mypy/pyright + Pydantic v2** — every production ML codebase uses typed Python. Learn: `TypedDict`, `Protocol`, `Generic`, `Annotated`, `TYPE_CHECKING`; [Pydantic v2 docs](https://docs.pydantic.dev/) ✅ for data-validation and settings management.
   * **[`uv` — Astral's ultra-fast package manager (0.11.7, Apr 2026)](https://docs.astral.sh/uv/)** ✅ — replaces `pip`/`pip-tools`/`virtualenv`/`pipx`/`poetry`. Learn `uv init`, `uv add`, `uv run`, `uv lock`, `uv tool install`.
   * **`async`/`asyncio` + `anyio`** — required for serving LLM APIs (M24), streaming pipelines (M8b), and batching tokeniser calls. Read [Python docs asyncio](https://docs.python.org/3/library/asyncio.html) ✅ + *Fluent Python* ch 19–21.
@@ -571,6 +282,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-2"></a>
 ## Module 2: Single-Variable & Multivariable Calculus + Matrix Calculus & Convex Optimisation
 
 * **The Tutor's "Why":** Gradients, backpropagation, maximum-likelihood estimation, and Bayes-rule derivations all live or die on calculus. You will not understand *why* SGD converges without it. Harvard's CS 1810 (2026) explicitly requires AM 22a (calc + lin alg). **Crucially, every modern paper denotes gradients in *matrix-calculus* notation (Jacobians, Hessians, vector-by-matrix derivatives) — and 90 % of self-learners have never seen this formalism.** This module fixes that gap.
@@ -585,27 +297,27 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **[IITM BSMA1001 — Math for DS I]**: Function basics, domain/range, piecewise functions, composition, inverse functions; limits; differentiation applied to business problems; definite vs indefinite integration; matrix-vector product as linear combination (preview of M3).
   * **[IITM BSMA1003 — Math for DS II]**: Vector calculus for optimisation, constrained optimisation, Lagrange multipliers with KKT conditions, convex functions, Jensen's inequality, convex optimisation preview.
   * **[Cambridge Data Science — Wischik]**: Calculus of variations (used in variational inference, M13).
-  * **🆕 [MIT 18.063 / 18.S096 · Matrix Calculus for Machine Learning, IAP 2023 + Jan 2026 — Edelman & Johnson]**: **Differentials in the language of linear maps** (the *correct* modern view that subsumes both numerator-layout and denominator-layout conventions); derivatives of vector-valued functions of vectors (Jacobians); derivatives of scalar-valued functions of matrices (gradients); derivatives of matrix-valued functions of matrices (4-tensors / Kronecker products); chain rule as composition of linear maps; **forward-mode and reverse-mode automatic differentiation** (the operational foundation of every DL framework); cost analysis of forward-vs-reverse AD (matrix-multiplication-cost argument); derivatives through SVD, eigendecomposition, matrix inverse, determinant, log-determinant, trace, Frobenius norm; **adjoint method** for differentiating through ODE/PDE solutions (used in Neural ODEs and diffusion solvers, M16).
-  * **🆕 [Stanford EE364A · Convex Optimization I — Boyd & Vandenberghe (Lectures 1–10) — *promoted from Module 9 to here as a foundation*]**: Convex sets (hyperplanes, half-spaces, polyhedra, balls, ellipsoids, norm cones, positive semi-definite cone), operations preserving convexity, convex functions (definition via secant inequality, first- and second-order conditions, Jensen's inequality), epigraph, sub-level sets, conjugate function, **convex optimisation problems** (LP, QP, QCQP, SOCP, SDP — and *which ML problems map to each*), Lagrangian duality, **KKT conditions** (the single most-cited result in classical ML), strong vs weak duality, complementary slackness, perturbation analysis. **Why here, not later:** every regression / SVM / logistic / GLM proof in Modules 9–14 *assumes* this material.
-  * **🆕 [The Matrix Cookbook — Petersen & Pedersen, 2024 update]** + **[Parr & Howard "The Matrix Calculus You Need For Deep Learning" (arXiv:1802.01528, 2024 revision)]** as *daily-reference* lookup PDFs.
+  * **[MIT 18.063 / 18.S096 · Matrix Calculus for Machine Learning, IAP 2023 + Jan 2026 — Edelman & Johnson]**: **Differentials in the language of linear maps** (the *correct* modern view that subsumes both numerator-layout and denominator-layout conventions); derivatives of vector-valued functions of vectors (Jacobians); derivatives of scalar-valued functions of matrices (gradients); derivatives of matrix-valued functions of matrices (4-tensors / Kronecker products); chain rule as composition of linear maps; **forward-mode and reverse-mode automatic differentiation** (the operational foundation of every DL framework); cost analysis of forward-vs-reverse AD (matrix-multiplication-cost argument); derivatives through SVD, eigendecomposition, matrix inverse, determinant, log-determinant, trace, Frobenius norm; **adjoint method** for differentiating through ODE/PDE solutions (used in Neural ODEs and diffusion solvers, M16).
+  * **[Stanford EE364A · Convex Optimization I — Boyd & Vandenberghe (Lectures 1–10) — *promoted from Module 9 to here as a foundation*]**: Convex sets (hyperplanes, half-spaces, polyhedra, balls, ellipsoids, norm cones, positive semi-definite cone), operations preserving convexity, convex functions (definition via secant inequality, first- and second-order conditions, Jensen's inequality), epigraph, sub-level sets, conjugate function, **convex optimisation problems** (LP, QP, QCQP, SOCP, SDP — and *which ML problems map to each*), Lagrangian duality, **KKT conditions** (the single most-cited result in classical ML), strong vs weak duality, complementary slackness, perturbation analysis. **Why here, not later:** every regression / SVM / logistic / GLM proof in Modules 9–14 *assumes* this material.
+  * **[The Matrix Cookbook — Petersen & Pedersen, 2024 update]** + **[Parr & Howard "The Matrix Calculus You Need For Deep Learning" (arXiv:1802.01528, 2024 revision)]** as *daily-reference* lookup PDFs.
 
 * **2026 Resources:**
   * **Primary Course Link:** [MITx 18.01.1x](https://mitxonline.mit.edu/courses/course-v1:MITxT+18.01.1x/) · [18.01.2x](https://mitxonline.mit.edu/courses/course-v1:MITxT+18.01.2x/) · [18.01.3x](https://mitxonline.mit.edu/courses/course-v1:MITxT+18.01.3x/) · [MIT OCW 18.02SC Multivariable](https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/)
-  * **🆕 Matrix-Calculus track:** [MIT 18.S096 / 18.063 — Matrix Calculus for ML (IAP 2023 + Jan 2026)](https://github.com/mitmath/matrixcalc) — full lecture notes, video, problem sets *all open* on GitHub.
-  * **🆕 Convex-Optimisation track:** [Stanford EE364A — Boyd, lectures + slides + book](https://web.stanford.edu/class/ee364a/) · [Free PDF of *Convex Optimization* (Boyd & Vandenberghe, Cambridge 2004, 6th printing 2023)](https://stanford.edu/~boyd/cvxbook/) · YouTube lecture series (re-recorded **Spring 2024**).
+  * **Matrix-Calculus track:** [MIT 18.S096 / 18.063 — Matrix Calculus for ML (IAP 2023 + Jan 2026)](https://github.com/mitmath/matrixcalc) — full lecture notes, video, problem sets *all open* on GitHub.
+  * **Convex-Optimisation track:** [Stanford EE364A — Boyd, lectures + slides + book](https://web.stanford.edu/class/ee364a/) · [Free PDF of *Convex Optimization* (Boyd & Vandenberghe, Cambridge 2004, 6th printing 2023)](https://stanford.edu/~boyd/cvxbook/) · YouTube lecture series (re-recorded **Spring 2024**).
   * **Required Reading (Latest 2026 Editions):**
     * _Calculus: Early Transcendentals_ (**9th Edition, 2025 reprint**) — James Stewart — chapters 1–12.
-    * **🆕 [Recommended freely-available alternative]** _Active Calculus_ (Boelkins et al., **2024 edition, free online**) — used at 80+ liberal-arts colleges.
-    * **🆕 [Free, MIT-quality, 2024-revised]** Strang & Herman _Calculus, Vol 1–3_ (OpenStax, free PDF) — explicit OCW companion.
+    * **[Recommended freely-available alternative]** _Active Calculus_ (Boelkins et al., **2024 edition, free online**) — used at 80+ liberal-arts colleges.
+    * **[Free, MIT-quality, 2024-revised]** Strang & Herman _Calculus, Vol 1–3_ (OpenStax, free PDF) — explicit OCW companion.
     * _Mathematics for Machine Learning_ — Deisenroth, Faisal, Ong (**book PDF last updated December 2025**) — Chapters 5 (Vector Calculus), 6 (Probability), **7 (Continuous Optimization)**. [mml-book.com](https://mml-book.com/) — **explicitly recommended by Harvard CS 1810 (2026)**.
-    * **🆕 *The Matrix Cookbook*** — Petersen & Pedersen (2024 web update) — [PDF mirror via MIT 18.S096](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/external-resources/the-matrix-cookbook-pdf_fa1edb35-184a-410d-9d60-34488dbc72ee/).
-    * **🆕 Parr & Howard** "The Matrix Calculus You Need For Deep Learning" — free on arXiv `1802.01528` (revised); also as an HTML web-book at [explained.ai/matrix-calculus](https://explained.ai/matrix-calculus/).
-    * **🆕 Boyd & Vandenberghe** _Convex Optimization_ (Cambridge 2004; **6th printing 2023**, free PDF as above) — chapters 1–5 mandatory; 6–11 optional and revisited in M9–M11.
+    * ***The Matrix Cookbook*** — Petersen & Pedersen (2024 web update) — [PDF mirror via MIT 18.S096](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/external-resources/the-matrix-cookbook-pdf_fa1edb35-184a-410d-9d60-34488dbc72ee/).
+    * **Parr & Howard** "The Matrix Calculus You Need For Deep Learning" — free on arXiv `1802.01528` (revised); also as an HTML web-book at [explained.ai/matrix-calculus](https://explained.ai/matrix-calculus/).
+    * **Boyd & Vandenberghe** _Convex Optimization_ (Cambridge 2004; **6th printing 2023**, free PDF as above) — chapters 1–5 mandatory; 6–11 optional and revisited in M9–M11.
     * 3Blue1Brown: [_Essence of Calculus_ playlist (16 videos, ≈ 3 hrs)](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) — required visual intuition.
-    * **🆕 [Imperial College "Mathematics for Machine Learning" Coursera Specialization (Deisenroth, Cooper, Page — last refreshed Mar 2025)](https://www.coursera.org/specializations/mathematics-machine-learning)** — three courses: Linear Algebra · Multivariable Calculus · PCA. Free audit. *Pedagogically the gentlest on-ramp.*
-  * **Practical Implementation:** **SymPy 1.13+** for symbolic verification; **JAX 0.7+** `jax.grad` / `jax.jacrev` / `jax.jacfwd` / `jax.hessian` for automatic differentiation — learn these NOW as you'll need them for all of M15+. **🆕 `cvxpy` 1.5+** for convex optimisation modelling (DCP), **`autograd`** as a teaching aid for hand-coding back-prop. Optionally explore **`Zygote.jl`** in Julia for source-to-source AD intuition.
+    * **[Imperial College "Mathematics for Machine Learning" Coursera Specialization (Deisenroth, Cooper, Page — last refreshed Mar 2025)](https://www.coursera.org/specializations/mathematics-machine-learning)** — three courses: Linear Algebra · Multivariable Calculus · PCA. Free audit. *Pedagogically the gentlest on-ramp.*
+  * **Practical Implementation:** **SymPy 1.13+** for symbolic verification; **JAX 0.7+** `jax.grad` / `jax.jacrev` / `jax.jacfwd` / `jax.hessian` for automatic differentiation — learn these NOW as you'll need them for all of M15+. **`cvxpy` 1.5+** for convex optimisation modelling (DCP), **`autograd`** as a teaching aid for hand-coding back-prop. Optionally explore **`Zygote.jl`** in Julia for source-to-source AD intuition.
 
-* **🆕 Suggested Sequencing (16 weeks at 10 hrs/week):**
+* **Suggested Sequencing (16 weeks at 10 hrs/week):**
   1. Weeks 1–4: Single-variable calc (18.01.1x + 18.01.2x).
   2. Weeks 5–6: Series + Taylor (18.01.3x).
   3. Weeks 7–10: Multivariable (18.02 SC), with daily SymPy verification.
@@ -621,6 +333,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-3"></a>
 ## Module 3: Linear Algebra — Computational, Geometric & Abstract
 
 * **The Tutor's "Why":** *Every* modern ML algorithm — from linear regression to attention heads in GPT-class transformers — is a composition of matrix operations. Strang's 18.06 is the global gold standard for the *computational* view; Axler's *Linear Algebra Done Right* (**4th edition, 2024, freely available**) is the gold standard for the *abstract / proof-based* view that PRML, Bishop 2024, and Cambridge MLMI implicitly assume. **You need both.** Cambridge's MLMI Module 1 requires eigendecomposition mastery before week 3.
@@ -634,28 +347,28 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **Exhaustive Topic List:**
   * **[MIT 18.06 · Strang]**: Systems of linear equations, Gaussian elimination, LU factorisation, vector spaces, subspaces (column space, null space, row space, left null space — the "four fundamental subspaces"), rank-nullity theorem, linear independence, basis, dimension, orthogonality, Gram-Schmidt process, QR decomposition, projections, least squares (normal equations), determinants (cofactor expansion, properties), **eigenvalues and eigenvectors** (characteristic polynomial, diagonalisation), **Singular Value Decomposition (SVD)** (full and reduced forms, Eckart-Young theorem, pseudoinverse), positive-definite matrices (Cholesky), similar matrices, Jordan form, complex matrices (Hermitian, unitary), fast Fourier transform as a change of basis, linear transformations, applications to graphs (Laplacian), applications to differential equations (matrix exponential).
-  * **🆕 [Axler — *Linear Algebra Done Right* 4e (2024) · *abstract pass*]**: Vector spaces *axiomatically* (no a-priori reference to ℝⁿ), subspaces, sums and direct sums, linear independence, basis, dimension; **linear maps as the central object** (kernel, image, the fundamental theorem of linear algebra); polynomials over ℂ (the algebraic backbone of eigentheory); eigenvalues, eigenvectors, **invariant subspaces, generalised eigenspaces**; **inner-product spaces** (axioms, Cauchy-Schwarz, triangle inequality, orthonormal bases via Gram-Schmidt, orthogonal complements, orthogonal projection as best approximation); **operators on inner-product spaces** (self-adjoint, normal, **the Spectral Theorem — proven without determinants**, polar decomposition, **SVD via the spectral theorem**); positive operators and isometries; trace and determinant *properly* defined (via characteristic polynomial coefficients, not as the Leibniz formula).
+  * **[Axler — *Linear Algebra Done Right* 4e (2024) · *abstract pass*]**: Vector spaces *axiomatically* (no a-priori reference to ℝⁿ), subspaces, sums and direct sums, linear independence, basis, dimension; **linear maps as the central object** (kernel, image, the fundamental theorem of linear algebra); polynomials over ℂ (the algebraic backbone of eigentheory); eigenvalues, eigenvectors, **invariant subspaces, generalised eigenspaces**; **inner-product spaces** (axioms, Cauchy-Schwarz, triangle inequality, orthonormal bases via Gram-Schmidt, orthogonal complements, orthogonal projection as best approximation); **operators on inner-product spaces** (self-adjoint, normal, **the Spectral Theorem — proven without determinants**, polar decomposition, **SVD via the spectral theorem**); positive operators and isometries; trace and determinant *properly* defined (via characteristic polynomial coefficients, not as the Leibniz formula).
   * **[3Blue1Brown — Essence of Linear Algebra (16 videos, evergreen)]**: Geometric intuition for determinants as signed-volume scaling, eigenvectors as invariant directions, change of basis as relabelling, **dot product as the dual of a linear map** (the trick that makes attention "queries · keys" feel inevitable).
   * **[IITM BSMA1003]**: Matrix rank via row reduction, solvability of linear systems, null space / column space correspondence, linear maps, basis transformations, symmetric matrices and spectral theorem.
   * **[Harvard CS 1810 prereq (AM 22a / Math 21b)]**: Inner product spaces, orthogonal complement, projection matrices `P = A(AᵀA)⁻¹Aᵀ`, quadratic forms, positive semi-definiteness as condition for convex loss.
   * **[Cambridge Data Science — Wischik, Lec 2-3 "Feature Spaces"]**: Vector spaces as abstract objects, bases, inner products, orthonormal bases, projection onto subspace, **"model fitting as projection"** (critical insight for understanding linear regression), design of features, basis functions (polynomial, Fourier, radial).
   * **[Cambridge MLMI 1]**: Eigendecomposition as diagonalisation, SVD applications to dimensionality reduction and image compression.
-  * **🆕 [Strang & Drineas/Mahoney — *Numerical Linear Algebra at scale*]**: Condition number κ(A) and numerical-stability intuition, **why floating-point matters** (catastrophic cancellation; why you never `(AᵀA)⁻¹Aᵀy` in practice — use `np.linalg.lstsq` or QR), **randomised SVD** (Halko-Martinsson-Tropp, 2011 — the algorithm Hugging Face uses for embedding compression), iterative methods (power iteration, Lanczos, Arnoldi → ARPACK), **Krylov subspaces** as preview of conjugate-gradient.
+  * **[Strang & Drineas/Mahoney — *Numerical Linear Algebra at scale*]**: Condition number κ(A) and numerical-stability intuition, **why floating-point matters** (catastrophic cancellation; why you never `(AᵀA)⁻¹Aᵀy` in practice — use `np.linalg.lstsq` or QR), **randomised SVD** (Halko-Martinsson-Tropp, 2011 — the algorithm Hugging Face uses for embedding compression), iterative methods (power iteration, Lanczos, Arnoldi → ARPACK), **Krylov subspaces** as preview of conjugate-gradient.
 
 * **2026 Resources:**
   * **Primary Course Link:** [MIT 18.06 OCW SC version (Strang, 2011) — evergreen](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/) · [3Blue1Brown EoLA](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-  * **🆕 Abstract / Proof Track:** [_Linear Algebra Done Right_ — Axler, **4th Edition, Springer 2024, FREE PDF + Kindle**](https://linear.axler.net/) — the cleanest abstract treatment ever written; 400 pp.; includes worked solutions.
-  * **🆕 Applications-first Track:** [_Linear Algebra for Data Science, Machine Learning, and Signal Processing_ — Hero/Fessler/Townsend (Cambridge, 2024, hardback)](http://www.cambridge.org/highereducation/isbn/9781009418140) — explicitly cross-references PCA, SVD-of-images, low-rank approximation.
+  * **Abstract / Proof Track:** [_Linear Algebra Done Right_ — Axler, **4th Edition, Springer 2024, FREE PDF + Kindle**](https://linear.axler.net/) — the cleanest abstract treatment ever written; 400 pp.; includes worked solutions.
+  * **Applications-first Track:** [_Linear Algebra for Data Science, Machine Learning, and Signal Processing_ — Hero/Fessler/Townsend (Cambridge, 2024, hardback)](http://www.cambridge.org/highereducation/isbn/9781009418140) — explicitly cross-references PCA, SVD-of-images, low-rank approximation.
   * **Required Reading (Latest 2026 Editions):**
     * _Introduction to Linear Algebra_ (**6th Edition, 2023**) — Gilbert Strang. Companion to 18.06.
     * _Linear Algebra and Learning from Data_ (**2019; 2025 reprint with errata**) — Strang — specifically written for ML era; covers randomised SVD, NMF, neural-net Jacobians.
-    * **🆕 *Linear Algebra Done Right* (Axler, 4e, 2024)** — chapters 1–7 mandatory for proof maturity.
+    * ***Linear Algebra Done Right* (Axler, 4e, 2024)** — chapters 1–7 mandatory for proof maturity.
     * _Mathematics for Machine Learning_ — Deisenroth et al. — Chapters 2, 3, 4.
-    * **🆕 [*Numerical Linear Algebra* — Trefethen & Bau (SIAM, 1997, 25th-anniversary printing 2022)]** — for any student going into systems / scaling (M19).
-  * **🆕 Free interactive notebooks:** [`fastai/numerical-linear-algebra` — Rachel Thomas USF (2019, still gold-standard, all-Jupyter)](https://github.com/fastai/numerical-linear-algebra) — covers SVD, randomised methods, PageRank, compressed sensing in 12 lectures.
-  * **Practical Implementation:** **NumPy 2.x** (`np.linalg.eig`, `np.linalg.svd`, `np.linalg.solve`, `np.linalg.lstsq`). **SciPy 1.14+** for sparse linear algebra (`scipy.sparse.linalg`, ARPACK eigensolvers, `splu`). Use **`jax.numpy`** for GPU-accelerated linear algebra once comfortable. **🆕 `einops` 0.8+** to write tensor operations in *index notation* — once you internalise this, you can read every transformer paper without effort.
+    * **[*Numerical Linear Algebra* — Trefethen & Bau (SIAM, 1997, 25th-anniversary printing 2022)]** — for any student going into systems / scaling (M19).
+  * **Free interactive notebooks:** [`fastai/numerical-linear-algebra` — Rachel Thomas USF (2019, still gold-standard, all-Jupyter)](https://github.com/fastai/numerical-linear-algebra) — covers SVD, randomised methods, PageRank, compressed sensing in 12 lectures.
+  * **Practical Implementation:** **NumPy 2.x** (`np.linalg.eig`, `np.linalg.svd`, `np.linalg.solve`, `np.linalg.lstsq`). **SciPy 1.14+** for sparse linear algebra (`scipy.sparse.linalg`, ARPACK eigensolvers, `splu`). Use **`jax.numpy`** for GPU-accelerated linear algebra once comfortable. **`einops` 0.8+** to write tensor operations in *index notation* — once you internalise this, you can read every transformer paper without effort.
 
-* **🆕 Mandatory mini-projects (do **all five**):**
+* **Mandatory mini-projects (do **all five**):**
   1. **PCA on MNIST from scratch** using only `np.linalg.svd` — recover 95 % variance in `k` components, plot `k`.
   2. **Image compression** via truncated SVD on a single greyscale photo — show MSE-vs-rank curve.
   3. **PageRank** as power iteration on the link-matrix — verify on a 5-node toy graph by hand.
@@ -670,6 +383,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-4"></a>
 ## Module 4: Discrete Math, Algorithms & Data Structures
 
 * **The Tutor's "Why":** Interviews for FAANG/quant/research roles test DSA rigorously; beyond that, you cannot design feature pipelines (hashing, bloom filters) or understand graph ML without it. **Cambridge ML & Bayesian Inference (2025-26) explicitly lists Discrete Mathematics as a prerequisite.**
@@ -684,9 +398,9 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **[IITM BSCS2002 — PDSA in Python]**: Complexity analysis (O, Ω, Θ), master theorem proofs, graph representations (adjacency list/matrix), topological sort with DFS, DAG shortest paths, strongly connected components (Tarjan, Kosaraju).
   * **[Cambridge Discrete Math]**: Proof techniques (induction, contradiction, contrapositive), set theory, relations, equivalence classes, partial orders, functions (injection, surjection, bijection), counting (permutations, combinations, inclusion-exclusion, pigeonhole), recurrence relations, generating functions (preview of MGFs in M5), graph theory (Euler paths, Hamiltonian cycles, planarity, chromatic number), elementary number theory (gcd, Euclidean algorithm, modular arithmetic — used in cryptography and hashing).
   * **[Cambridge ML & Real-World Data · Topic 3]**: **Social networks analysis** — properties of networks (degree, diameter), betweenness centrality, clustering using betweenness centrality, detection of cliques in unstructured networks.
-  * **🆕 [2026.2 addendum — Randomised & Streaming Algorithms]**: **Bloom filters** (false-positive rate calculus, counting bloom, cuckoo filter), **MinHash / locality-sensitive hashing (LSH)** (Jaccard similarity estimation for dedup and near-duplicate detection, used in LLM pre-training data pipelines), **HyperLogLog** (cardinality estimation), **Count-Min Sketch** (frequency estimation for streaming), **reservoir sampling** (uniform sampling from a stream of unknown length), **randomised quicksort**, **Karger's min-cut**. *All of these appear in modern data-engineering interviews (M8a/M8b).*
-  * **🆕 [Amortised Analysis]**: Aggregate / accounting / potential methods applied to dynamic arrays, splay trees, union-find with path-compression — the mental model behind *"why Python `list.append` is O(1) amortised"*.
-  * **🆕 [Approximation Algorithms]**: PTAS / FPTAS definitions, vertex-cover 2-approximation, set-cover greedy log-factor, k-means approximation, **primal-dual schema** — relevant for NP-hard pipeline-scheduling problems (M8b).
+  * **[2026.2 addendum — Randomised & Streaming Algorithms]**: **Bloom filters** (false-positive rate calculus, counting bloom, cuckoo filter), **MinHash / locality-sensitive hashing (LSH)** (Jaccard similarity estimation for dedup and near-duplicate detection, used in LLM pre-training data pipelines), **HyperLogLog** (cardinality estimation), **Count-Min Sketch** (frequency estimation for streaming), **reservoir sampling** (uniform sampling from a stream of unknown length), **randomised quicksort**, **Karger's min-cut**. *All of these appear in modern data-engineering interviews (M8a/M8b).*
+  * **[Amortised Analysis]**: Aggregate / accounting / potential methods applied to dynamic arrays, splay trees, union-find with path-compression — the mental model behind *"why Python `list.append` is O(1) amortised"*.
+  * **[Approximation Algorithms]**: PTAS / FPTAS definitions, vertex-cover 2-approximation, set-cover greedy log-factor, k-means approximation, **primal-dual schema** — relevant for NP-hard pipeline-scheduling problems (M8b).
 
 * **2026 Resources:**
   * **Primary Course Link:** [GaTech DSA I-IV on edX](https://www.edx.org/learn/data-structures/the-georgia-institute-of-technology-data-structures-algorithms-i-arraylists-linkedlists-stacks-and-queues) (Java) **OR** [MIT 6.006 Introduction to Algorithms OCW](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Python — **more aligned with 2026 workflow**).
@@ -698,6 +412,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-5"></a>
 ## Module 5: Probability Theory — The Language of Uncertainty
 
 * **The Tutor's "Why":** Harvard's Joe Blitzstein (Stat 110) calls probability "the soul of statistics." In 2026, every ML model is a probability distribution — diffusion models are score-matched Gaussians; LLMs are autoregressive categoricals; Bayesian networks are joint PMFs. This is **the** pivotal module.
@@ -733,7 +448,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **[Cambridge Data Science — Wischik · "Handling probability models"]**: PDF and CDF manipulation, Bayes's rule, **Monte Carlo estimation** (first rigorous introduction), empirical distribution as a function.
   * **[Cambridge Data Science — Wischik · "Random processes"]**: Markov chains (discrete time), **stationarity and drift analysis**, processes with memory, learning a random process from data.
 
-* **🆕 Critical Additions (April 2026):**
+* **Critical Additions (April 2026):**
   * **Concentration inequalities for ML — beyond Chebyshev:** **Hoeffding's inequality** (the workhorse of generalisation bounds), **McDiarmid's bounded-differences inequality**, **Bernstein's inequality**, **sub-Gaussian** and **sub-exponential** random variables, ψ-Orlicz norms, **Bernstein-Chernoff bound for VC-dimension** (the 1971 Vapnik-Chervonenkis result that started statistical learning theory). Without these you cannot read a single PAC-learning theorem in M9.
   * **Information theory primer (the overlap with probability):** **entropy `H(X) = −Σ p log p`**, joint and conditional entropy, **mutual information `I(X;Y)`**, **KL divergence `D_KL(P‖Q)` and Jensen's inequality**, cross-entropy (the loss function of every classifier and every LM), **f-divergences** (TV, JS, Hellinger), **Fano's inequality** (lower bounds for classification error). Cited from MIT 6.7960 Wk 5–6 (Information Theory) and Cover & Thomas Ch 1–2.
   * **Measure-theoretic bridge — *taught minimally so you can read PML2 (Murphy 2023)*:** σ-algebras (Borel), measurable functions, Lebesgue integral *vs* Riemann (why we need it: integrating discontinuous limits), **Radon-Nikodym derivative `dν/dμ`** (the *correct* definition of "density"), almost-sure convergence vs convergence in probability vs in distribution vs in `L²` (the four convergence types every probabilist mixes up), pushforward measures, **dominated and monotone convergence theorems** (used implicitly every time you swap an integral and a limit in MCMC analysis). **Goal:** read Wasserman *All of Statistics* Ch 21 or Murphy PML2 Ch 1 without panic — *not* to do measure-theoretic exercises.
@@ -744,14 +459,14 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Required Reading (Latest 2026 Editions):**
     * _Introduction to Probability_ (**2nd Edition, 2019; 2024 reprint**) — Joseph Blitzstein & Jessica Hwang — [free PDF](https://projects.iq.harvard.edu/stat110/home) — **chapters 1-12 cover-to-cover**. This is the primary text.
     * _Introduction to Probability_ (**2nd Edition, 2008**) — Bertsekas & Tsitsiklis — companion to 6.431x.
-    * **🆕 [_Introduction to Probability for Data Science_ — Stanley H. Chan (Michigan Publishing, 2021/2023, FREE PDF + HTML)](https://probability4datascience.com/)** — *the* book that bridges Stat-110-style probability to Python/MATLAB code; hundreds of worked computational examples; **adopted by 30+ US engineering programmes** (incl. Purdue, Michigan).
+    * **[_Introduction to Probability for Data Science_ — Stanley H. Chan (Michigan Publishing, 2021/2023, FREE PDF + HTML)](https://probability4datascience.com/)** — *the* book that bridges Stat-110-style probability to Python/MATLAB code; hundreds of worked computational examples; **adopted by 30+ US engineering programmes** (incl. Purdue, Michigan).
     * _Mathematics for Machine Learning_ — Deisenroth et al. — Chapter 6.
-    * **🆕 [_Information Theory, Inference, and Learning Algorithms_ — David MacKay (Cambridge 2003, **free PDF**)](https://www.inference.org.uk/itila/)** — a singular masterpiece; chapters 1–6 give the cleanest entropy/MI exposition in any language.
-    * **🆕 [_High-Dimensional Probability_ — Roman Vershynin (Cambridge 2018, **free draft online**)](https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html)** — *the* reference for sub-Gaussian, concentration, and random matrices; chapters 1–3 sufficient for ML purposes.
-    * **🆕 (Optional, PhD-track only)** _Probability with Martingales_ — David Williams (Cambridge 1991), or _Measure, Integral and Probability_ — Capinski & Kopp (Springer 2nd ed., 2014) — for the measure-theoretic complement after Stat 110.
-  * **Practical Implementation:** **SciPy 1.14+** `scipy.stats` (every distribution you'll need); **NumPy** `np.random.Generator` (modern PCG64 / Philox RNG, **default since NumPy 1.17**); begin using **`distrax`** (JAX) or **`torch.distributions`** (PyTorch) for *differentiable* distributions — you'll need these in M13. **🆕 `tensorflow_probability` 0.24+** (JAX-substrate) for advanced bijectors (used in normalising flows, M16).
+    * **[_Information Theory, Inference, and Learning Algorithms_ — David MacKay (Cambridge 2003, **free PDF**)](https://www.inference.org.uk/itila/)** — a singular masterpiece; chapters 1–6 give the cleanest entropy/MI exposition in any language.
+    * **[_High-Dimensional Probability_ — Roman Vershynin (Cambridge 2018, **free draft online**)](https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html)** — *the* reference for sub-Gaussian, concentration, and random matrices; chapters 1–3 sufficient for ML purposes.
+    * **(Optional, PhD-track only)** _Probability with Martingales_ — David Williams (Cambridge 1991), or _Measure, Integral and Probability_ — Capinski & Kopp (Springer 2nd ed., 2014) — for the measure-theoretic complement after Stat 110.
+  * **Practical Implementation:** **SciPy 1.14+** `scipy.stats` (every distribution you'll need); **NumPy** `np.random.Generator` (modern PCG64 / Philox RNG, **default since NumPy 1.17**); begin using **`distrax`** (JAX) or **`torch.distributions`** (PyTorch) for *differentiable* distributions — you'll need these in M13. **`tensorflow_probability` 0.24+** (JAX-substrate) for advanced bijectors (used in normalising flows, M16).
 
-* **🆕 Suggested Pace (12 weeks at 10 hrs/week):**
+* **Suggested Pace (12 weeks at 10 hrs/week):**
   * Weeks 1–8: Stat 110 lectures 1–28 + Blitzstein-Hwang exercises 1–10 from each chapter.
   * Weeks 9–10: Concentration inequalities + information-theory primer (MacKay Ch 1–6 + Vershynin Ch 1–2).
   * Weeks 11–12: Stat 110 lectures 29–34 + measure-theoretic bridge (Wasserman Ch 21 *or* Capinski-Kopp Ch 1–4 if PhD-track).
@@ -763,6 +478,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-6"></a>
 ## Module 6: Statistical Inference
 
 * **The Tutor's "Why":** This is where mathematics meets reality. Every p-value in a Nature paper, every A/B test at Meta, every FDA drug approval, hinges on the concepts in this module. Harvard STAT 111 and MIT 18.6501x are the twin pillars.
@@ -795,7 +511,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 6½: Causal Inference & Experimentation (NEW · v2026.2)
+<a id="module-6-half"></a>
+## Module 6½: Causal Inference & Experimentation
 
 * **The Tutor's "Why":** In 2026, this is the #1 differentiator between a *junior ML engineer* and a *senior data scientist*. Netflix, Meta, Uber, Booking, Airbnb, and every product-data-science org hires specifically for causal-inference fluency. Berkeley MIDS dedicates an entire course to it ([DATA 241 · Causal Inference](https://www.ischool.berkeley.edu/courses/datasci/241) ✅). MIT 14.387 *Mostly Harmless Big Data* covers the econometric half. **Correlation≠causation is not a slogan — it is a formal theorem (Pearl's do-calculus).** This module closes the single largest production-DS gap identified in the April 2026 benchmark PDF.
 
@@ -832,6 +549,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-7"></a>
 ## Module 7: Data Wrangling, EDA & Visualisation
 
 * **The Tutor's "Why":** "The data scientist spends 80% of their time on data preparation" is a cliché because it's true. Harvard CS109A dedicates **three full weeks** to this before any modelling.
@@ -858,7 +576,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Fundamentals of Data Visualization_ — Claus Wilke — [free online](https://clauswilke.com/dataviz/).
   * **Practical Implementation:** **Polars 1.x** (fastest DataFrame library of 2026, Arrow-native, lazy evaluation) as primary; **pandas 2.2+** with PyArrow backend for compatibility. **`matplotlib 3.9+`**, **`seaborn 0.13+`**, **`plotly 5.x`**, **`altair 5.x`**, and **`great_tables`** for publication-grade tables. **`ydata-profiling`** (formerly pandas-profiling) for automated EDA.
 
-* **🔧 2026 Tooling Modernisation (NEW v2026.2 sub-section):**
+* **🔧 Modern Data Tooling:**
   * **[Polars 1.40+](https://pola.rs/)** ✅ — the pandas successor; Rust-powered, Arrow-native, lazy frames, query optimiser. Learn `pl.LazyFrame`, `pl.col`, `pl.Expr`, expression-based group-by, streaming engine.
   * **[DuckDB 1.5+](https://duckdb.org/)** ✅ — "SQLite for analytics." In-process OLAP over Parquet/Arrow; zero-config; faster than pandas on anything > 100MB. Perfect for EDA on 100-GB datasets from a laptop.
   * **[Great Expectations](https://greatexpectations.io/)** ✅ + **[Pandera](https://pandera.readthedocs.io/)** ✅ — schema + data-quality validation; declarative expectations; catch data drift before it reaches models.
@@ -868,7 +586,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 8a: Databases, SQL & Warehouses (v2026.2 split)
+<a id="module-8a"></a>
+## Module 8a: Databases, SQL & Warehouses
 
 * **The Tutor's "Why":** In 2026, data rarely fits in RAM. IITM dedicates a full diploma-level course (BSCS2001) + two specialisation courses to this. You need SQL fluency for 90% of industry jobs. **Module 8 has been split in v2026.2** into **M8a (Databases, SQL & Warehouses)** here, and **M8b (Distributed Data & Streaming)** directly below — because the 2026 production data stack (Spark + Iceberg + Airflow + Kafka + dbt) is a full module in its own right and cannot share airtime with SQL fundamentals.
 
@@ -893,7 +612,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 8b: Distributed Data & Streaming Systems (NEW · v2026.2)
+<a id="module-8b"></a>
+## Module 8b: Distributed Data & Streaming Systems
 
 * **The Tutor's "Why":** Every senior-DS / MLE interview in 2026 covers Spark, Kafka, Airflow, and the lakehouse pattern. Closing this is closing Gap #2 in the benchmark PDF — the single largest production gap. Joe Reis (*Fundamentals of Data Engineering*) and the DataExpert free bootcamp are the two canonical on-ramps.
 
@@ -932,6 +652,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-9"></a>
 ## Module 9: Supervised Learning — Regression Family
 
 * **The Tutor's "Why":** Linear regression is the universal first ML algorithm because it teaches you optimisation, loss functions, regularisation, and statistical inference all at once. The **Gauss-Markov theorem** appears in every single one of our four universities.
@@ -961,6 +682,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-10"></a>
 ## Module 10: Supervised Learning — Classification & Kernel Methods
 
 * **The Tutor's "Why":** Classification is supervised learning in its most deployed form — spam filters, credit scoring, disease diagnosis. Support Vector Machines are mandatory at every university because their **dual formulation + kernel trick** is the purest expression of convex optimisation meeting functional analysis.
@@ -989,7 +711,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Learning with Kernels_ — Schölkopf & Smola — deep dive on SVMs.
   * **Practical Implementation:** **scikit-learn** (`LogisticRegression`, `SVC`, `LinearSVC`, `GaussianNB`, `MultinomialNB`, `LinearDiscriminantAnalysis`, `QuadraticDiscriminantAnalysis`); **`libsvm`** directly for research; **`cvxpy`** to hand-code the SVM dual QP for didactic clarity.
 
-* **🎯 Calibration & Reliability (NEW v2026.2 sub-section):** A classifier that outputs `P(y=1 | x) = 0.9` but is right only 70% of the time is *mis-calibrated* — disastrous for medical, financial, and risk-scoring applications.
+* **🎯 Calibration & Reliability:** A classifier that outputs `P(y=1 | x) = 0.9` but is right only 70% of the time is *mis-calibrated* — disastrous for medical, financial, and risk-scoring applications.
   * **Calibration methods:** [**Platt scaling**](https://en.wikipedia.org/wiki/Platt_scaling) (logistic calibration on held-out scores), **isotonic regression** (non-parametric, monotone step-function, better for ≥ 1000 calibration samples), **temperature scaling** (single-parameter scalar on logits; the standard for modern neural networks — Guo et al. ICML 2017), **Beta calibration**, **Dirichlet calibration** (multi-class), **histogram binning**.
   * **Metrics:** **Brier score**, **Expected Calibration Error (ECE)**, **Maximum Calibration Error (MCE)**, **reliability diagrams** (calibration curves), **log-loss** decomposition into refinement + calibration.
   * **Practical:** [`sklearn.calibration.CalibratedClassifierCV`](https://scikit-learn.org/stable/modules/calibration.html), [`sklearn.calibration.calibration_curve`](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.calibration_curve.html), [`netcal`](https://github.com/EFS-OpenSource/calibration-framework) for DL calibration.
@@ -997,6 +719,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-11"></a>
 ## Module 11: Unsupervised Learning, Dimensionality Reduction & Mixture Models
 
 * **The Tutor's "Why":** The universe is overwhelmingly unlabelled. Every one of our four universities treats PCA as an eigenvalue problem, K-means as Lloyd's algorithm, and mixture models as the EM-algorithm's canonical application. Harvard CS109B's **very first lecture** is clustering.
@@ -1025,6 +748,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-12"></a>
 ## Module 12: Ensemble Methods, Tree-Based Learning & Boosting
 
 * **The Tutor's "Why":** On tabular data (still the majority of enterprise data in 2026), **gradient-boosted trees (XGBoost/LightGBM/CatBoost) beat deep learning** the overwhelming majority of the time. Harvard CS109A dedicates **four full lectures** to trees/bagging/RF/boosting. You must master this before assuming neural networks are always better.
@@ -1057,6 +781,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-13"></a>
 ## Module 13: Bayesian Inference, Graphical Models & MCMC
 
 * **The Tutor's "Why":** Harvard CS109B allocates **weeks 2-4 (five consecutive Bayes lectures)** to this; MIT 6.790 dedicates Part III entirely to it; Cambridge's ML & Bayesian Inference is named after it; Cambridge MLMI Module 1 states it as a foundational objective. Ignore this module and you will never understand uncertainty quantification, variational autoencoders, or modern Bayesian neural networks.
@@ -1089,6 +814,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-14"></a>
 ## Module 14: Sequence Modelling — HMMs, Kalman Filters & Time Series
 
 * **The Tutor's "Why":** Time is the most important axis in the real world. Cambridge ML & Real-World Data dedicates **Topic 2 (4 sessions) entirely** to HMMs with a biological application. MIT MicroMasters C4 is a whole course on time series with interventions. The state-space model framework unifies HMMs, Kalman filters, and particle filters.
@@ -1123,6 +849,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-15"></a>
 ## Module 15: Deep Learning Foundations — MLPs, CNNs, Backprop
 
 * **The Tutor's "Why":** The deep-learning revolution (2012-present) defines modern AI. Harvard CS109B allocates **four full lectures (8-11) to neural network fundamentals**; MIT 6.3900 Spring 2026 spends **three lectures (5, 6, 7) on NNs and CNNs**; MIT 6.7960 is an entire course. Master the mathematics before touching a GPU.
@@ -1161,7 +888,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Deep Learning_ — Goodfellow, Bengio, Courville (2016, still relevant as historical reference).
   * **Practical Implementation:** **PyTorch 2.11.0** (`torch.compile`, FSDP2, CUDA 13, `torch.func.grad`, `torch.distributed.tensor`), **JAX 0.10.0** with **Flax 0.10+** / **NNX** / **Equinox** for functional DL, **Hugging Face Accelerate** for distributed training, **Weights & Biases** or **MLflow 3.11+** for experiment tracking, **Lightning 2.4+** for training‑loop abstraction.
 
-* **🚀 2026 DL Systems — Training at Scale (NEW v2026.2 sub-section):** Modern DL is as much a *systems* discipline as an algorithms discipline. Stanford CS336 dedicates weeks to it.
+* **🚀 Deep Learning Systems — Training at Scale:** Modern DL is as much a *systems* discipline as an algorithms discipline. Stanford CS336 dedicates weeks to it.
   * **JAX alongside PyTorch:** [JAX docs](https://docs.jax.dev/) ✅, [Flax NNX](https://flax.readthedocs.io/) ✅ — mainstream at Google, DeepMind, Anthropic. Learn `jit`, `vmap`, `pmap`, `scan`, `shard_map`, `jax.Array` with sharding, and the [tour of JAX tutorials](https://docs.jax.dev/en/latest/tutorials.html).
   * **Mixed-Precision Training:** `torch.amp`, `bfloat16` vs `fp16` vs `fp8` (H100/B200), loss-scaling, stochastic rounding; **why bf16 is the 2026 default** (no loss-scaling needed, wider dynamic range).
   * **Gradient Checkpointing:** Trade compute for memory; `torch.utils.checkpoint`, `jax.checkpoint` — required for any model that doesn't fit in GPU RAM.
@@ -1172,6 +899,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-16"></a>
 ## Module 16: Representation Learning, Transformers & Generative Models
 
 * **The Tutor's "Why":** The Transformer (Vaswani et al. 2017, *Attention is All You Need*) is **the** defining architecture of 2026. MIT 6.390 Spring 2026 dedicates Lecture 9 entirely to it. Every frontier lab, from OpenAI to DeepMind to Anthropic, builds on transformers + diffusion. This module is the ticket to research-grade work.
@@ -1218,6 +946,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="module-17"></a>
 ## Module 17: Reinforcement Learning & Decision Making
 
 * **The Tutor's "Why":** RL drives robotics, game AI, and — most importantly in 2026 — the RLHF alignment of LLMs. MIT 6.390 Spring 2026 Lec 10-11 covers MDPs and RL. IITM runs a dedicated BSCS3003 course. Harvard CS 1810 (2026) lists reinforcement learning as a named syllabus topic.
@@ -1251,10 +980,11 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-# 🔴 ELITE / 2026 FRONTIER STRATUM (Modules 18–20)
+# 🔴 FRONTIER & PRODUCTION STRATUM — Modules 18, 21–26
 
 ---
 
+<a id="module-18"></a>
 ## Module 18: Large Language Models, RLHF & Alignment
 
 * **The Tutor's "Why":** This is the defining technology of 2026. IITM has a **dedicated course BSCS3004 on LLMs**; MIT 6.7960 Week 12 and 15 cover LLMs and RLHF explicitly; Harvard's AC215 covers MLOps for models. If you cannot build, fine-tune, and deploy an LLM in 2026, you are not employable as a senior data scientist.
@@ -1292,7 +1022,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * "A Survey of LLMs" (Zhao et al., 2023, updated 2025) — arXiv comprehensive survey.
   * **Practical Implementation:** **Hugging Face `transformers` v5.6+** (April 2026 PyPI), **`datasets` 3.x**, **`accelerate` 1.x**, **`peft` 0.19+** (LoRA/QLoRA/DoRA), **`trl` 1.2+** (SFT, DPO, GRPO, ORPO, KTO, SimPO), **`bitsandbytes` 0.44+**, **`vLLM` 0.19+** (production inference with continuous batching, paged attention, prefix caching), **`SGLang`** (2026 fastest), **`llama.cpp`** + GGUF (CPU inference), **Ollama** / **LM Studio** (local deployment), **LangGraph 1.1+** / **LlamaIndex 0.11+** / **DSPy 3.2+** (2026 prompting frameworks), **`smolagents` 1.24+** + **MCP SDK (Python/TypeScript)** (Anthropic's Nov 2025 standard — used by Claude Desktop, Cursor, VS Code, Zed), **Unsloth** (efficient fine‑tuning, 2× faster), **Marin** / **OLMo 2** / **SmolLM3** open training recipes.
 
-* **🎯 Fine-Tuning Playbook (NEW v2026.2 sub-section):** Closes Gap #11 of the benchmark PDF — the *operational* knowledge of when to use which PEFT method.
+* **🎯 Fine-Tuning Playbook:** Learn the operational trade-offs behind each parameter-efficient fine-tuning method.
   * **When to full-fine-tune vs LoRA vs QLoRA vs DoRA:** cost curves (VRAM, $, wall-clock), quality trade-offs; **LoRA** works for 90% of alignment tasks; **QLoRA** enables 65B on a single 48GB GPU; **DoRA** (Weight-Decomposed LoRA, 2024) closes the full-FT quality gap at LoRA cost.
   * **Frameworks:**
     * [**Unsloth**](https://github.com/unslothai/unsloth) ✅ — 2× faster, 60% less VRAM; drop-in for HF Trainer.
@@ -1311,7 +1041,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 21: RAG, Vector DBs & Retrieval Systems (NEW · v2026.2)
+<a id="module-21"></a>
+## Module 21: RAG, Vector DBs & Retrieval Systems
 
 * **The Tutor's "Why":** RAG is the single most-deployed LLM pattern in production (Oct 2025: >70% of enterprise LLM deployments per Menlo Ventures state-of-AI report). Getting chunking + retrieval + reranking right is often the difference between a demo and a product.
 
@@ -1343,7 +1074,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 22: Agentic AI — LangGraph, CrewAI, MCP & A2A (NEW · v2026.2)
+<a id="module-22"></a>
+## Module 22: Agentic AI — LangGraph, CrewAI, MCP & A2A
 
 * **The Tutor's "Why":** 2025 was the "year of the agent" and 2026 is the year of *reliable* agents. Every 2026 senior AI-engineer interview covers LangGraph + MCP + SWE-bench. HuggingFace launched a certified free [Agents Course](https://huggingface.co/learn/agents-course/) specifically to teach this. Closes Gap #4 of the benchmark PDF.
 
@@ -1386,7 +1118,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 23: AI Safety, Alignment, Interpretability, Evals & Policy (NEW · v2026.2)
+<a id="module-23"></a>
+## Module 23: AI Safety, Alignment, Interpretability, Evals & Policy
 
 * **The Tutor's "Why":** No serious 2026 AI/ML role is hired without alignment and safety literacy. MIT AI Safety Forum + Berkeley MIDS + [AISF Alignment Fundamentals](https://aisafetyfundamentals.com/alignment/) ✅ all cover this. Closes Gaps #6, #12, and #13 of the benchmark PDF.
 
@@ -1433,9 +1166,10 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 24: MLOps + LLMOps + AgentOps (v2026.2 · supersedes old M19)
+<a id="module-24"></a>
+## Module 24: MLOps + LLMOps + AgentOps
 
-> **Rename history:** this section was previously "Module 19 — MLOps, Scaling, Systems & Responsible AI". In v2026.2 it has been expanded into the three-tier operational stack (MLOps + LLMOps + AgentOps) that the benchmark PDF identifies as Gap #3. The original anchor `#module-19-...` is retained for backward compatibility.
+
 
 * **The Tutor's "Why":** A Jupyter notebook is not a product. The 2026 data scientist must understand the entire lifecycle across three operational tiers: **(1) MLOps** for classical models, **(2) LLMOps** for prompt- and model-driven systems, and **(3) AgentOps** for the new class of stateful, tool-using agents from M22. Harvard's AC215 (new 2024) covers the first tier in depth; the other two are 2024-2026 standards, not yet in any university course.
 
@@ -1470,14 +1204,14 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * **NIST AI RMF 1.0 + GenAI Profile** ([nist.gov/itl/ai-risk-management-framework](https://www.nist.gov/itl/ai-risk-management-framework)).
   * **Practical Implementation (MLOps tier):** **Docker 27+** / **Podman 5+**, **Kubernetes 1.32+**, **Terraform 1.9+**, **Pulumi** (modern alternative), **AWS/GCP/Azure SDKs**, **Ray 2.x** (Ray Tune, Ray Serve, Ray Data, RLlib), **vLLM**, **SGLang**, **BentoML**, **SkyPilot** (multi‑cloud), **Modal** (serverless GPU, $30/mo free tier, Stanford CS336 sponsor), **RunPod** / **Lambda** / **Nebius** (B200 access from ~$5/h), **Fairlearn 0.11+**, **AIF360**, **Opacus** (DP for PyTorch), **Flower** (federated learning), **MCP SDK** (Python + TypeScript, `pip install mcp`), **LangFuse** / **Arize Phoenix** (LLM observability), **Weights & Biases Weave** (LLM tracing), **Evidently 0.4+** (drift monitoring).
 
-* **🤖 LLMOps Tier (NEW v2026.2 sub-section):** Operational practices specific to prompt-driven and LLM-driven systems. Closes part of Gap #3.
+* **🤖 LLMOps Tier:** Operational practices specific to prompt-driven and LLM-driven systems.
   * **Prompt versioning & CI:** [**Langfuse**](https://langfuse.com/) ✅ (open-source, self-hostable), [**PromptLayer**](https://promptlayer.com/) ✅, [**Helicone**](https://www.helicone.ai/) ✅ (gateway + observability).
   * **Token & cost monitoring:** per-user, per-feature, per-model budgeting; rate-limit backpressure; fallback routing (GPT-4 → Claude → Llama 3); **LiteLLM** proxy, **OpenRouter**, **Portkey**.
   * **Guardrails:** [**NeMo Guardrails** (NVIDIA)](https://github.com/NVIDIA/NeMo-Guardrails) ✅, [**Guardrails AI**](https://www.guardrailsai.com/) ✅, [**Llama Guard / PurpleLlama**](https://github.com/meta-llama/PurpleLlama) ✅ (Meta), **Rebuff** (prompt-injection detection), **Lakera Guard**.
   * **LLM observability & tracing:** [**OpenTelemetry GenAI semantic conventions**](https://opentelemetry.io/docs/specs/semconv/gen-ai/) ✅ (the 2025-2026 standard), **Langfuse traces**, **Honeycomb for AI**, cost & latency dashboards.
   * **Evals in production:** reuse **promptfoo**, **DeepEval**, **Ragas** (M18); **A/B test prompts** as you would models.
 
-* **🤖 AgentOps Tier (NEW v2026.2 sub-section):** Closes the other half of Gap #3 — operational practices for stateful, tool-using agents (from M22).
+* **🤖 AgentOps Tier:** Operational practices for stateful, tool-using agents (from M22).
   * **Agent tracing & debugging:** [**LangSmith**](https://www.langchain.com/langsmith) ✅, [**Arize Phoenix**](https://github.com/Arize-ai/phoenix) ✅ (open-source OTel-native), [**W&B Weave**](https://wandb.ai/site/weave) ✅, **Helicone Agents**, **Comet Opik**.
   * **Agent eval harnesses (production):** [**GAIA**](https://huggingface.co/gaia-benchmark) ✅, [**SWE-bench**](https://www.swebench.com/) ✅, **τ-bench**, **WebArena** — run these as regression tests.
   * **Sandboxing & isolation:** [**E2B**](https://e2b.dev/) ✅, [**Daytona**](https://www.daytona.io/) ✅, [**Modal**](https://modal.com/) ✅, Firecracker microVMs, gVisor.
@@ -1485,9 +1219,10 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 25: Product DS, Business, Communication & Storytelling (NEW · v2026.2)
+<a id="module-25"></a>
+## Module 25: Product DS, Business, Communication & Storytelling
 
-* **The Tutor's "Why":** Closes Gap #7 of the benchmark PDF — the single largest non-technical gap. A senior data scientist must be able to (a) frame a business problem as a measurable DS problem, (b) communicate results to non-technical stakeholders, (c) drive decisions. Most theory-heavy curricula ignore this; CMU's MSPPM-DA and UMich MADS programs dedicate entire courses to it. Every Meta / Airbnb / Uber / Spotify DS interview has a "product case" loop.
+* **The Tutor's "Why":** A senior data scientist must be able to (a) frame a business problem as a measurable DS problem, (b) communicate results to non-technical stakeholders, and (c) drive decisions. Most theory-heavy curricula ignore this; CMU's MSPPM-DA and UMich MADS programs dedicate entire courses to it. Every Meta / Airbnb / Uber / Spotify DS interview has a "product case" loop.
 
 * **Strict Prerequisites:** Module 6½ (A/B testing literacy), any modelling module.
 
@@ -1526,9 +1261,10 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-## Module 26 (née M20): Capstone — Three-Track Dissertation / Systems / Applied Project
+<a id="module-26"></a>
+## Module 26: Capstone — Research, Systems & Applied Tracks
 
-> **Rename history:** in v2026.2 the capstone has been renamed **M26** to match the benchmark PDF's flat numbering, and restructured into **three tracks** with explicit rubrics. The original anchor `#module-20-...` is retained for backward compatibility.
+
 
 * **The Tutor's "Why":** Every one of our four reference universities requires a substantial capstone. IITM requires a capstone project; Harvard CS109B culminates in a final project showcase; MIT 6.7960's grade is 35% final project; Cambridge MLMI runs a **4-month research dissertation** from end of Lent Term; Berkeley MIDS runs a client-sponsored capstone. This is the module where you convert a portfolio into a career. **v2026.2 introduces three tracks** so that research-leaning, systems-leaning, and applied-leaning students all have a rubric that matches their intended next step.
 
@@ -1583,7 +1319,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
-# 📖 Core 2026 Textbook Reading List
+<a id="books"></a>
+# 📖 Core Textbook Reading List
 
 > **Tier 1 (own a copy)**. These are the books you should have on your shelf, marked-up, for the rest of your career.
 
@@ -1613,30 +1350,31 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 | **22** | **_Hands‑On Large Language Models_** (NEW) | Jay Alammar & Maarten Grootendorst | **O'Reilly, Sep 2024**, 428 pp. | M18 | [HandsOnLLM repo](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) |
 | **23** | **_AI Engineering_** (NEW) | Chip Huyen | O'Reilly Jan 2025 | M18‑M19 | — |
 | **24** | **_Pattern Recognition and Machine Learning_** (PRML — moved to Tier 1‑reference) | Christopher Bishop | 2006 (still in print) | M9‑M17 | — |
-| **🆕 25** | **_Linear Algebra Done Right_ — 4th Edition (the abstract / proof‑track linear algebra)** | Sheldon Axler | **Springer 2024**, 400 pp., ISBN 978‑3‑031‑41025‑3 | M3 | ✅ [linear.axler.net](https://linear.axler.net/) |
-| **🆕 26** | **_Introduction to Probability for Data Science_ — bridges Stat 110 to Python code** | Stanley H. Chan | Michigan Publishing **2021/2023**, 700+ pp. | M5 | ✅ [probability4datascience.com](https://probability4datascience.com/) |
-| **🆕 27** | **_Convex Optimization_** (paired with Stanford EE364A) | Stephen Boyd & Lieven Vandenberghe | Cambridge 2004, **6th printing 2023** | M2, M9‑M11 | ✅ [stanford.edu/~boyd/cvxbook/](https://stanford.edu/~boyd/cvxbook/) |
-| **🆕 28** | **_Information Theory, Inference, and Learning Algorithms_** | David J. C. MacKay | Cambridge **2003** (the gold-standard intro to entropy/MI) | M5, M16, M18 | ✅ [inference.org.uk/itila](https://www.inference.org.uk/itila/) |
-| **🆕 29** | **_High-Dimensional Probability_ — concentration inequalities for ML/statistics** | Roman Vershynin | Cambridge **2018** (free draft online) | M5, M9, M15 | ✅ [vershyn HDP draft](https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html) |
-| **🆕 30** | **_Book of Proof_ — proof-writing for first-year university** | Richard Hammack | **3rd Edition, 2018** (CC-BY) | **M0b** | ✅ [richardhammack.github.io/BookOfProof](https://richardhammack.github.io/BookOfProof/) |
-| **🆕 31** | **_How to Prove It: A Structured Approach_ + *With Lean* (browser-interactive)** | Daniel J. Velleman | Cambridge **3e, 2019** + Lean companion **2024** | **M0b** | Lean: ✅ [djvelleman.github.io/HTPIwL](https://djvelleman.github.io/HTPIwL/) |
-| **🆕 32** | **_Mathematics for Computer Science_ (MIT 6.042J textbook)** | Lehman, Leighton, Meyer | **2015 final, still current**, MIT Press | **M0b**, M4 | ✅ [OCW PDF](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) |
-| **🆕 33** | **_Numerical Linear Algebra_** | Lloyd N. Trefethen & David Bau III | SIAM **1997**, 25th-anniversary printing 2022 | M3, M24 | — |
-| **🆕 34** | **_Trustworthy Online Controlled Experiments_** (industrial A/B-testing bible) | Ron Kohavi, Diane Tang, Ya Xu | Cambridge **2020** | **M6½**, M25 | — |
-| **🆕 35** | **_Fundamentals of Data Engineering_** (Gap #2 anchor) | Joe Reis & Matt Housley | O'Reilly **2022** | **M8a, M8b** | — |
-| **🆕 36** | **_Causal Inference: What If_** (free) | Miguel A. Hernán & James M. Robins | Continuously updated, **2024 revision** | **M6½** | ✅ [Harvard / Hernan What If PDF](https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf) |
-| **🆕 37** | **_Causal Inference in Statistics: A Primer_** | Judea Pearl, Madelyn Glymour, Nicholas P. Jewell | Wiley **2016** | **M6½** | — |
-| **🆕 38** | **_Storytelling with Data_** (+ *Let's Practice!*) | Cole Nussbaumer Knaflic | Wiley 2015 / 2019 | **M25** | — |
+| **25** | **_Linear Algebra Done Right_ — 4th Edition (the abstract / proof‑track linear algebra)** | Sheldon Axler | **Springer 2024**, 400 pp., ISBN 978‑3‑031‑41025‑3 | M3 | ✅ [linear.axler.net](https://linear.axler.net/) |
+| **26** | **_Introduction to Probability for Data Science_ — bridges Stat 110 to Python code** | Stanley H. Chan | Michigan Publishing **2021/2023**, 700+ pp. | M5 | ✅ [probability4datascience.com](https://probability4datascience.com/) |
+| **27** | **_Convex Optimization_** (paired with Stanford EE364A) | Stephen Boyd & Lieven Vandenberghe | Cambridge 2004, **6th printing 2023** | M2, M9‑M11 | ✅ [stanford.edu/~boyd/cvxbook/](https://stanford.edu/~boyd/cvxbook/) |
+| **28** | **_Information Theory, Inference, and Learning Algorithms_** | David J. C. MacKay | Cambridge **2003** (the gold-standard intro to entropy/MI) | M5, M16, M18 | ✅ [inference.org.uk/itila](https://www.inference.org.uk/itila/) |
+| **29** | **_High-Dimensional Probability_ — concentration inequalities for ML/statistics** | Roman Vershynin | Cambridge **2018** (free draft online) | M5, M9, M15 | ✅ [vershyn HDP draft](https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html) |
+| **30** | **_Book of Proof_ — proof-writing for first-year university** | Richard Hammack | **3rd Edition, 2018** (CC-BY) | **M0b** | ✅ [richardhammack.github.io/BookOfProof](https://richardhammack.github.io/BookOfProof/) |
+| **31** | **_How to Prove It: A Structured Approach_ + *With Lean* (browser-interactive)** | Daniel J. Velleman | Cambridge **3e, 2019** + Lean companion **2024** | **M0b** | Lean: ✅ [djvelleman.github.io/HTPIwL](https://djvelleman.github.io/HTPIwL/) |
+| **32** | **_Mathematics for Computer Science_ (MIT 6.042J textbook)** | Lehman, Leighton, Meyer | **2015 final, still current**, MIT Press | **M0b**, M4 | ✅ [OCW PDF](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) |
+| **33** | **_Numerical Linear Algebra_** | Lloyd N. Trefethen & David Bau III | SIAM **1997**, 25th-anniversary printing 2022 | M3, M24 | — |
+| **34** | **_Trustworthy Online Controlled Experiments_** (industrial A/B-testing bible) | Ron Kohavi, Diane Tang, Ya Xu | Cambridge **2020** | **M6½**, M25 | — |
+| **35** | **_Fundamentals of Data Engineering_** (Gap #2 anchor) | Joe Reis & Matt Housley | O'Reilly **2022** | **M8a, M8b** | — |
+| **36** | **_Causal Inference: What If_** (free) | Miguel A. Hernán & James M. Robins | Continuously updated, **2024 revision** | **M6½** | ✅ [Harvard / Hernan What If PDF](https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf) |
+| **37** | **_Causal Inference in Statistics: A Primer_** | Judea Pearl, Madelyn Glymour, Nicholas P. Jewell | Wiley **2016** | **M6½** | — |
+| **38** | **_Storytelling with Data_** (+ *Let's Practice!*) | Cole Nussbaumer Knaflic | Wiley 2015 / 2019 | **M25** | — |
 
 > **Tier 2 (reference)**: _All of Statistics_ (Wasserman), _Statistical Inference_ (Casella & Berger), _Bayesian Reasoning and Machine Learning_ (Barber), _Machine Learning: A Probabilistic Perspective_ (Murphy 2012), _Deep Learning_ (Goodfellow/Bengio/Courville 2016), _Algorithms for Decision Making_ (Kochenderfer), _Interpretable Machine Learning_ (Molnar), _Forecasting: Principles and Practice_ (Hyndman 3rd Ed. 2021), _Mining of Massive Datasets_ (Leskovec 3rd Ed. 2020, free at [mmds.org](http://www.mmds.org/)), _The Elements of Statistical Learning_ (ESL — still canonical), **_Active Calculus_** (Boelkins, free 2024), **_Linear Algebra and Learning from Data_** (Strang 2019/25 reprint), **_The Matrix Cookbook_** (Petersen-Pedersen 2024), **_Probability with Martingales_** (Williams 1991, PhD-track), **_Measure, Integral and Probability_** (Capinski-Kopp 2e 2014, PhD-track), **_Tao Analysis I & II_** (Hindustan Book Agency, 4e 2022, real-analysis bridge for PhD-track).
 
 ---
 
-# 🛠️ The Elite 2026 Toolchain
+<a id="toolchain"></a>
+# 🛠️ Production Toolchain
 
-Not merely a list — these are the exact versions you should be using in April 2026.
+A practical stack mapped to the curriculum. Version numbers below are a dated reference snapshot, not permanent recommendations; check the linked project before installing.
 
-| Category | Tool | **Verified April 2026 Version** | Why (2026) |
+| Category | Tool | **Reference snapshot** | Why it matters |
 |---|---|---|---|
 | **Python runtime** | CPython | **3.13+** (3.14 RC compatible) | Free‑threaded build (PEP 703) in experimental; per‑interpreter GIL for parallel ML workloads |
 | **Package manager** | `uv` | **0.11.7** (Apr 2026) | 10‑100× faster than pip/poetry; now the de‑facto standard; replaces `pipenv`/`poetry`/`virtualenv` |
@@ -1680,6 +1418,7 @@ Not merely a list — these are the exact versions you should be using in April 
 
 ---
 
+<a id="progress-tracker"></a>
 # ✅ Progress Tracker
 
 > Fork this repo, copy this section, and replace `[ ]` with `[x]` as you complete each sub-module.
@@ -1689,8 +1428,8 @@ Not merely a list — these are the exact versions you should be using in April 
 - [ ] Decided whether to do **Module 0** (mandatory if any strand < 70%)
 
 ### 🟩 Foundation Stratum
-- [ ] **🆕 Module 0a**: Pre-Calculus & Trigonometry (Khan Academy / MIT 18.01A)
-- [ ] **🆕 Module 0b**: Logic, Proof & Discrete-Math Primer (Hammack + Velleman + MIT 6.042J; optional: Lean 4 first proof)
+- [ ] **Module 0a**: Pre-Calculus & Trigonometry (Khan Academy / MIT 18.01A)
+- [ ] **Module 0b**: Logic, Proof & Discrete-Math Primer (Hammack + Velleman + MIT 6.042J; optional: Lean 4 first proof)
 - [ ] **Module 1**: Programming Foundations (CS50P + MIT 6.0001/6.0002)
 - [ ] **Module 2**: Calculus + Matrix Calculus + Convex Optimisation (MITx 18.01.1/2/3x + 18.02 + **MIT 18.S096/063 Matrix Calc** + **Stanford EE364A Boyd**)
 - [ ] **Module 3**: Linear Algebra — Computational + Abstract + Applications (MIT 18.06 + 3Blue1Brown + **Axler 4e 2024** + Townsend 2024 + Trefethen/Bau)
@@ -1699,10 +1438,10 @@ Not merely a list — these are the exact versions you should be using in April 
 
 ### 🟨 Core Statistics Stratum
 - [ ] **Module 6**: Inference (MITx 18.6501x + STAT 111)
-- [ ] **🆕 Module 6½**: Causal Inference & Experimentation (Brady Neal + MIT 14.387 + Kohavi + DoWhy)
+- [ ] **Module 6½**: Causal Inference & Experimentation (Brady Neal + MIT 14.387 + Kohavi + DoWhy)
 - [ ] **Module 7**: EDA & Viz (CS109A Lec 1-2, 9, 12-13 + Polars/DuckDB modernisation)
 - [ ] **Module 8a**: Databases, SQL & Warehouses (IITM BSCS2001 + Kimball + dbt Learn)
-- [ ] **🆕 Module 8b**: Distributed Data & Streaming (Stanford CS246 + DataExpert.io + Reis & Housley + Spark + Kafka + Airflow + Iceberg)
+- [ ] **Module 8b**: Distributed Data & Streaming (Stanford CS246 + DataExpert.io + Reis & Housley + Spark + Kafka + Airflow + Iceberg)
 
 ### 🟧 Classical ML Stratum
 - [ ] **Module 9**: Regression (MIT 6.390 Lec 1-3, CS109A Lec 3-6)
@@ -1719,111 +1458,20 @@ Not merely a list — these are the exact versions you should be using in April 
 - [ ] **Module 16**: Transformers + ViT + Diffusion + SSMs + MoE (CS109B Lec 16–23, **MIT 6.7960 Fall 2025 W4‑11**, MIT 6.390 Lec 9, **Stanford CS336 Lec 3–4, 6**; DINOv2/SAM 2/LLaVA/Mamba)
 - [ ] **Module 17**: RL + Modern LLM RL (MIT 6.390 Lec 10–11, IITM BSCS3003, **Stanford CS336 Lec 15–17 RLVR**, CleanRL, Berkeley CS285, Spinning Up)
 
-### 🔴 Frontier / Production Stratum (2026 verified)
+### 🔴 Frontier / Production Stratum
 - [ ] **Module 18**: LLMs & Fine-Tuning Playbook (**Stanford CS336 Spring 2026**, IITM BSCS3004, MIT 6.7960 W8–13, **HF Agents Course**, **MCP Nov 2025 spec**, Unsloth/Axolotl/TRL/PEFT/DSPy/vLLM/SGLang)
-- [ ] **🆕 Module 21**: RAG + Vector DBs (Pinecone Learn + LlamaIndex + pgvector + Qdrant + Ragas)
-- [ ] **🆕 Module 22**: Agentic AI — LangGraph/CrewAI/MCP/A2A (HF Agents Course + Berkeley LLM Agents + Anthropic Building Effective Agents + GAIA + SWE-bench)
-- [ ] **🆕 Module 23**: AI Safety + Interpretability + Evals + Policy (AISF Alignment Fundamentals + Transformer Circuits + EU AI Act + NIST AI RMF + inspect-ai)
+- [ ] **Module 21**: RAG + Vector DBs (Pinecone Learn + LlamaIndex + pgvector + Qdrant + Ragas)
+- [ ] **Module 22**: Agentic AI — LangGraph/CrewAI/MCP/A2A (HF Agents Course + Berkeley LLM Agents + Anthropic Building Effective Agents + GAIA + SWE-bench)
+- [ ] **Module 23**: AI Safety + Interpretability + Evals + Policy (AISF Alignment Fundamentals + Transformer Circuits + EU AI Act + NIST AI RMF + inspect-ai)
 - [ ] **Module 24**: MLOps + LLMOps + AgentOps (Harvard AC215, Chip Huyen AI Engineering, FSDL, Made With ML, Langfuse/LangSmith/Phoenix/Weave)
-- [ ] **🆕 Module 25**: Product DS · Communication · Decision Intelligence (Kozyrkov + Kohavi Trustworthy Experiments + Storytelling with Data + CMU MSPPM-DA / UMich MADS)
+- [ ] **Module 25**: Product DS · Communication · Decision Intelligence (Kozyrkov + Kohavi Trustworthy Experiments + Storytelling with Data + CMU MSPPM-DA / UMich MADS)
 
 ### 🏆 Capstone Stratum
 - [ ] **Module 26**: Capstone Project — Choose **1 of 3 tracks**: Research / Systems / Applied (arXiv preprint + HF release + MCP‑compliant tool/agent OR production system with SLOs OR stakeholder-sponsored applied project with causal evaluation)
 
 ---
 
-# 📊 Pedagogical Dependency Graph
-
-```
-                           ┌──────────────┐
-                           │ M1 Programming│
-                           └───────┬──────┘
-             ┌─────────────────────┼─────────────────────┐
-             ▼                     ▼                     ▼
-    ┌──────────────┐       ┌──────────────┐      ┌──────────────┐
-    │ M2 Calculus  │       │ M4 DSA       │      │ M7 EDA/Viz   │
-    └──────┬───────┘       └──────┬───────┘      └──────┬───────┘
-           ▼                      ▼                     │
-    ┌──────────────┐       ┌──────────────┐             │
-    │ M3 Lin Alg   │       │ M8 Databases │             │
-    └──────┬───────┘       └──────────────┘             │
-           ▼                                            │
-    ┌──────────────────────────────────────┐            │
-    │       M5 Probability                 │            │
-    └───────────────┬──────────────────────┘            │
-                    ▼                                   │
-          ┌────────────────────┐                        │
-          │ M6 Inference       │◀───────────────────────┘
-          └────────────────────┘
-                    ▼
-    ┌───────────────────────────────┐
-    │ M9 Regression ──▶ M10 Classification ──▶ M11 Unsup ──▶ M12 Ensembles │
-    └───────────────┬───────────────┘
-                    ▼
-          ┌────────────────────┐
-          │ M13 Bayes / MCMC   │
-          └─────────┬──────────┘
-                    ▼
-          ┌────────────────────┐
-          │ M14 HMMs / Time    │
-          └─────────┬──────────┘
-                    ▼
-    ┌────────────────────────────────┐
-    │ M15 DL Foundations             │
-    └───────────────┬────────────────┘
-                    ▼
-    ┌────────────────────────────────┐
-    │ M16 Transformers & Gen Models  │
-    └───────────────┬────────────────┘
-                    ▼
-    ┌────────────────────────────────┐
-    │ M17 RL & Decision Making       │
-    └───────────────┬────────────────┘
-                    ▼
-      ┌───────────────────────────┐
-      │ M18 LLMs / RLHF / Agents  │
-      └─────────────┬─────────────┘
-                    ▼
-      ┌───────────────────────────┐
-      │ M19 MLOps & Responsible AI│
-      └─────────────┬─────────────┘
-                    ▼
-      ┌───────────────────────────┐
-      │ M20 Capstone              │
-      └───────────────────────────┘
-```
-
----
-
-# 🗂 2026 Tooling Quick-Reference (v2026.2)
-
-> A *condensed* cheat-sheet of the 2026 production-grade tools introduced in v2026.2. For full context, see the Elite 2026 Toolchain table above.
-
-| Tool | One-line | Primary modules | Live-verified URL |
-|---|---|---|---|
-| **Polars** | Rust-powered, Arrow-native DataFrame library; pandas successor for 100 MB–100 GB data | M7, M8a, M8b | [pola.rs](https://pola.rs/) ✅ |
-| **DuckDB** | In-process SQL OLAP over Parquet/Arrow; "SQLite for analytics" | M7, M8a, M8b | [duckdb.org](https://duckdb.org/) ✅ |
-| **uv** | 10–100× faster pip/poetry replacement (Astral, Rust) | M1, all | [docs.astral.sh/uv](https://docs.astral.sh/uv/) ✅ |
-| **JAX** | Functional DL with `jit`/`vmap`/`pmap` and TPU-first scale-out | M2, M13, M15, M16 | [docs.jax.dev](https://docs.jax.dev/) ✅ |
-| **Qdrant** | Rust-based, high-performance vector database | M21 | [qdrant.tech](https://qdrant.tech/) ✅ |
-| **pgvector** | Postgres extension; 2026 default for mixed OLTP + vector workloads | M21, M8a | [github.com/pgvector/pgvector](https://github.com/pgvector/pgvector) ✅ |
-| **vLLM** | Continuous-batching + paged-attention LLM inference server | M18, M24 | [docs.vllm.ai](https://docs.vllm.ai/) ✅ |
-| **LangGraph** | Stateful, cyclic multi-agent framework; 2026 production default | M22 | [langchain.com/langgraph](https://www.langchain.com/langgraph) ✅ |
-| **smolagents** | ~1000 LOC code-agents library; HF Agents Course primary | M22 | [github.com/huggingface/smolagents](https://github.com/huggingface/smolagents) ✅ |
-| **MCP** | Open LLM↔tool/data standard from Anthropic; used by Claude Desktop, Cursor, VS Code, Zed | M22, M24 | [modelcontextprotocol.io](https://modelcontextprotocol.io/) ✅ |
-| **dbt** | Transform + test + document SQL models in the warehouse | M8a | [docs.getdbt.com](https://docs.getdbt.com/) ✅ |
-| **Airflow / Dagster / Prefect** | Workflow orchestration for data & ML pipelines | M8b, M24 | [airflow.apache.org](https://airflow.apache.org/) ✅ |
-| **Kafka / Flink / Redpanda** | Streaming data platform + processing | M8b | [kafka.apache.org](https://kafka.apache.org/) ✅ |
-| **Iceberg / Delta Lake** | ACID lakehouse table formats on object storage | M8b | [iceberg.apache.org](https://iceberg.apache.org/) ✅ |
-| **MLflow** | Experiment tracking + model registry; v3.11 in 2026 | M24 | [mlflow.org](https://mlflow.org/) ✅ |
-| **Langfuse** | Self-hostable open-source LLM observability + prompt versioning | M24 (LLMOps) | [langfuse.com](https://langfuse.com/) ✅ |
-| **LangSmith / Arize Phoenix / W&B Weave** | Agent & LLM tracing | M24 (AgentOps) | [phoenix.arize.com](https://phoenix.arize.com/) ✅ |
-| **DoWhy / EconML / CausalML** | Causal inference Python stack | M6½ | [py-why.github.io/dowhy](https://www.pywhy.org/dowhy/) ✅ |
-| **DSPy** | Programs-not-prompts; optimiser-driven LLM compilation | M18, M21 | [dspy.ai](https://dspy.ai/) ✅ |
-| **TRL / PEFT / Unsloth / Axolotl** | Fine-tuning playbook (SFT / DPO / GRPO / LoRA / QLoRA / DoRA) | M18 | [github.com/huggingface/trl](https://github.com/huggingface/trl) ✅ |
-
----
-
+<a id="acknowledgements"></a>
 # 🙏 Acknowledgements & Attribution
 
 This curriculum synthesises publicly-available syllabi from:
@@ -1837,83 +1485,15 @@ This curriculum synthesises publicly-available syllabi from:
 * **CMU / UMich (Product-DS anchors)** — [heinz.cmu.edu](https://www.heinz.cmu.edu/programs/public-policy-management-master/data-analytics) (MSPPM-DA) · [si.umich.edu](https://www.si.umich.edu/programs/master-applied-data-science) (MADS).
 * **Hugging Face** — [huggingface.co/learn](https://huggingface.co/learn) (Agents Course, Smol Course, Smol Training Playbook).
 * **Anthropic / MCP Consortium** — [modelcontextprotocol.io](https://modelcontextprotocol.io/) (Nov 2025 spec) · [transformer-circuits.pub](https://transformer-circuits.pub/) (mechanistic interpretability research).
-* **Benchmark Gap Analysis (v2026.2)** — this **v2026.2 Production Superstructure Pass** closes 13 gaps identified in the April 2026 benchmark report against Berkeley MIDS, UMich MADS, CMU MSPPM-DA, MIT 6.390, Stanford CS336, Hugging Face Agents Course, MIT AI Safety Forum, and the 2026 Agentic AI Roadmap. The 13 gaps closed: (1) Causal Inference → M6½, (2) Modern Data Engineering → M8a/M8b split, (3) LLMOps + AgentOps → M24 tier split, (4) Agentic AI → M22, (5) RAG + Vector DBs → M21, (6) AI Safety + Evals → M23, (7) Product DS + Storytelling → M25, (8) Modern Python Tooling → M1 addendum + M7 modernisation, (9) ViT + Diffusion + SSMs → M16 additions, (10) Time-Series Foundation Models → M14 additions, (11) Fine-Tuning Playbook → M18 additions, (12) Mechanistic Interpretability → M23, (13) Ethics + Privacy + AI Policy → M23. See [`audit/VERIFICATION.md`](audit/VERIFICATION.md) and [`audit/IMPROVEMENT_SPEC.md`](audit/IMPROVEMENT_SPEC.md) for the 150+-URL verification record and edit traceability.
 
 All university material remains © their respective institutions; this repository only cites and organises publicly‑disclosed syllabi.
-
-**Framework / toolchain citations (April 23 2026 PyPI-verified):** PyTorch 2.11.0 (23 Mar 2026) · JAX 0.10.0 (16 Apr 2026) · Polars 1.40.1 (22 Apr 2026) · HF Transformers 5.6.2 (23 Apr 2026) · vLLM 0.19.1 · scikit-learn 1.8.0 (Dec 2025) · PyMC 5.28.4 · NumPyro 0.20.1 · uv 0.11.7 · dbt-core 1.11.8 · DuckDB 1.5.2 · MLflow 3.11.1 · LangGraph 1.1.9 · smolagents 1.24.0 · DSPy 3.2.0 · TRL 1.2.0 · PEFT 0.19.1 · Qdrant-client 1.17.1 · MCP One-Year Anniversary post (blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/).
-
----
-
-# 📄 Legacy OSSU Curriculum (Reference Only)
-
-> The following is the _original_ `ossu/data-science` curriculum, preserved for historical reference. It is **no longer the recommended path** in 2026 — it lacks Transformers, LLMs, Diffusion models, Bayesian methods, Reinforcement Learning, Causal Inference, Modern Data Engineering, Agentic AI, RAG, AI Safety, and MLOps/LLMOps/AgentOps. Use the **26 modules + Module 0** above instead (v2026.2 Production Superstructure).
-
-<details>
-<summary><b>Click to expand the pre-2026 OSSU curriculum</b></summary>
-
-## Original OSSU Contents
-
-- [About](#about)
-- [Curricular Guideline](#curricular-guideline)
-- Original course sections: Introduction to Data Science · Introduction to Computer Science · Data Structures and Algorithms · Databases · Single Variable Calculus · Linear Algebra · Multivariable Calculus · Statistics & Probability · Data Science Tools & Methods · Machine Learning/Data Mining · Final project
-
-## About
-
-This was a path for those of you who wanted to complete the Data Science undergraduate curriculum on your own time, for free, with courses from the best universities in the World. It preferred MOOC (Massive Open Online Course) style courses because these were created with self-study in mind.
-
-## Curricular Guideline
-
-OSSU Data Science used the report [Curriculum Guidelines for Undergraduate Programs in Data Science](https://www.amstat.org/asa/files/pdfs/EDU-DataScienceGuidelines.pdf).
-
-### Original Prerequisites
-The OSSU Data Science curriculum assumes the student has taken [high school math](https://ossu.dev/precollege-math) and [statistics](https://www.khanacademy.org/math/probability).
-
-### Original Course Links (archived)
-- [What is Data Science (Coursera)](https://www.coursera.org/learn/what-is-datascience)
-- [Introduction to Programming](coursepages/intro-programming/README.md)
-- [Introduction to Computer Science and Programming Using Python](coursepages/intro-cs/README.md)
-- [Introduction to Computational Thinking and Data Science (MIT 6.0002)](https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/)
-- [Java Programming](https://java-programming.mooc.fi/)
-- [GaTech Algorithms I-IV on edX](https://www.edx.org/learn/data-structures/the-georgia-institute-of-technology-data-structures-algorithms-i-arraylists-linkedlists-stacks-and-queues)
-- [Database Management Essentials (Coursera)](https://www.coursera.org/learn/database-management)
-- [Data Warehouse Concepts, Design, and Data Integration (Coursera)](https://www.coursera.org/learn/dwdesign)
-- [Relational Database Support for Data Warehouses (Coursera)](https://www.coursera.org/learn/dwrelational)
-- [Business Intelligence Concepts, Tools, and Applications (Coursera)](https://www.coursera.org/learn/business-intelligence-tools)
-- [Design and Build a Data Warehouse for BI Implementation (Coursera)](https://www.coursera.org/learn/data-warehouse-bi-building)
-- [MongoDB for Developers Learning Path](https://learn.mongodb.com/pages/mongodb-developer-learning-paths)
-- [MITx Calculus 1A / 1B / 1C](https://mitxonline.mit.edu/courses/)
-- [3Blue1Brown: Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-- [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/)
-- [MIT 18.02 Multivariable Calculus](http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm)
-- [Harvard Stat 110 Introduction to Probability](https://projects.iq.harvard.edu/stat110/home)
-- [Intro to Descriptive Statistics (Udacity)](https://www.udacity.com/course/intro-to-descriptive-statistics--ud827)
-- [Intro to Inferential Statistics (Udacity)](https://www.udacity.com/course/intro-to-inferential-statistics--ud201)
-- [Statistical Learning with Python (Stanford/edX)](https://www.edx.org/learn/python/stanford-university-statistical-learning-with-python)
-- [Tools for Data Science (Coursera)](https://www.coursera.org/learn/open-source-tools-for-data-science)
-- [Data Science Methodology (Coursera)](https://www.coursera.org/learn/data-science-methodology)
-- [Data Science: Wrangling (edX)](https://www.edx.org/course/data-science-wrangling)
-- [Supervised Machine Learning: Regression and Classification (Coursera/Andrew Ng)](https://www.coursera.org/learn/machine-learning)
-- [Advanced Learning Algorithms (Coursera)](https://www.coursera.org/learn/advanced-learning-algorithms)
-- [Unsupervised Learning, Recommenders, Reinforcement Learning (Coursera)](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning)
-- [Intro to Machine Learning (Udacity)](https://www.udacity.com/course/intro-to-machine-learning--ud120)
-- [Mining Massive Datasets (Stanford/edX)](https://www.edx.org/course/mining-massive-datasets)
-- [Process Mining (Coursera)](https://www.coursera.org/learn/process-mining)
-
-See [`extras/books.md`](extras/books.md), [`extras/courses.md`](extras/courses.md), and [`extras/specializations.md`](extras/specializations.md) for the original auxiliary material.
-
-### Original Team
-* **Curriculum Maintainer (OSSU)**: [Waciuma Wanjohi](https://github.com/waciumawanjohi)
-* **Contributors**: [OSSU Data Science contributors](https://github.com/open-source-society/data-science/graphs/contributors)
-
-</details>
 
 ---
 
 <div align="center">
-  <sub>🎓 <strong>The Elite Data Science Curriculum — 2026 Edition</strong> · Zero Omissions Policy · <strong>Last full refresh: 20 April 2026 (Math-Foundations Hardening Pass)</strong></sub>
-  <br/>
-  <sub>Synthesised from IITM · Harvard · MIT · Cambridge · Stanford · Hugging Face · MCP Consortium · Freely redistributable under the <a href="./LICENSE.md">original LICENSE</a></sub>
-  <br/>
-  <sub>Every URL live-verified · Every framework version current as of April 2026 · PRs welcome for future refreshes</sub>
+
+**Learn the foundations. Build the systems. Show the work.**
+
+Maintained as a free-first curriculum · [CC BY-SA 4.0](LICENSE.md) · Corrections and resource updates are welcome
+
 </div>
