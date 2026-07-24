@@ -11,6 +11,8 @@
 
 **Mathematics · Statistics · Machine Learning · Data Engineering · Deep Learning · LLMs · Production AI**
 
+[Start here](#start-here) · [Choose a track](#choose-your-track) · [Browse modules](#roadmap) · [Companion curricula](#companion-curricula) · [Books](#books) · [Toolchain](#toolchain) · [Progress tracker](#progress-tracker)
+
 </div>
 
 ---
@@ -45,6 +47,21 @@ The curriculum is detailed by design, but the navigation is intentionally simple
 5. **Build every mandatory project.** Passive course completion is not enough.
 6. **Track your work** with the [progress checklist](#progress-tracker).
 7. **Finish with a capstone** that matches your intended role.
+
+<a id="start-here"></a>
+## Start here
+
+Use the shortest entry point that matches your current experience. You can return to the full curriculum whenever you need more depth.
+
+| If you are... | Start with | Then continue to |
+|---|---|---|
+| **New to programming and data** | [Microsoft Data Science for Beginners](#companion-curricula), then [M1](#module-1) | [M5](#module-5) → [M6](#module-6) → [M7](#module-7) → [M8a](#module-8a) |
+| **Comfortable with Python, new to ML** | [Microsoft ML for Beginners](#companion-curricula) alongside [M9](#module-9) | M9 → [M10](#module-10) → [M11](#module-11) → [M12](#module-12) |
+| **An analyst moving into data science** | [M5](#module-5) → [M6](#module-6) → [M7](#module-7) | [M9](#module-9) → [M14](#module-14) → [M25](#module-25) |
+| **An ML practitioner moving into production AI** | [M8b](#module-8b) and [M24](#module-24) | [M18](#module-18) → [M21](#module-21) → [M22](#module-22) → [M23](#module-23) |
+| **Preparing for research** | [Math diagnostic](#math-diagnostic) | Follow M0–M18 in order, then [M23](#module-23) and the [research capstone](#module-26) |
+
+> **First milestone:** complete one small project before collecting more resources. The Microsoft companion courses below supply guided lessons, quizzes, assignments, and solutions; this roadmap supplies the deeper prerequisite and production sequence.
 
 ## Choose your track
 
@@ -120,6 +137,33 @@ The curriculum is detailed by design, but the navigation is intentionally simple
 | **Probabilistic & deep learning** | M13–M17 | Bayesian modelling, time series, neural networks, transformers, RL |
 | **Frontier & production** | M18, M21–M25 | LLMs, RAG, agents, safety, evaluation, MLOps, product thinking |
 | **Capstone** | M26 | A public, reproducible portfolio project |
+
+<a id="companion-curricula"></a>
+## Guided companion curricula
+
+The two Microsoft curricula below are strong, actively maintained beginner companions. They use the lesson-table navigation, short projects, quizzes, assignments, and solution folders that make a large subject easier to enter. Use their repository root links to follow the newest default-branch content; the reviewed commits provide a dated audit trail.
+
+| Curriculum | Best for | Current scope | Reviewed upstream snapshot |
+|---|---|---|---|
+| [Microsoft Data Science for Beginners](https://github.com/microsoft/Data-Science-For-Beginners) | A gentle, project-based introduction before the statistics and data modules | 10 weeks · 20 lessons · data ethics, SQL/NoSQL, Python, preparation, visualisation, lifecycle, cloud, and communication | [`4d2ac42`](https://github.com/microsoft/Data-Science-For-Beginners/commit/4d2ac427ad6f022e73a75c4f46a28bbb7978ec3f), reviewed 2026-07-24 |
+| [Microsoft ML for Beginners](https://github.com/microsoft/ML-For-Beginners) | Hands-on classical ML practice alongside M9–M14 and M17 | 12 weeks · 26 lessons · regression, classification, clustering, NLP, time series, reinforcement learning, and responsible ML | [`d0d0ea2`](https://github.com/microsoft/ML-For-Beginners/commit/d0d0ea2b2d22cddca31f9c6d108df7daa87a1b46), reviewed 2026-07-24 |
+
+### Where the Microsoft lessons fit
+
+| This roadmap | Guided lesson groups | How to use them |
+|---|---|---|
+| [M1 Programming](#module-1), [M5 Probability](#module-5), [M6 Statistics](#module-6) | [Defining data science and introductory statistics](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/1-Introduction) | Use as an accessible first pass; keep this roadmap's exercises for mathematical depth. |
+| [M7 Wrangling, EDA, and visualisation](#module-7) | [Working with data](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data) and [data visualisation](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/3-Data-Visualization) | Complete the guided notebooks, then rebuild one analysis with validation and a reproducible pipeline. |
+| [M8a Databases and SQL](#module-8a) | [Relational and NoSQL lessons](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data) | Use lessons 5–6 for practice before advanced SQL, query plans, warehousing, and dbt. |
+| [M9 Regression](#module-9) | [Regression lessons](https://github.com/microsoft/ML-For-Beginners/tree/main/2-Regression) and [model web app](https://github.com/microsoft/ML-For-Beginners/tree/main/3-Web-App) | Pair the projects with this roadmap's derivations, diagnostics, regularisation, and cross-validation. |
+| [M10 Classification](#module-10) | [Classification lessons](https://github.com/microsoft/ML-For-Beginners/tree/main/4-Classification) | Practise model comparison, then add calibration, leakage checks, and error analysis. |
+| [M11 Unsupervised learning](#module-11) | [Clustering lessons](https://github.com/microsoft/ML-For-Beginners/tree/main/5-Clustering) | Use for a visual K-means project before PCA, mixture models, and manifold learning. |
+| [M14 Time series](#module-14) | [Time-series lessons](https://github.com/microsoft/ML-For-Beginners/tree/main/7-TimeSeries) | Start with ARIMA and SVR, then continue to probabilistic forecasting and foundation models. |
+| [M16 Representation learning](#module-16) | [Introductory NLP lessons](https://github.com/microsoft/ML-For-Beginners/tree/main/6-NLP) | Treat these as classical NLP prerequisites before transformers and generative models. |
+| [M17 Reinforcement learning](#module-17) | [Reinforcement-learning lessons](https://github.com/microsoft/ML-For-Beginners/tree/main/8-Reinforcement) | Use the Q-learning projects as the practical on-ramp to modern deep and offline RL. |
+| [M23 Safety](#module-23), [M24 Operations](#module-24), [M25 Product DS](#module-25) | [ML in the wild](https://github.com/microsoft/ML-For-Beginners/tree/main/9-Real-World), [data-science lifecycle](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/4-Data-Science-Lifecycle), and [cloud lessons](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/5-Data-Science-In-Cloud) | Use for case studies; follow this roadmap for current evaluation, governance, MLOps, and communication depth. |
+
+> **Selection rule:** use the Microsoft courses when you want a guided beginner lesson or a small practice project. Use the primary university courses and books in each module when you need formal depth. The companion courses supplement this roadmap; they do not replace its mathematics, deep learning, data engineering, or production-AI modules.
 
 ### Suggested study rhythm
 
@@ -1484,6 +1528,7 @@ This curriculum synthesises publicly-available syllabi from:
 * **UC Berkeley** — [ischool.berkeley.edu/courses/datasci/241](https://www.ischool.berkeley.edu/courses/datasci/241) (MIDS Causal Inference — anchor for M6½) · [rail.eecs.berkeley.edu/deeprlcourse](https://rail.eecs.berkeley.edu/deeprlcourse/) (CS285 Deep RL) · [llmagents-learning.org](https://llmagents-learning.org/) (LLM Agents MOOC — anchor for M22).
 * **CMU / UMich (Product-DS anchors)** — [heinz.cmu.edu](https://www.heinz.cmu.edu/programs/public-policy-management-master/data-analytics) (MSPPM-DA) · [si.umich.edu](https://www.si.umich.edu/programs/master-applied-data-science) (MADS).
 * **Hugging Face** — [huggingface.co/learn](https://huggingface.co/learn) (Agents Course, Smol Course, Smol Training Playbook).
+* **Microsoft** — [Data Science for Beginners](https://github.com/microsoft/Data-Science-For-Beginners) and [ML for Beginners](https://github.com/microsoft/ML-For-Beginners), used as project-based companion curricula with quizzes, assignments, and guided lesson navigation.
 * **Anthropic / MCP Consortium** — [modelcontextprotocol.io](https://modelcontextprotocol.io/) (Nov 2025 spec) · [transformer-circuits.pub](https://transformer-circuits.pub/) (mechanistic interpretability research).
 
 All university material remains © their respective institutions; this repository only cites and organises publicly‑disclosed syllabi.
