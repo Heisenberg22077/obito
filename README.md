@@ -4,6 +4,7 @@
 
 ### A rigorous, free-first path from foundations to production AI
 
+[![Edition](https://img.shields.io/badge/2026.3-Practitioner's%20Pass-6f42c1)](#refresh-log)
 [![Modules](https://img.shields.io/badge/modules-27-6f42c1)](#roadmap)
 [![Level](https://img.shields.io/badge/level-beginner%20to%20advanced-0969da)](#who-this-is-for)
 [![Resources](https://img.shields.io/badge/resources-free--first-1a7f37)](#how-to-use-this-roadmap)
@@ -11,7 +12,7 @@
 
 **Mathematics · Statistics · Machine Learning · Data Engineering · Deep Learning · LLMs · Production AI**
 
-[Start here](#start-here) · [Choose a track](#choose-your-track) · [Browse modules](#roadmap) · [Companion curricula](#companion-curricula) · [Books](#books) · [Toolchain](#toolchain) · [Progress tracker](#progress-tracker)
+[Start here](#start-here) · [Choose a track](#choose-your-track) · [Practitioner fast lane](#practitioner-track) · [Browse modules](#roadmap) · [Career operations](#career-operations) · [Books](#books) · [Toolchain](#toolchain) · [Progress tracker](#progress-tracker)
 
 </div>
 
@@ -27,6 +28,13 @@ This roadmap turns high-quality university syllabi and open learning resources i
 - finish with a portfolio-ready research, systems, or applied capstone.
 
 The curriculum is detailed by design, but the navigation is intentionally simple: **choose a track, follow the modules in order, and build as you learn.**
+
+<a id="refresh-log"></a>
+## Refresh log
+
+### July 2026 — v2026.3 Practitioner's Pass
+
+This pass adds a parallel 6–9 month practitioner on-ramp without removing the academic spine: intuition-first mathematics, a phase-based Python plan, mandatory shipped projects, an applications-focused AI Engineer identity, career operations grounded in 12 live job postings, a practitioner book shelf, and a minimum production bar. Source claims and new URLs are recorded in [`audit/AUDIT_v2026.3.md`](audit/AUDIT_v2026.3.md) and [`audit/VERIFICATION.md`](audit/VERIFICATION.md).
 
 ## Who this is for
 
@@ -71,13 +79,33 @@ Use the shortest entry point that matches your current experience. You can retur
 | **Data Scientist** | M1–M7 → M9–M14 → M25 → M26 | Validated model plus causal or experimental evaluation |
 | **Data Engineer** | M1 → M4 → M7 → M8a → M8b → M24 → M26 | Tested batch/streaming data platform with observability |
 | **ML Engineer** | M1–M12 → M15–M17 → M24 → M26 | Model served behind an API with CI, monitoring, and SLOs |
-| **AI Engineer** | M1 → M8a → M15–M18 → M21–M24 → M26 | Evaluated RAG or agent system with tracing and guardrails |
+| **AI Engineer (model/research depth)** | M1 → M8a → M15–M18 → M21–M24 → M26 | Evaluated RAG or agent system plus model-training depth, tracing, and guardrails |
+| **AI Engineer (Applications)** | M1 → M7 → M8a → intuition passes in M2/M3/M5 → M18 → M21–M24 → M26 | Production application on GPT/Claude/Llama-class foundation models: prompting, RAG, agents, evals, and secure deployment. Primary text: [Chip Huyen, *AI Engineering*](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) ⚠️ publisher bot-gated; ISBN 978-1-098-16630-4 |
 | **Research / PhD prep** | M0–M18 → M23 → M26 Research Track | Reproducible paper, ablations, and public research artifact |
+
+<a id="practitioner-track"></a>
+## 🚀 Practitioner Track (Fast Lane)
+
+**Target:** 6–9 months at 12–18 focused hours/week. This is a shipping-first route to junior applied ML/AI work, not a compressed research degree. It follows the practical sequence described in [“How to Become an ML Engineer”](https://www.youtube.com/watch?v=UZ_rK9gzVSc) (math intuition at 01:13–02:16; from-scratch NumPy at 05:01–05:20; production wrap at 07:28–07:42; GenAI at 08:31–09:04) and the applications-focused role definition in [“The Only 7 Books You Need to Become an AI Engineer”](https://www.youtube.com/watch?v=Pr9oRVtAqCM) (00:52–01:12).
+
+| Phase | Approx. time | Sequence and exit evidence |
+|---|---:|---|
+| **1. Python that works** | 6–8 weeks | Complete the M1 phases below: [Scrimba Learn Python](https://scrimba.com/learn-python-c03) for an interactive start, *Automate the Boring Stuff* for useful scripts, then CS50P or Helsinki for depth. Ship a tested file-I/O CLI and API app. |
+| **2. Math intuition first** | 3–5 weeks | Use the ⚡ alternatives in M0/M2/M3/M5: 3Blue1Brown, StatQuest, and the Manga Guides. Explain gradients, vectors/eigenvectors, distributions, and Bayes in plain language; compute toy examples. Defer proofs—do not pretend you completed them. |
+| **3. Classical ML overview** | 5–7 weeks | Work at scikit-learn level through M9–M12: baselines, leakage-safe pipelines, cross-validation, regression/classification/clustering/trees, calibration, and error analysis. Ship one churn-prediction dashboard with a decision memo. |
+| **4. Mechanical understanding** | 3–4 weeks | Implement **logistic regression**, **K-Means**, and a **decision tree** from scratch with NumPy. Use the `__init__` → internal helpers (for logistic regression, `sigmoid`) → `fit` → `predict` class pattern; test against scikit-learn on fixed toy data. |
+| **5. AI Engineer stack** | 6–9 weeks | M18 → M21 → M22 → M23: prompting, the zero-shot/RAG/fine-tuning decision, retrieval, agents/tool use, eval pipelines, and prompt-injection defenses. Ship a cited RAG assistant over your own notes. |
+| **6. Production wrap** | 4–6 weeks | M24: move out of a loose notebook into typed Python, pytest, Docker, CI/CD, MLflow or W&B tracking, monitoring, and one deployment target (AWS is one option, not a requirement). Publish architecture, evals, cost/latency, and failure analysis. |
+
+> **Trade-off:** this route buys fast feedback and portfolio evidence by postponing proof literacy, measure theory, abstract linear algebra, and derivation-heavy deep learning. Return to full M0/M2/M3/M5 before research work, before claiming mathematical mastery, or when M13+ derivations become opaque. The academic route remains the stronger preparation for research and theory-heavy roles.
+
+> **Operating rule:** implement first, then use libraries; deploy before polishing. AI assistants may tutor, explain errors, and review your work, but must not perform the cognitive step you are trying to learn. Otherwise you create the **fluency illusion**: generated code feels familiar even though you cannot reproduce or debug it.
 
 ## Roadmap
 
 ### Foundations
 
+- [🚀 Practitioner Track (Fast Lane)](#practitioner-track)
 - [Math diagnostic and remediation](#math-diagnostic)
 - [M0 — Mathematical maturity: pre-calculus, logic, and proof](#module-0)
 - [M1 — Programming foundations and computational thinking](#module-1)
@@ -121,6 +149,8 @@ Use the shortest entry point that matches your current experience. You can retur
 
 ### Reference sections
 
+- [Career Operations](#career-operations)
+- [Practitioner Shelf](#practitioner-shelf)
 - [Core textbook list](#books)
 - [Production toolchain](#toolchain)
 - [Progress tracker](#progress-tracker)
@@ -174,6 +204,8 @@ For each module, use a simple four-step loop:
 3. **Implement** — reproduce core algorithms without relying only on high-level APIs.
 4. **Ship** — complete the module project with tests, documentation, and a short results memo.
 
+> **Portfolio rule for every M1–M25 project:** publish a concrete, runnable deliverable. The definition of done is (1) automated tests for the critical path and at least one failure case, (2) a `README` with setup, architecture, usage, and limitations, and (3) a short results memo with evidence, errors, and next steps. Add at least one production stretch—Docker, CI, experiment tracking, monitoring, or deployment. **A messy project on the internet beats a perfect project on your laptop.** Existing multi-project lists below use this same completion bar.
+
 > **Resource policy:** free and open resources are preferred. Some books are listed as optional references when no equivalent open source is as strong.
 
 ---
@@ -195,10 +227,10 @@ Pick **one** of these freely-available diagnostic instruments — each maps clea
 
 | # | Strand | Diagnostic instrument | Pass bar | Remediation if you fail → |
 |---|---|---|---|---|
-| 1 | **Pre-calculus & algebra** | [MIT 18.01A diagnostic (Q1–Q10)](https://ocw.mit.edu/courses/18-01a-calculus-fall-2005/resources/exam_a/) | 8/10 | Module **0a** (Khan Academy Pre-Calc) |
+| 1 | **Pre-calculus & algebra** | [MIT 18.01 practice exam (first 10 questions)](https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/exams/) | 8/10 | Module **0a** (Khan Academy Pre-Calc) |
 | 2 | **Trigonometry & complex numbers** | [Paul's Online Trig diagnostic](https://tutorial.math.lamar.edu/) | 7/10 | Module **0a** (Khan Academy Trig + Euler's formula) |
-| 3 | **Proof writing & logic** | [Velleman *How To Prove It* §1.5 exercises](https://www.cambridge.org/core/books/how-to-prove-it/) | 4/5 | Module **0b** (Hammack *Book of Proof* + Velleman + Lean tutorial) |
-| 4 | **Single-variable calculus** | [MIT 18.01 Final Exam](https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/final-exam/) | 70 % | Module **2** (full) |
+| 3 | **Proof writing & logic** | [Velleman *How To Prove It* §1.5 exercises](https://www.cambridge.org/highereducation/books/how-to-prove-it/6D2965D625C6836CD4A785A2C843B3DA) | 4/5 | Module **0b** (Hammack *Book of Proof* + Velleman + Lean tutorial) |
+| 4 | **Single-variable calculus** | [MIT 18.01SC Final Exam](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/final-exam/) | 70 % | Module **2** (full) |
 | 5 | **Linear algebra (computational)** | [MIT 18.06 Quiz 1](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/exams/) | 70 % | Module **3** (full) |
 | 6 | **Probability sense** | [Harvard Stat 110 Practice Strategic Practice 1–3](https://stat110.hsites.harvard.edu/) | 70 % | Module **5** (full) |
 
@@ -233,6 +265,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **Strict Prerequisites:** Working knowledge of high-school algebra (solve linear and quadratic equations).
 
+> **⚡ Intuition-First Alternative (Practitioner Track):** You may defer M0b while you build the first practitioner projects. Use the visuals-first approach of [3Blue1Brown](https://www.3blue1brown.com/), the plain-language style of [StatQuest](https://www.youtube.com/@statquest), and the relevant Manga Guide examples to learn what notation is saying before formal proof. **What you give up:** quantifier discipline, theorem reading, and the ability to verify claims rather than merely recognize them. **Come back:** before research work and before M13+ derivations. There is no honest “intuition-only” substitute for learning to write a proof.
+
 ### Sub-module 0a — Pre-Calculus & Trigonometry Refresher (≈ 2–4 weeks)
 
 * **Exhaustive Topic List:**
@@ -247,7 +281,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **2026 Resources:**
   * **Primary (free):** [Khan Academy Precalculus](https://www.khanacademy.org/math/precalculus) — 10 units, ≈ 40 hours, includes mastery quizzes.
-  * **Alternative (free, MIT-quality):** [MIT 18.01A Calculus with Pre-Calc](https://ocw.mit.edu/courses/18-01a-calculus-fall-2005/) — combines refresher with calculus, ideal if you have 6+ weeks.
+  * **Alternative (free, MIT-quality):** [MIT 18.01SC Single Variable Calculus](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) — a structured calculus review with videos, notes, exams, and solutions; pair it with Khan Precalculus above if algebra or trigonometry is weak.
   * **Reading:** Stewart *Calculus, Early Transcendentals* (9th ed.) — Appendix A (numbers), Appendix B (coordinate geometry), Appendix C (graphs), §1.1–§1.5 (functions and models).
   * **Computational verification:** every identity must be checked in **SymPy** within 1 line (e.g., `sympy.simplify(sin(x)**2 + cos(x)**2 - 1)`).
 
@@ -274,7 +308,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **2026 Resources:**
   * **Primary text (free, CC-BY):** [_Book of Proof_ (Hammack, **3rd Edition, 2018; revised 2025**)](https://richardhammack.github.io/BookOfProof/) — chapters 1–10. Open Textbook Initiative-approved; used at 50+ universities.
-  * **Companion text:** [_How to Prove It: A Structured Approach_ (Velleman, **3rd Edition, Cambridge 2019**)](https://www.cambridge.org/core/books/how-to-prove-it/) — chapters 1–6 + the new **[*How to Prove It With Lean* (Velleman, 2024)](https://djvelleman.github.io/HTPIwL/)** companion (free, browser-based).
+  * **Companion text:** [_How to Prove It: A Structured Approach_ (Velleman, **3rd Edition, Cambridge 2019**)](https://www.cambridge.org/highereducation/books/how-to-prove-it/6D2965D625C6836CD4A785A2C843B3DA) — chapters 1–6 + the new **[*How to Prove It With Lean* (Velleman, 2024)](https://djvelleman.github.io/HTPIwL/)** companion (free, browser-based).
   * **Discrete-math companion:** [_Mathematics for Computer Science_ (Lehman, Leighton, Meyer — MIT 6.042J, **2024 edition free PDF**)](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_textbook/) — chapters 1–5 (Proofs, Induction, Number Theory).
   * **Video course:** [Stanford CS103 Mathematical Foundations of Computing — full lecture notes](https://web.stanford.edu/class/cs103/) (publicly mirrored).
   * **Free online interactive course:** [_Introduction to Mathematical Thinking_ (Keith Devlin — Coursera, evergreen)](https://www.coursera.org/learn/mathematical-thinking) — Stanford-led, free audit.
@@ -293,6 +327,17 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **Strict Prerequisites:** High-school algebra. A working laptop with VS Code installed.
 
+* **Official Pacing — four phases:**
+
+  | Phase | Time | Skills and mandatory milestone |
+  |---|---:|---|
+  | **1. Foundations** | Weeks 1–4 | Types, control flow, functions, collections, strings, debugging → ship a number-guessing game **and** calculator. |
+  | **2. Working Python** | Weeks 5–8 | Comprehensions, standard library, files, exceptions, packages, `uv` → ship a file-I/O CLI such as an expense tracker, notes manager, password generator, or downloads organiser. |
+  | **3. Real-World Python** | Weeks 9–14 | HTTP/APIs, JSON, scraping, OOP, pytest, Git/GitHub → ship a weather CLI, Reddit scraper, Spotify analyser, or Discord bot that stores results. |
+  | **4. Specialisation** | Months 4–6+ | Choose web/data/AI/automation; build **2–3 deployed portfolio projects**. Ladder options: Flask blog with auth → pretrained-HF sentiment analyser → stock dashboard → RAG chatbot over your own notes. |
+
+  **Honest timing:** approximately 4–8 weeks for basics, 3–6 months for useful programs, and 9–12 months for entry-level job readiness when the learner also builds a portfolio. These estimates assume consistent part-time study; prior programming experience can shorten them.
+
 * **Exhaustive Topic List:**
   * **[Harvard CS50P · Week 0]**: Functions, variables, types (int/float/str), `print`, formatted strings, conditionals, boolean expressions.
   * **[Harvard CS50P · Week 1]**: Conditionals, `match` statement, flow control, truthy/falsy semantics.
@@ -310,7 +355,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **[MIT 6.0002]**: Optimisation problems, knapsack, graph-theoretic models, dynamic programming motivation, random walks, Monte Carlo simulation, sampling + confidence, experimental data curve-fitting, statistical myths.
 
 * **2026 Resources:**
-  * **Primary Course Link:** [Harvard CS50P — 2024 edition](https://cs50.harvard.edu/python/) · [MIT 6.0001 on OCW](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)
+  * **Primary Course Link:** [Harvard CS50P](https://cs50.harvard.edu/python/) · [MIT 6.0001 on OCW](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)
+  * **Research sources:** [Scrimba — *Best Free Python Courses for Beginners in 2026*](https://scrimba.com/articles/best-free-python-courses-for-beginners-in-2026/) · [Scrimba — *How to Learn Python: A Beginner's Guide (2026)*](https://scrimba.com/articles/how-to-learn-python-a-beginners-guide-2026/)
   * **Required Reading (Latest 2026 Editions):**
     * _Fluent Python_ (**3rd Edition, 2025**) — Luciano Ramalho — chapters 1–6, 9 (closures/decorators), 17 (iterators).
     * _Python Crash Course_ (**4th Edition, 2025**) — Eric Matthes — for absolute beginners only.
@@ -324,6 +370,27 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **`pytest` + `hypothesis` (property-based testing)** — [hypothesis docs](https://hypothesis.readthedocs.io/) ✅. Every ML engineer at FAANG writes property-based tests for numerical code; learn the `@given` decorator and shrinking.
   * **`ruff` + `pyright`** for lint + typecheck; **`pre-commit`** to run them on every commit.
 
+* **Free Python Course Matrix:**
+
+  | Resource | Time | Format | Certificate | Project practice | Best for |
+  |---|---:|---|---|---|---|
+  | [Scrimba Learn Python](https://scrimba.com/learn-python-c03) | 5.6 h | Interactive scrims, 58 parts | Free completion certificate | Built throughout | First-week active practice |
+  | [Harvard CS50P](https://cs50.harvard.edu/python/) | ≈100 h / 10 weeks | Lectures + problem sets | Free audit; paid verified edX certificate | 9 problem sets + final | Academic depth and problem solving |
+  | [Helsinki Python MOOC 2026](https://programming-26.mooc.fi/) | 200+ h / 14 parts | Text + auto-graded exercises | Exam/ECTS route subject to course rules | Hundreds of exercises | Maximum exercise volume |
+  | [freeCodeCamp Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) | ≈300 h estimate | Text + projects | Free | 5 required projects | Project certificate; **legacy track is no longer actively updated**—check the [current Python certifications](https://www.freecodecamp.org/news/python-curriculum-is-live/) |
+  | [Python for Everybody](https://www.coursera.org/specializations/python) | ≈32 h audit estimate | Video + reading | No certificate in audit mode | Graded work is paid | Gentle university-style sequence |
+  | [Official Python Tutorial](https://docs.python.org/3/tutorial/) | Self-paced | Canonical reference | No | None | Accurate companion/reference, not hand-holding |
+  | [Google's Python Class](https://developers.google.com/edu/python) | ≈10 h | Text + videos + exercises | No | Exercises | Existing programmers moving quickly |
+  | [*Automate the Boring Stuff*](https://automatetheboringstuff.com/) | Self-paced | Free online book | No | Automation scripts | Immediate, useful wins |
+
+  **Recommended pairing:** Scrimba → *Automate the Boring Stuff* → CS50P **or** Helsinki. Red flags when evaluating alternatives: Python 2 as the primary language, no projects, or no OOP coverage.
+
+> **📚 How to actually study this module — tutorial-hell escape protocol:** Build before you feel ready. After each lesson, close it and rebuild the idea from a blank file. Budget **two hours building for each hour watching**. Clone a small open-source Python project; run it, read it, break it, and fix it. Use a study cohort, code review partner, local meetup, or learning community for weekly accountability. Difficulty is not a sign to collect another tutorial; it is the practice.
+
+> **AI-use policy — avoid the fluency illusion:** In Phases 1–2, type the code yourself. Cursor, Claude, Copilot, and ChatGPT may explain an error, ask you guiding questions, generate extra exercises, or review code **after your attempt**. They may not author the solution you are learning to produce. Before accepting AI help, write your hypothesis; afterward, close the answer and reproduce the fix from memory.
+
+* **📦 Module Project (mandatory) — API-powered weather CLI:** Build a CLI with typed functions, error handling, caching, and tests around mocked HTTP responses. **Definition of done:** public repo; `README` with setup and example output; pytest suite including failure paths; short results/lessons memo; tagged release. **Stretch:** Dockerfile + GitHub Actions test workflow. Ship before polishing—a messy project on the internet beats a perfect project on your laptop.
+
 ---
 
 <a id="module-2"></a>
@@ -332,6 +399,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 * **The Tutor's "Why":** Gradients, backpropagation, maximum-likelihood estimation, and Bayes-rule derivations all live or die on calculus. You will not understand *why* SGD converges without it. Harvard's CS 1810 (2026) explicitly requires AM 22a (calc + lin alg). **Crucially, every modern paper denotes gradients in *matrix-calculus* notation (Jacobians, Hessians, vector-by-matrix derivatives) — and 90 % of self-learners have never seen this formalism.** This module fixes that gap.
 
 * **Strict Prerequisites:** Module 0 (proof literacy) + Module 1 (so you can verify integrals with SymPy).
+
+> **⚡ Intuition-First Alternative (Practitioner Track):** Start with [3Blue1Brown's *Essence of Calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr), calculus explanations from [StatQuest](https://www.youtube.com/@statquest), and [*The Manga Guide to Calculus*](https://nostarch.com/releases/manga_calculus.html) (optional paid book). Practise derivatives, gradients, and convex-loss sketches on toy functions; use autodiff to check them. **What you give up:** ε–δ proof literacy, convergence arguments, full matrix-calculus derivations, and KKT depth. **Come back:** before research, optimisation-heavy interviews, or when M13+/M15 derivations stop being intelligible.
 
 * **Exhaustive Topic List:**
   * **[MIT 18.01.1x · Differentiation]**: Limits and continuity (ε-δ definition), derivative as a limit, power/product/quotient/chain rules, trig derivatives, exponential and log derivatives, implicit differentiation, linear/quadratic approximations, related rates, Mean Value Theorem, L'Hôpital's rule, optimisation (first/second derivative tests), Newton's method.
@@ -354,7 +423,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * **[Recommended freely-available alternative]** _Active Calculus_ (Boelkins et al., **2024 edition, free online**) — used at 80+ liberal-arts colleges.
     * **[Free, MIT-quality, 2024-revised]** Strang & Herman _Calculus, Vol 1–3_ (OpenStax, free PDF) — explicit OCW companion.
     * _Mathematics for Machine Learning_ — Deisenroth, Faisal, Ong (**book PDF last updated December 2025**) — Chapters 5 (Vector Calculus), 6 (Probability), **7 (Continuous Optimization)**. [mml-book.com](https://mml-book.com/) — **explicitly recommended by Harvard CS 1810 (2026)**.
-    * ***The Matrix Cookbook*** — Petersen & Pedersen (2024 web update) — [PDF mirror via MIT 18.S096](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/external-resources/the-matrix-cookbook-pdf_fa1edb35-184a-410d-9d60-34488dbc72ee/).
+    * ***The Matrix Cookbook*** — Petersen & Pedersen (2012 release) — [DTU publication page](https://www2.compute.dtu.dk/pubdb/pubs/3274-full.html) with the freely available manuscript.
     * **Parr & Howard** "The Matrix Calculus You Need For Deep Learning" — free on arXiv `1802.01528` (revised); also as an HTML web-book at [explained.ai/matrix-calculus](https://explained.ai/matrix-calculus/).
     * **Boyd & Vandenberghe** _Convex Optimization_ (Cambridge 2004; **6th printing 2023**, free PDF as above) — chapters 1–5 mandatory; 6–11 optional and revisited in M9–M11.
     * 3Blue1Brown: [_Essence of Calculus_ playlist (16 videos, ≈ 3 hrs)](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) — required visual intuition.
@@ -375,6 +444,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Checkpointing:** Trade compute for memory by recomputing activations during backward pass (used in FSDP / gradient-checkpointing in M15).
   * **Practical:** `jax.grad`, `jax.jvp`, `jax.vjp`, `jax.jacrev`, `jax.jacfwd`, `jax.hessian`; `torch.autograd.grad`, `torch.func.vmap`, `torch.func.jacrev`; all cross-reference the [MIT 18.063 matrix-calc notes](https://github.com/mitmath/matrixcalc) already cited above.
 
+* **📦 Module Project (mandatory) — constraint-based meal planner:** Express nutrition, budget, allergy, and preference constraints; solve them with `cvxpy`; explain feasibility and sensitivity. **Definition of done:** tested feasible and infeasible cases, reproducible environment, `README`, and results memo. **Production stretch:** containerise the solver and run tests in CI.
+
 ---
 
 <a id="module-3"></a>
@@ -383,6 +454,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 * **The Tutor's "Why":** *Every* modern ML algorithm — from linear regression to attention heads in GPT-class transformers — is a composition of matrix operations. Strang's 18.06 is the global gold standard for the *computational* view; Axler's *Linear Algebra Done Right* (**4th edition, 2024, freely available**) is the gold standard for the *abstract / proof-based* view that PRML, Bishop 2024, and Cambridge MLMI implicitly assume. **You need both.** Cambridge's MLMI Module 1 requires eigendecomposition mastery before week 3.
 
 * **Strict Prerequisites:** Module 0b (proof literacy) + Module 2 (partial derivatives for matrix calculus).
+
+> **⚡ Intuition-First Alternative (Practitioner Track):** Complete [3Blue1Brown's *Essence of Linear Algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), selected [StatQuest](https://www.youtube.com/@statquest) PCA/linear-model explanations, and [*The Manga Guide to Linear Algebra*](https://nostarch.com/linearalgebra) (optional paid book), then manipulate small matrices in NumPy. **What you give up:** abstract vector-space and spectral-theorem proofs plus numerical-analysis depth. **Come back:** before research, M13+ derivations, or any work where conditioning and factorisation choices affect correctness.
 
 * **🧭 Suggested Two-Pass Pedagogy:**
   * **Pass 1 — Computational (5 weeks):** Strang 18.06 + 3Blue1Brown — focus on *doing* row-reduction, computing eigenvalues, running SVD on toy matrices. Goal: numerical fluency.
@@ -454,6 +527,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Concrete Mathematics_ (**2nd Edition**) — Graham, Knuth, Patashnik — for discrete-math depth.
   * **Practical Implementation:** Pure Python + `collections` (deque, defaultdict, Counter), **`sortedcontainers`**, **`networkx` 3.x** for graph algorithms, **LeetCode** + **Codeforces** for practice.
 
+* **📦 Module Project (mandatory) — route-planner benchmark:** Implement BFS, Dijkstra, and A* over the same graph; document complexity and benchmark runtime/memory on reproducible inputs. **Definition of done:** correctness/property tests, `README`, and results memo. **Production stretch:** expose the planner through a containerised API with CI.
+
 ---
 
 <a id="module-5"></a>
@@ -462,6 +537,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 * **The Tutor's "Why":** Harvard's Joe Blitzstein (Stat 110) calls probability "the soul of statistics." In 2026, every ML model is a probability distribution — diffusion models are score-matched Gaussians; LLMs are autoregressive categoricals; Bayesian networks are joint PMFs. This is **the** pivotal module.
 
 * **Strict Prerequisites:** Modules 2 and 3 (integration for continuous RVs; matrices for multivariate distributions).
+
+> **⚡ Intuition-First Alternative (Practitioner Track):** Use [StatQuest](https://www.youtube.com/@statquest) for distributions, Bayes, likelihood, and uncertainty; pair it with [*The Manga Guide to Statistics*](https://nostarch.com/releases/manga_statistics.html) (optional paid book) and visual probability simulations in NumPy. 3Blue1Brown's visual style is useful for the linear-algebra/calculus dependencies. **What you give up:** measure-theoretic definitions, concentration proofs, and convergence arguments. **Come back:** before Bayesian research, theoretical ML, or M13+ derivations; simulation intuition does not license formal probability claims.
 
 * **Exhaustive Topic List:** *(Blitzstein's 34-lecture Stat 110 is the spine; everything else confirms or extends it.)*
   * **[Harvard STAT 110 · Lec 1]**: Probability and Counting — sample spaces, events, naïve definition of probability, multiplication rule, permutations, combinations, binomial coefficient identities.
@@ -505,7 +582,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Introduction to Probability_ (**2nd Edition, 2008**) — Bertsekas & Tsitsiklis — companion to 6.431x.
     * **[_Introduction to Probability for Data Science_ — Stanley H. Chan (Michigan Publishing, 2021/2023, FREE PDF + HTML)](https://probability4datascience.com/)** — *the* book that bridges Stat-110-style probability to Python/MATLAB code; hundreds of worked computational examples; **adopted by 30+ US engineering programmes** (incl. Purdue, Michigan).
     * _Mathematics for Machine Learning_ — Deisenroth et al. — Chapter 6.
-    * **[_Information Theory, Inference, and Learning Algorithms_ — David MacKay (Cambridge 2003, **free PDF**)](https://www.inference.org.uk/itila/)** — a singular masterpiece; chapters 1–6 give the cleanest entropy/MI exposition in any language.
+    * **[_Information Theory, Inference, and Learning Algorithms_ — David MacKay (Cambridge 2003, **free PDF**)](https://archive.org/details/MackayInformationTheoryFreeEbookReleasedByAuthor)** — a singular masterpiece; chapters 1–6 give the cleanest entropy/MI exposition in any language.
     * **[_High-Dimensional Probability_ — Roman Vershynin (Cambridge 2018, **free draft online**)](https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html)** — *the* reference for sub-Gaussian, concentration, and random matrices; chapters 1–3 sufficient for ML purposes.
     * **(Optional, PhD-track only)** _Probability with Martingales_ — David Williams (Cambridge 1991), or _Measure, Integral and Probability_ — Capinski & Kopp (Springer 2nd ed., 2014) — for the measure-theoretic complement after Stat 110.
   * **Practical Implementation:** **SciPy 1.14+** `scipy.stats` (every distribution you'll need); **NumPy** `np.random.Generator` (modern PCG64 / Philox RNG, **default since NumPy 1.17**); begin using **`distrax`** (JAX) or **`torch.distributions`** (PyTorch) for *differentiable* distributions — you'll need these in M13. **`tensorflow_probability` 0.24+** (JAX-substrate) for advanced bijectors (used in normalising flows, M16).
@@ -515,6 +592,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * Weeks 9–10: Concentration inequalities + information-theory primer (MacKay Ch 1–6 + Vershynin Ch 1–2).
   * Weeks 11–12: Stat 110 lectures 29–34 + measure-theoretic bridge (Wasserman Ch 21 *or* Capinski-Kopp Ch 1–4 if PhD-track).
   * **Capstone exercise:** write a 30-line script that empirically demonstrates the CLT, the Hoeffding bound, and the Galton-Watson process, all in one notebook. *If you can do this without help, you have actually learned probability.*
+
+* **📦 Module Project (mandatory) — uncertainty simulator:** Build an interactive simulator for Bayes updates, the CLT, and concentration bounds; compare empirical coverage with theory. **Definition of done:** deterministic statistical tests, `README`, and results memo. **Production stretch:** deploy the app with monitoring for invalid inputs.
 
 ---
 
@@ -553,6 +632,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **➡️ Cross-ref note (NEW v2026.2):** A/B testing, experimental design, and causal inference have been promoted out of this module into a **dedicated Module 6½ — Causal Inference & Experimentation** (directly below) because every senior-DS interview at Meta / Netflix / Booking / Uber tests this material in depth.
 
+* **📦 Module Project (mandatory) — reproducible inference lab:** Analyse one public dataset with estimator diagnostics, confidence intervals, power analysis, multiple-testing control, and bootstrap checks. **Definition of done:** simulation/unit tests, `README`, and decision-focused results memo. **Production stretch:** schedule the analysis in CI and publish the report artifact.
+
 ---
 
 <a id="module-6-half"></a>
@@ -582,12 +663,12 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * Hernán & Robins — [*Causal Inference: What If* (free PDF, 2024 revision)](https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf) ✅
     * Pearl, Glymour & Jewell — *Causal Inference in Statistics: A Primer* (Wiley 2016).
     * Pearl — *Causality: Models, Reasoning, and Inference* (Cambridge 2e, 2009) — the reference.
-    * **Kohavi, Tang & Xu** — [*Trustworthy Online Controlled Experiments*](https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59) ✅ (Cambridge 2020) — **the industrial A/B-testing bible**.
+    * **Kohavi, Tang & Xu** — [*Trustworthy Online Controlled Experiments*](https://doi.org/10.1017/9781108653985) ✅ (Cambridge 2020) — **the industrial A/B-testing bible**.
   * **Communities / living resources:** [exp-platform.com](https://exp-platform.com/) ✅ (Ron Kohavi's blog + papers from Microsoft ExP platform), [Statistical Modeling, Causal Inference & Social Science (Gelman blog)](https://statmodeling.stat.columbia.edu/), Pearl's *UCLA Causality Blog*.
 
 * **📋 Mandatory mini-projects:**
   1. **Design + simulate an A/B test** with CUPED variance reduction — show the % reduction in required sample size.
-  2. **Fit an IV regression** on a realistic dataset (e.g., [NLSY or Angrist-Krueger 1991 compulsory-schooling](https://economics.mit.edu/sites/default/files/publications/Does%20Compulsory%20School%20Attendance.pdf)) — reproduce the returns-to-education estimate.
+  2. **Fit an IV regression** on a realistic dataset (e.g., [NLSY or Angrist-Krueger 1991 compulsory-schooling](https://www.nber.org/papers/w3572)) — reproduce the returns-to-education estimate.
   3. **Use DoWhy end-to-end**: model → identify → estimate → refute — on a confounded synthetic dataset; show refutation tests (placebo, random common cause, unobserved-confounder sensitivity).
   4. **Causal Forest on lalonde / criteo-uplift**: estimate CATEs, plot HTE heatmap, produce a targeting policy + its evaluation via doubly-robust off-policy estimation.
 
@@ -628,6 +709,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Dashboards:** **[Streamlit](https://streamlit.io/)** ✅ for ML demos, **[Gradio](https://www.gradio.app/)** ✅ for HF-style model UIs, **[Evidently](https://www.evidentlyai.com/)** ✅ for data-drift dashboards.
   * **Feature Engineering Discipline:** Target encoding with K-fold smoothing, **train-test leakage** (temporal, group, target-leak from future aggregates), time-based features (lag, rolling, expanding windows), cyclical encoding (sin/cos of hour/month), **sklearn Pipelines + ColumnTransformer** as the *only* correct way to avoid leakage. Reference: [*Feature Engineering for Machine Learning* — Zheng & Casari (O'Reilly 2018)](https://www.oreilly.com/library/view/feature-engineering-for/9781491953235/).
 
+* **📦 Module Project (mandatory) — public-data EDA dashboard:** Ingest, validate, clean, and visualise a public dataset; make one defensible recommendation and disclose data limitations. **Definition of done:** schema/transform tests, `README`, and results memo. **Production stretch:** deploy a Streamlit dashboard with CI.
+
 ---
 
 <a id="module-8a"></a>
@@ -653,6 +736,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * **The Kimball Group** — [*The Data Warehouse Toolkit* (3e)](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/) ✅ — the dimensional-modelling bible.
     * Reis & Housley — [*Fundamentals of Data Engineering*](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) ✅ (O'Reilly 2022) — Chapters 5–8 for the DB/warehouse half.
   * **Practical Implementation:** **PostgreSQL 17** (with `pgvector` extension), **DuckDB 1.5+**, **SQLAlchemy 2.x** with async, **dbt-core 1.11.8**, **sqlmesh** (dbt alternative), **Snowflake** or **BigQuery** free-tier for cloud practice.
+
+* **📦 Module Project (mandatory) — analytics warehouse:** Model an open dataset as facts/dimensions in Postgres or DuckDB, transform it with dbt, and answer five stakeholder questions with tested SQL. **Definition of done:** dbt tests, query-plan evidence, `README`, and results memo. **Production stretch:** orchestrate refreshes and add data-quality monitoring.
 
 ---
 
@@ -724,6 +809,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Pattern Recognition and Machine Learning_ (Bishop, 2006) — Chapter 3.
   * **Practical Implementation:** **scikit-learn 1.5+** (`LinearRegression`, `Ridge`, `Lasso`, `ElasticNet`, `KNeighborsRegressor`, `GaussianProcessRegressor`), **statsmodels** for inferential output, **`torch.optim.SGD` / `torch.optim.AdamW`** once you graduate to M15.
 
+* **📦 Module Project (mandatory) — regression decision service:** Build a leakage-safe baseline-to-regularised pipeline, report uncertainty and subgroup errors, and serve one prediction endpoint. **Definition of done:** data/model/API tests, `README`, and results memo. **Production stretch:** Dockerise it and track experiments in MLflow or W&B.
+
 ---
 
 <a id="module-10"></a>
@@ -761,6 +848,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Practical:** [`sklearn.calibration.CalibratedClassifierCV`](https://scikit-learn.org/stable/modules/calibration.html), [`sklearn.calibration.calibration_curve`](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.calibration_curve.html), [`netcal`](https://github.com/EFS-OpenSource/calibration-framework) for DL calibration.
   * **Why it matters for 2026 interviews:** every senior-DS interview asks about calibration before asking about model choice.
 
+* **📦 Module Project (mandatory) — churn decision dashboard:** Implement logistic regression from scratch with NumPy (`__init__` → `sigmoid` → `fit` → `predict`), compare it with scikit-learn, calibrate probabilities, and document a threshold policy. **Definition of done:** gradient/parity/failure tests, `README`, and results memo. **Production stretch:** deploy the dashboard with CI and prediction logging.
+
 ---
 
 <a id="module-11"></a>
@@ -790,6 +879,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Probabilistic Machine Learning: An Introduction_ (Murphy, MIT Press 2022) — chapters 20-21.
   * **Practical Implementation:** **scikit-learn** (`KMeans`, `DBSCAN`, `AgglomerativeClustering`, `GaussianMixture`, `PCA`, `KernelPCA`, `TruncatedSVD`); **`hdbscan`**, **`umap-learn`**, **`openTSNE`**; **`pymc`** for Bayesian GMMs.
 
+* **📦 Module Project (mandatory) — customer segmentation study:** Implement K-Means from scratch with NumPy, compare against scikit-learn and density-based clustering, and test stability across seeds. **Definition of done:** convergence/parity tests, `README`, and results memo. **Production stretch:** track runs and publish a monitored segmentation dashboard.
+
 ---
 
 <a id="module-12"></a>
@@ -818,6 +909,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * XGBoost paper (Chen & Guestrin 2016) — mandatory.
     * _Interpretable Machine Learning_ — Christoph Molnar — [free online, 2024 edition](https://christophm.github.io/interpretable-ml-book/).
   * **Practical Implementation:** **scikit-learn** (`DecisionTreeClassifier`, `RandomForestClassifier`, `GradientBoostingClassifier`, `HistGradientBoostingClassifier` — now default, C++-backed), **XGBoost 2.x**, **LightGBM 4.x**, **CatBoost 1.2+**, **`shap` 0.46+**, **`interpret` (Microsoft InterpretML)**, **`dalex`**.
+
+* **📦 Module Project (mandatory) — tree benchmark:** Implement a small CART classifier from scratch, then compare it with random forest and gradient boosting on tabular data with calibration and explainability. **Definition of done:** split/prediction/parity tests, `README`, and results memo. **Production stretch:** package the winner behind a Dockerised API with CI.
 
 ---
 
@@ -856,6 +949,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Bayesian Reasoning and Machine Learning_ — David Barber — [free PDF](http://www.cs.ucl.ac.uk/staff/D.Barber/brml/) (explicitly listed in Cambridge ML&BI reading list).
   * **Practical Implementation:** **PyMC 5.x** (with PyTensor backend), **NumPyro 0.15+** (JAX-native, 10-100× faster for complex models, standard in 2026 research), **Stan** via `cmdstanpy`, **TensorFlow Probability 0.24+**, **`arviz`** for posterior diagnostics (R̂, ESS, trace plots, posterior predictive checks).
 
+* **📦 Module Project (mandatory) — Bayesian decision package:** Fit a hierarchical model, run prior/posterior predictive checks and convergence diagnostics, then express a decision under uncertainty. **Definition of done:** simulation/recovery tests, `README`, and results memo. **Production stretch:** track posterior artifacts and deploy a reproducible report pipeline.
+
 ---
 
 <a id="module-14"></a>
@@ -886,6 +981,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * Rabiner, "A Tutorial on Hidden Markov Models" (IEEE 1989) — mandatory historical reading.
     * Bishop PRML — Chapter 13 (sequential data).
   * **Practical Implementation:** **`statsmodels.tsa`** (ARIMA, SARIMAX, VAR, state-space), **`pmdarima`** (auto-ARIMA), **`prophet` 1.1+**, **`hmmlearn`**, **`pykalman`**, **`filterpy`** for Kalman variants, **`darts`** (Unit8's unified TS library — 2026 favourite), **`sktime` 0.30+**, **`neuralforecast`** (Nixtla) for modern deep TS.
+
+* **📦 Module Project (mandatory) — forecast dashboard:** Compare naïve, statistical, and learned forecasts using rolling-origin validation; quantify interval coverage and failure during regime change. **Definition of done:** leakage/metric tests, `README`, and results memo. **Production stretch:** schedule retraining and monitor forecast drift.
 
 ---
 
@@ -941,6 +1038,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Throughput engineering:** [Triton](https://github.com/triton-lang/triton) ✅ kernels, **FlashAttention-2 / 3** (Tri Dao), **PagedAttention** (vLLM), activation recomputation strategies, `torch.compile` with `fullgraph=True`.
   * **Reading:** [*How to Scale Your Model* (Google JAX scaling book, 2024)](https://jax-ml.github.io/scaling-book/) ✅, [PyTorch DTensor docs](https://pytorch.org/docs/stable/distributed.tensor.html), Stanford CS336 Lectures 5-7 (scaling, parallelism, systems).
 
+* **📦 Module Project (mandatory) — vision training system:** Train a small CNN with reproducible data/versioned configs, baseline it, run ablations, and analyse errors and calibration. **Definition of done:** data/model smoke tests, `README`, and results memo. **Production stretch:** containerise training, enable CI, and track runs.
+
 ---
 
 <a id="module-16"></a>
@@ -988,6 +1087,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _The Little Book of Deep Learning_ — François Fleuret — concise reference.
   * **Practical Implementation:** **Hugging Face Transformers v5.0 / v4.57 LTS**, **Diffusers 0.30+** (image/video), **PEFT 0.14+** (LoRA/QLoRA/DoRA), **xformers** / **FlashAttention‑3**, **bitsandbytes** (4/8‑bit), **`torch.compile`** + **`torch.fullgraph`** (2× speedups), **Triton 3.x** for custom kernels (Stanford CS336 Lec 6).
 
+* **📦 Module Project (mandatory) — pretrained sentiment service:** Fine-tune or linearly probe a transformer, compare against a classical baseline, and report robustness, latency, and model-card limitations. **Definition of done:** preprocessing/inference tests, `README`, and results memo. **Production stretch:** deploy a monitored API with Docker and CI.
+
 ---
 
 <a id="module-17"></a>
@@ -1022,6 +1123,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * _Foundations of Deep Reinforcement Learning_ — Graesser & Keng — for practitioners.
   * **Practical Implementation:** **Gymnasium** (successor to OpenAI Gym), **Stable-Baselines3 2.x**, **CleanRL** (single-file implementations — best for learning), **RLlib** (Ray, for distributed), **PettingZoo** (multi-agent), **trl** (Hugging Face — for RLHF), **DeepMind Acme**, **PufferLib** (2025, unified wrapper).
 
+* **📦 Module Project (mandatory) — reproducible control agent:** Train and evaluate a compact RL agent over multiple seeds; compare against a random policy and report learning stability. **Definition of done:** environment/policy tests, `README`, and results memo. **Production stretch:** track experiments and publish an evaluation dashboard.
+
 ---
 
 # 🔴 FRONTIER & PRODUCTION STRATUM — Modules 18, 21–26
@@ -1054,7 +1157,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Multi-modality**: Vision-Language Models (LLaVA, GPT-4V, Claude 3.5 Sonnet Vision, **Molmo** 2024, **Pixtral**), audio (Whisper v3, Voice-Mode, **Moshi**), video (Sora, Veo 2, **Runway Gen-3**, **Kling 2.0**).
 
 * **2026 Resources:**
-  * **Primary Course Link:** [**Stanford CS336 Spring 2026 “Language Modeling from Scratch”**](https://cs336.stanford.edu/) (Hashimoto · Liang, LIVE 30 Mar 2026 — 17 lectures + 5 assignments covering tokenizer → Transformer → Triton FlashAttention → parallelism → data pipelines → SFT → RLHF/DPO → RLVR) · [CS336 Spring 2025 archive](https://cs336.stanford.edu/spring2025/) + [YouTube playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_) · [IITM BSCS3004](https://onlinedegree.iitm.ac.in/) · [Princeton COS 597 G](https://princeton-nlp.github.io/cos597G/) · [**MIT 6.7960 Fall 2025 Week 8‑9, 11–13**](https://deeplearning6-7960.github.io/) (Foundation Model pre‑/post‑training, scaling laws, inference‑time algorithms) · [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/) (free, certified) · [Hugging Face Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) (200+ pages of real training secrets, Oct 2025).
+  * **Primary Course Link:** [**Stanford CS336 Spring 2026 “Language Modeling from Scratch”**](https://cs336.stanford.edu/) (Hashimoto · Liang, LIVE 30 Mar 2026 — 17 lectures + 5 assignments covering tokenizer → Transformer → Triton FlashAttention → parallelism → data pipelines → SFT → RLHF/DPO → RLVR) · [CS336 Spring 2025 archive](https://cs336.stanford.edu/spring2025/) + [YouTube playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_) · [IITM BSCS3004](https://onlinedegree.iitm.ac.in/) · [Princeton COS 597G](https://www.cs.princeton.edu/courses/archive/fall22/cos597G/) · [**MIT 6.7960 Fall 2025 Week 8‑9, 11–13**](https://deeplearning6-7960.github.io/) (Foundation Model pre‑/post‑training, scaling laws, inference‑time algorithms) · [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/) (free, certified) · [Hugging Face Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) (200+ pages of real training secrets, Oct 2025).
   * **Required Reading (Latest 2026 Editions — verified April 2026):**
     * **_Build a Large Language Model (From Scratch)_** — Sebastian Raschka (Manning 2024) — **do this alongside CS336 Assignment 1**.
     * **_Hands‑On Large Language Models_** — Alammar & Grootendorst (O'Reilly Sep 2024, 428 pp., [HandsOnLLM repo](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)).
@@ -1083,6 +1186,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * [**lm-evaluation-harness (EleutherAI)**](https://github.com/EleutherAI/lm-evaluation-harness) ✅ — the canonical open-source harness (MMLU, GSM8K, HellaSwag, BBH, TruthfulQA, HumanEval).
     * [**HF Open LLM Leaderboard**](https://huggingface.co/open-llm-leaderboard) ✅ — the public scoreboard.
 
+* **📦 Module Project (mandatory) — adaptation benchmark:** Compare zero/few-shot prompting with one PEFT method on a bounded task; evaluate quality, cost, latency, safety failures, and reproducibility. **Definition of done:** prompt/data/inference tests, `README`, and results memo. **Production stretch:** containerise evaluation and gate regressions in CI.
+
 ---
 
 <a id="module-21"></a>
@@ -1092,6 +1197,12 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 * **Strict Prerequisites:** Module 18 (LLMs, tokenisation), Module 11 (embeddings, cosine similarity, PCA/SVD for retrieval concepts), Module 8a (SQL — for metadata filtering and hybrid search).
 
+* **Zero-shot vs RAG vs fine-tuning decision gate:**
+  1. Start with **zero/few-shot prompting** when the model already has the knowledge and the problem is instruction, format, or reasoning quality. It is the cheapest baseline and must be evaluated first.
+  2. Choose **RAG** when answers must use private, changing, attributable, or access-controlled knowledge. Measure retrieval separately from generation; citations do not prove faithfulness.
+  3. Choose **fine-tuning/PEFT** when repeated examples are needed to change behaviour, style, tool selection, output structure, or domain task performance—not merely to inject facts. Keep an untouched evaluation set.
+  4. Combine them only when ablations show independent value. Compare quality, latency, cost, security, maintenance, and rollback; do not select a stack because it is fashionable.
+
 * **Exhaustive Topic List:**
   * **Chunking strategies:** fixed-size, **recursive character splitters**, **semantic chunking** (embedding-based), **sentence-window retrieval**, **parent-document retrieval**, **auto-merging retrieval** (LlamaIndex), **late chunking** (Jina 2024 — embed whole doc, chunk embeddings post-hoc), **contextual retrieval** (Anthropic 2024 — LLM prepends context to each chunk before embedding).
   * **Embeddings:** **OpenAI text-embedding-3-large/small**, **Voyage-3-large** (2025 leader on MTEB), **BGE-M3** (BAAI, multilingual + multi-granularity), **Jina v3**, **Nomic Embed v2**, **Cohere Embed v4**, **NV-Embed** (NVIDIA). Learn **MTEB benchmark** (Massive Text Embedding Benchmark).
@@ -1100,7 +1211,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Vector databases:** [**pgvector**](https://github.com/pgvector/pgvector) ✅ (Postgres extension, 2026 default for mixed workloads), [**Qdrant**](https://qdrant.tech/) ✅, [**Weaviate**](https://weaviate.io/) ✅, [**Milvus**](https://milvus.io/) ✅, [**LanceDB**](https://lancedb.com/) ✅ (embedded, Lance format), **Chroma**, **FAISS** (Meta, library — not a DB).
   * **Indexing & ANN algorithms:** **HNSW** (Hierarchical Navigable Small World), **IVF** (Inverted File with quantisation — IVF-PQ, IVF-SQ), **DiskANN**, **ScaNN** (Google), trade-offs (build time vs query latency vs recall@k).
   * **RAG patterns:** naive RAG, **Advanced RAG** (pre-retrieval query rewriting, HyDE, query decomposition, multi-query, step-back prompting), **GraphRAG** (Microsoft 2024 — community summaries, entity graphs), **Agentic RAG** (router + multi-tool), **Corrective RAG (CRAG)**, **Self-RAG**, **FLARE**.
-  * **Evaluation:** **Ragas** metrics (faithfulness, answer relevance, context precision, context recall), **nDCG@k**, **MRR**, **recall@k**, **Needle-in-a-Haystack** for long context.
+  * **Evaluation pipeline:** version a labelled query set; separate retrieval metrics (**nDCG@k, MRR, recall@k**) from generation metrics (**faithfulness, answer relevance, context precision/recall**); add abstention and citation checks; run prompt/RAG regression tests in CI; track latency and cost by slice. **Needle-in-a-Haystack** is a diagnostic, not a product-quality substitute.
+  * **Prompt-injection security:** treat retrieved text as untrusted data; test direct and indirect injection, poisoned documents, data exfiltration, malicious links, and instruction collisions. Enforce source ACLs before retrieval, delimit data from instructions, minimise tool privileges, validate outputs, and include adversarial cases in every release gate.
 
 * **2026 Resources:**
   * **Primary Course Link:** [**Pinecone Learning Center**](https://www.pinecone.io/learn/) ✅ (comprehensive free RAG/vector primer) · [**LlamaIndex docs**](https://docs.llamaindex.ai/) ✅ (practical cookbook-driven) · [**LangChain RAG tutorial**](https://python.langchain.com/docs/tutorials/rag/) · [DeepLearning.AI short courses — "Advanced Retrieval for AI" & "Building and Evaluating Advanced RAG"](https://www.deeplearning.ai/).
@@ -1129,7 +1241,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **Agent architectures:** ReAct (Reasoning + Acting), **Reflexion** (self-reflection), **Plan-and-Solve**, **Chain-of-Thought with tools**, **Tree-of-Thoughts**, **Graph-of-Thoughts**, **LATS** (Language Agent Tree Search).
   * **Frameworks (open-source):**
     * [**LangGraph**](https://www.langchain.com/langgraph) ✅ 1.1+ — stateful, cyclic, multi-agent graphs; the 2026 production default.
-    * [**CrewAI**](https://docs.crewai.com/) ✅ — role-based multi-agent orchestration.
+    * [**CrewAI**](https://docs.crewai.com/) ✅ **1.15.5** ([PyPI JSON verified 2026-07-26](https://pypi.org/pypi/crewai/json)) — role-based multi-agent orchestration; use only when multiple explicit roles improve an evaluated workflow.
     * [**smolagents**](https://github.com/huggingface/smolagents) ✅ 1.24+ (Hugging Face) — code-agents that write Python to act; ~1000 LOC.
     * **AutoGen** 0.4+ (Microsoft), **OpenAI Agents SDK** (formerly Swarm, 2025), **Anthropic Claude Agent SDK** (2025).
   * **Model Context Protocol (MCP)** — Anthropic-led open standard (Nov 2024) for LLMs to access tools, resources, and prompts across applications.
@@ -1145,6 +1257,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * **WebArena**, **VisualWebArena** — browser-based agent eval.
     * **BrowseComp** (OpenAI 2025) — hard web-research eval.
   * **Patterns from Anthropic's ["Building Effective Agents"](https://www.anthropic.com/research/building-effective-agents) ✅ (Dec 2024):** workflows (Prompt Chaining, Routing, Parallelization, Orchestrator-Workers, Evaluator-Optimizer) vs true agents (loops with tools). **"Start with prompts, graduate to workflows, only use full agents when you need them."**
+  * **Agent security and eval pipeline:** define task-level success, tool-call validity, side-effect budgets, latency/cost, and human-escalation rates; replay a versioned scenario suite in CI. Test direct/indirect prompt injection, confused-deputy attacks, tool-output poisoning, secret/PII exfiltration, excessive agency, and unsafe retries. Use allowlisted tools, least privilege, typed schemas, approval gates for irreversible actions, sandboxing, audit logs, and kill switches.
 
 * **2026 Resources:**
   * **Primary Course (free, certified):** [**Hugging Face AI Agents Course**](https://huggingface.co/learn/agents-course/) ✅ — free, certified, uses smolagents + LangGraph + LlamaIndex; covers MCP integration.
@@ -1255,11 +1368,20 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
   * **LLM observability & tracing:** [**OpenTelemetry GenAI semantic conventions**](https://opentelemetry.io/docs/specs/semconv/gen-ai/) ✅ (the 2025-2026 standard), **Langfuse traces**, **Honeycomb for AI**, cost & latency dashboards.
   * **Evals in production:** reuse **promptfoo**, **DeepEval**, **Ragas** (M18); **A/B test prompts** as you would models.
 
+* **Minimum Production Bar for Portfolio Projects (mandatory):**
+  - **Repository, quality, and reproducibility:** typed `src/` package instead of a loose notebook; pinned environment; formatter/linter/type check; pytest unit and integration tests; deterministic seeds where meaningful; documented data/model/prompt versions.
+  - **Delivery:** Dockerfile with non-root runtime and health check; CI runs quality checks, tests, and eval regressions; one real deployment target; secrets are externalised; rollback procedure is rehearsed.
+  - **Evidence:** MLflow or W&B for model experiments, or versioned prompt/eval artifacts for LLM systems; architecture diagram; model/system card; README with setup, eval set, results, latency/cost, limitations, and failure cases.
+  - **Operations:** structured logs and traces, request/correlation IDs, service-level indicator and target, dashboards/alerts, data/model/prompt drift checks, dependency/security scanning, and a short incident/runbook document.
+  - **LLM/agent additions:** prompt-injection tests, source/tool access controls, offline eval gate, production sampling, human escalation, token/cost budgets, sandboxing for code or tools, and a kill switch.
+
 * **🤖 AgentOps Tier:** Operational practices for stateful, tool-using agents (from M22).
   * **Agent tracing & debugging:** [**LangSmith**](https://www.langchain.com/langsmith) ✅, [**Arize Phoenix**](https://github.com/Arize-ai/phoenix) ✅ (open-source OTel-native), [**W&B Weave**](https://wandb.ai/site/weave) ✅, **Helicone Agents**, **Comet Opik**.
   * **Agent eval harnesses (production):** [**GAIA**](https://huggingface.co/gaia-benchmark) ✅, [**SWE-bench**](https://www.swebench.com/) ✅, **τ-bench**, **WebArena** — run these as regression tests.
   * **Sandboxing & isolation:** [**E2B**](https://e2b.dev/) ✅, [**Daytona**](https://www.daytona.io/) ✅, [**Modal**](https://modal.com/) ✅, Firecracker microVMs, gVisor.
   * **Key primary anchors for all three tiers:** [**Full Stack Deep Learning**](https://fullstackdeeplearning.com/) ✅, [**Made With ML** (Goku Mohandas)](https://madewithml.com/) ✅, [**Chip Huyen — *AI Engineering***](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) ✅.
+
+* **📦 Module Project (mandatory) — productionise a prior module:** Choose one model, RAG, or agent project and take it through repository structure, typed code, tests, Docker, CI, tracking/tracing, monitoring, deployment, and rollback documentation. **Definition of done:** every Minimum Production Bar check below passes; the `README` includes architecture, evals, latency/cost, limitations, and a results memo. **Production stretch:** add a load test and operational SLO dashboard.
 
 ---
 
@@ -1292,7 +1414,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
     * **Berkeley MIDS W271** (statistical methods for discrete response) + **W241** (experiments) for the methodological side.
   * **Required Reading:**
     * Cole Nussbaumer Knaflic — *Storytelling with Data* (Wiley 2015; *Let's Practice!* 2019).
-    * Kohavi, Tang, Xu — [*Trustworthy Online Controlled Experiments*](https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59) ✅ (Cambridge 2020) — shared with M6½.
+    * Kohavi, Tang, Xu — [*Trustworthy Online Controlled Experiments*](https://doi.org/10.1017/9781108653985) ✅ (Cambridge 2020) — shared with M6½.
     * Barbara Minto — *The Pyramid Principle*.
     * Edward Tufte — *The Visual Display of Quantitative Information* (2e, 2001).
     * Cathy O'Neil — *Weapons of Math Destruction* (for the ethics layer).
@@ -1363,8 +1485,65 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 
 ---
 
+<a id="career-operations"></a>
+# Career Operations
+
+Technical study is necessary but not sufficient. Treat the job search as an observable system: take action, collect feedback, adjust the smallest skill gap, and repeat. This operating model is supported by the career-transition evidence in [this practitioner interview](https://www.youtube.com/watch?v=FeQZmQMffzc) and by the live-role sample below.
+
+## The operating doctrine
+
+1. **Use an internal locus of control.** You cannot control hiring cycles, geography, credentials, or a recruiter's response. You can control weekly shipped evidence, applications, outreach, interview practice, and follow-up.
+2. **Apply at roughly 70% match.** A job description is a wish list, not an exam specification. Apply when you can prove most core outcomes and can name a credible plan for the rest; do not fabricate experience.
+3. **Run targeted cold outreach.** Each week, send 5–10 short notes to practitioners, hiring managers, alumni, maintainers, or local organisations. Ask one specific question, refer to their work, and link one relevant artifact—not a generic request for a referral.
+4. **Treat interviews as skill-gap data.** After every screen or loop, record the question class, your confidence, missing evidence, and one remediation task mapped to a module. Rejection is a data point, not an identity verdict.
+5. **Build for real people.** Source capstones from a nonprofit, small business, research group, open-source maintainer, civic organisation, or professional community. Agree on a narrow outcome, privacy constraints, and a handoff date.
+6. **Create community accountability.** Use a weekly demo group, study cohort, meetup, open-source community, or public build log. Report what shipped, what failed, and next week's smallest deliverable.
+
+> **Timeline reconciliation:** the M1 estimate of **9–12 months** means Python fluency plus enough portfolio evidence to begin competing for entry-level work. A full career transition commonly takes **18–36 months** because it also includes domain knowledge, production depth, interviewing, networking, market timing, and repeated application cycles. Start applying when the 70% bar and portfolio evidence are present; continue the academic path while searching. Neither estimate is a guarantee.
+
+## 2026 role checklist mapped to this roadmap
+
+| Target role | Evidence employers repeatedly requested | Roadmap proof points |
+|---|---|---|
+| **AI Engineer (Applications)** | Python software engineering; foundation-model APIs; prompting; RAG/vector search; agents/tool calling; eval harnesses; prompt-injection/PII defenses; tracing; Docker/CI/deployment | M1, M7, M8a, M18, M21–M24; ship the cited RAG assistant, an agent eval suite, and the M24 production bar |
+| **ML Engineer** | Python; scikit-learn/PyTorch/TensorFlow; end-to-end model ownership; evaluation/experimentation; serving/versioning; CI/CD; Docker/Kubernetes/cloud; observability | M1–M12, M15–M17, M24, M26 Systems; ship a calibrated model API with tracked experiments, SLOs, and rollback |
+| **Data Scientist** | SQL; statistics; experimentation and causal inference; Python or R; product metrics; stakeholder communication; reproducible analysis | M5–M10, M12–M14, M25, M26 Applied; ship an experiment or quasi-experiment with a decision memo and executive readout |
+| **Data Engineer** | Python and SQL; data modelling; Spark/Flink; Kafka; Airflow/dbt/Prefect; cloud warehouse/lakehouse; CI/CD; quality, governance, and observability | M1, M4, M7, M8a–M8b, M24, M26 Systems; ship a tested batch/streaming platform with lineage, alerts, and runbook |
+
+Use this as a **portfolio checklist, not keyword stuffing**. For each claimed skill, keep a public artifact, test, benchmark, design note, or stakeholder outcome that demonstrates it.
+
+## Live job-posting evidence sample
+
+The checklist above was synthesised from these **12 postings, live-checked on 2026-08-01**. Postings expire, so the audit records the check date and requirements rather than treating any one vacancy as permanent truth.
+
+| Role family | Live postings reviewed | Repeated signal |
+|---|---|---|
+| AI Engineer | [Healx — Agentic AI Engineer](https://jobs.lever.co/healx/c1dc1b43-066f-427f-a299-0a0b0dc4748f) · [Infinite PL — AI Engineer](https://jobs.lever.co/infinitepl/3ce62a59-7e6c-45d2-a6c0-44a2893dbce1) · [Kobie — AI Engineer](https://jobs.lever.co/kobie/d14582bd-64a2-439e-a7e3-a50ce7270a3d) | LLM APIs, RAG, agents, evals, security, tracing, and production Python |
+| ML Engineer | [Bumble — Machine Learning Engineer](https://jobs.lever.co/bumbleinc/51d32f4a-e482-486d-aeab-62924c7c92d7) · [Spear AI — Machine Learning Engineer](https://jobs.lever.co/spear-ai/e8994579-014e-4a11-a407-d50b843aac52) · [PayU — Machine Learning Engineer](https://jobs.lever.co/payugpo/49975338-7270-422e-a3c1-e2375394cef4) | Model ownership, ML frameworks, CI/CD, containers/cloud, serving, evaluation, and observability |
+| Data Scientist | [HighLevel — Staff Data Scientist, Experimentation & Causal Inference](https://jobs.lever.co/gohighlevel/0129e5bc-74e4-4f7c-9983-891da20542e8) · [Foodsmart — Staff Data Scientist, Growth Analytics](https://jobs.lever.co/foodsmart/c711b611-ac13-4167-8b60-5c0adb32af26) · [Airalo — Marketing Analytics Lead](https://jobs.lever.co/airalo/7b05ec00-a5a6-4597-ac35-4f6baa64ea92) | SQL, experiments/causal methods, product metrics, Python/R, and stakeholder decisions |
+| Data Engineer | [RAVL — Data Engineer](https://jobs.lever.co/ravl_io/9e942ef6-d1c4-4404-84b7-de6cd6c94b21) · [Breakwater Technology — Senior Data Engineer](https://jobs.lever.co/BreakwaterTech/45372c18-b24d-4a36-b05a-06e616b08450) · [SteerBridge — Data Engineer II](https://jobs.lever.co/steerbridge/084800cd-1bae-4b31-b653-da05c521b2d6) | Python/SQL, orchestration, distributed processing, warehouses/lakehouses, quality, and operational ownership |
+
+---
+
 <a id="books"></a>
 # 📖 Core Textbook Reading List
+
+<a id="practitioner-shelf"></a>
+## Practitioner Shelf
+
+These application-first books **supplement rather than replace** the academic list below. Every print/ebook purchase is optional; use free course material, library access, sample chapters, or the author's public material when cost is a barrier.
+
+| Practitioner title | Verified edition / availability | Best module and track mapping |
+|---|---|---|
+| [*Automate the Boring Stuff with Python*](https://nostarch.com/automate-boring-stuff-python-3rd-edition) — Al Sweigart | **3rd ed. (2025)**; print ISBN **978-1-7185-0340-3**; optional paid print/ebook, with a [free online edition](https://automatetheboringstuff.com/) | M1; every practitioner track, especially first useful automations |
+| [*Software Engineering for Data Scientists*](https://www.oreilly.com/library/view/software-engineering-for/9781098136192/) — Catherine Nelson | **1st ed. (O'Reilly, 2024)**; print ISBN **978-1-098-13620-8**; optional paid/library title; ⚠️ publisher page is bot-gated to automated checks | M1, M7, M24; Data Scientist, ML Engineer, and AI Engineer production habits |
+| *The Manga Guide to* [*Statistics*](https://nostarch.com/releases/manga_statistics.html), [*Linear Algebra*](https://nostarch.com/linearalgebra), and [*Calculus*](https://nostarch.com/releases/manga_calculus.html) | English editions in print; ISBNs **978-1-59327-189-3**, **978-1-59327-413-9**, and **978-1-59327-194-7**; all optional paid books | M5, M3, M2; Practitioner Fast Lane intuition pass before the proof track |
+| [*The StatQuest Illustrated Guide to Machine Learning* and *The StatQuest Illustrated Guide to Neural Networks and AI*](https://statquest.org/statquest-store/) — Josh Starmer | ML guide **2022**, ISBN **979-8986924007**; NN/AI guide **2025**, ISBN **979-8303440616**; optional paid print books; free StatQuest videos remain the no-cost route | M9–M12 and M15–M18; applied ML and AI Engineer intuition/reference |
+| [*Build a Large Language Model (From Scratch)*](https://www.manning.com/books/build-a-large-language-model-from-scratch) — Sebastian Raschka | **Manning, 2024**; ISBN **978-1-63343-716-6**; optional paid print/ebook with publisher sample/code access | M16, M18; model-depth AI Engineer and ML Engineer |
+| [*AI Engineering: Building Applications with Foundation Models*](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) — Chip Huyen | **1st ed. (O'Reilly, 2025)**; print ISBN **978-1-098-16630-4**; optional paid/library title; ⚠️ publisher page is bot-gated to automated checks | M18, M21–M24; primary shelf text for AI Engineer (Applications) |
+| [*Generative AI System Design Interview*](https://bytebytego.com/courses/genai-system-design-interview) — Ali Aminian and Hao Sheng | **ByteByteGo, 2024**; ISBN **978-1-73604-914-3**; optional paid book/course | M21–M24 and Career Operations; AI/ML systems design and interview synthesis |
+
+> **How to use the shelf:** choose at most one application-first book alongside one module's primary academic text. The practitioner book optimises for momentum and patterns; the academic book supplies derivations, assumptions, and research depth.
 
 > **Tier 1 (own a copy)**. These are the books you should have on your shelf, marked-up, for the rest of your career.
 
@@ -1397,7 +1576,7 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 | **25** | **_Linear Algebra Done Right_ — 4th Edition (the abstract / proof‑track linear algebra)** | Sheldon Axler | **Springer 2024**, 400 pp., ISBN 978‑3‑031‑41025‑3 | M3 | ✅ [linear.axler.net](https://linear.axler.net/) |
 | **26** | **_Introduction to Probability for Data Science_ — bridges Stat 110 to Python code** | Stanley H. Chan | Michigan Publishing **2021/2023**, 700+ pp. | M5 | ✅ [probability4datascience.com](https://probability4datascience.com/) |
 | **27** | **_Convex Optimization_** (paired with Stanford EE364A) | Stephen Boyd & Lieven Vandenberghe | Cambridge 2004, **6th printing 2023** | M2, M9‑M11 | ✅ [stanford.edu/~boyd/cvxbook/](https://stanford.edu/~boyd/cvxbook/) |
-| **28** | **_Information Theory, Inference, and Learning Algorithms_** | David J. C. MacKay | Cambridge **2003** (the gold-standard intro to entropy/MI) | M5, M16, M18 | ✅ [inference.org.uk/itila](https://www.inference.org.uk/itila/) |
+| **28** | **_Information Theory, Inference, and Learning Algorithms_** | David J. C. MacKay | Cambridge **2003** (the gold-standard intro to entropy/MI) | M5, M16, M18 | ✅ [inference.org.uk/itila](https://archive.org/details/MackayInformationTheoryFreeEbookReleasedByAuthor) |
 | **29** | **_High-Dimensional Probability_ — concentration inequalities for ML/statistics** | Roman Vershynin | Cambridge **2018** (free draft online) | M5, M9, M15 | ✅ [vershyn HDP draft](https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html) |
 | **30** | **_Book of Proof_ — proof-writing for first-year university** | Richard Hammack | **3rd Edition, 2018** (CC-BY) | **M0b** | ✅ [richardhammack.github.io/BookOfProof](https://richardhammack.github.io/BookOfProof/) |
 | **31** | **_How to Prove It: A Structured Approach_ + *With Lean* (browser-interactive)** | Daniel J. Velleman | Cambridge **3e, 2019** + Lean companion **2024** | **M0b** | Lean: ✅ [djvelleman.github.io/HTPIwL](https://djvelleman.github.io/HTPIwL/) |
@@ -1417,6 +1596,8 @@ Independent of *which* topic, every elite programme (MIT, Cambridge, Harvard) im
 # 🛠️ Production Toolchain
 
 A practical stack mapped to the curriculum. Version numbers below are a dated reference snapshot, not permanent recommendations; check the linked project before installing.
+
+> **Minimum Production Bar:** every serious portfolio repository uses typed package code, automated tests, a reproducible/pinned environment, Docker, CI, experiment or prompt/eval tracking, structured logging/tracing, monitoring with at least one SLI/SLO, a real deployment target, security/eval release gates, and a README containing architecture, results, cost/latency, limitations, and rollback. See [M24](#module-24) for the complete checklist.
 
 | Category | Tool | **Reference snapshot** | Why it matters |
 |---|---|---|---|
@@ -1440,7 +1621,7 @@ A practical stack mapped to the curriculum. Version numbers below are a dated re
 | **LLM fine‑tuning** | `trl` + `peft` + **Unsloth** + Axolotl | **TRL 1.2.0 · PEFT 0.19.1** | SFT / DPO / **GRPO** / **RLVR** / KTO / IPO / ORPO / SimPO — one surface |
 | **LLM inference** | **vLLM** / **SGLang** / TensorRT-LLM | **0.19.1** / latest | Continuous batching, paged‑attention, prefix caching, **FlashAttention‑3**, speculative decoding |
 | **LLM evals** | **promptfoo** / **DeepEval** / **Ragas** / **lm-eval-harness** | latest | M18 fine-tuning playbook + M24 LLMOps |
-| **Agents & Tools** | `smolagents` / **LangGraph** / LlamaIndex / CrewAI | **smolagents 1.24.0 · LangGraph 1.1.9** | **MCP‑native** since v1.0; Hugging Face Agents Course covers all three |
+| **Agents & Tools** | `smolagents` / **LangGraph** / LlamaIndex / CrewAI | **smolagents 1.24.0 · LangGraph 1.1.9 · CrewAI 1.15.5** | **MCP‑native** since v1.0; CrewAI version verified via [PyPI JSON](https://pypi.org/pypi/crewai/json) on 2026-07-26 |
 | **MCP** | Anthropic MCP SDK (Py / TS) | 2025‑06‑18 spec + Nov 2025 anniversary | Standard for LLM↔tool/data interoperability |
 | **Agent sandboxing** | E2B / Daytona / Modal | latest | Isolated code-execution for agents (M22, M24 AgentOps) |
 | **Prompting** | **DSPy** | **3.2.0** (Apr 2026) | Programmatic prompting; optimiser‑driven; 2026 research favourite |
@@ -1454,7 +1635,7 @@ A practical stack mapped to the curriculum. Version numbers below are a dated re
 | **Data Engineering** | **dbt-core** / Airflow / Dagster / Prefect / Kafka / Spark / Flink | **dbt 1.11.8** | M8a/b stack |
 | **Containers** | Docker / Podman | 27+ / 5+ | Multi‑arch, rootless, SBOM |
 | **Orchestration** | Kubernetes / **Dagster** / Prefect | 1.32+ / 1.x / 3.x | Dagster > Airflow for ML pipelines (asset‑centric) |
-| **Serving** | **FastAPI** + BentoML / **Modal** | latest | Modal = serverless GPU with $30/mo free; used by Stanford CS336 |
+| **Serving / demos** | **FastAPI** + BentoML / **Modal** / **Streamlit** | **Streamlit 1.60.0** | APIs for services; Streamlit for portfolio UIs ([PyPI JSON verified 2026-07-26](https://pypi.org/pypi/streamlit/json)), not a substitute for tested service boundaries |
 | **Experiment config** | **Hydra** + **Pydantic** | 1.3+ / 2.10+ | Pydantic 2 is 20× faster than v1 |
 | **Reproducibility** | DVC + Git LFS | 3.x / latest | Version control for data + models |
 | **Writing** | Typst or LaTeX + Zotero 7 | latest | Typst = modern LaTeX alternative, compiles in ms |
@@ -1466,6 +1647,20 @@ A practical stack mapped to the curriculum. Version numbers below are a dated re
 # ✅ Progress Tracker
 
 > Fork this repo, copy this section, and replace `[ ]` with `[x]` as you complete each sub-module.
+
+### 🚀 Practitioner Fast Lane
+- [ ] Chose the 6–9 month practitioner route or documented why I am following the full academic path
+- [ ] Completed the M1 four-phase Python plan and shipped the weather CLI/API project
+- [ ] Completed intuition-first passes in M0/M2/M3/M5 and recorded which proofs/derivations remain deferred
+- [ ] Built NumPy logistic regression, K-Means, and decision tree implementations with parity tests
+- [ ] Shipped prompting/RAG/agent/eval work with prompt-injection tests
+- [ ] Met the M24 Minimum Production Bar on one deployed project
+
+### 📦 Project completion bar (repeat for every M1–M25 module)
+- [ ] Automated tests include the critical path and a failure case
+- [ ] `README` documents setup, architecture, usage, results, and limitations
+- [ ] Short results memo records evidence, errors, and next steps
+- [ ] Added at least one production stretch: Docker, CI, tracking, monitoring, or deployment
 
 ### 🩺 Math-Foundations Diagnostic
 - [ ] Took the **15-question diagnostic** and recorded my score per strand
@@ -1513,6 +1708,14 @@ A practical stack mapped to the curriculum. Version numbers below are a dated re
 ### 🏆 Capstone Stratum
 - [ ] **Module 26**: Capstone Project — Choose **1 of 3 tracks**: Research / Systems / Applied (arXiv preprint + HF release + MCP‑compliant tool/agent OR production system with SLOs OR stakeholder-sponsored applied project with causal evaluation)
 
+### Career Operations
+- [ ] Selected one target role and mapped every claimed skill to public evidence
+- [ ] Began applying at roughly 70% match without overstating experience
+- [ ] Run weekly targeted outreach and community accountability
+- [ ] Log interview questions as module-mapped skill-gap data
+- [ ] Scoped at least one project for a real person or organisation
+- [ ] Reconciled the 9–12 month job-readiness milestone with an 18–36 month transition plan
+
 ---
 
 <a id="acknowledgements"></a>
@@ -1521,7 +1724,7 @@ A practical stack mapped to the curriculum. Version numbers below are a dated re
 This curriculum synthesises publicly-available syllabi from:
 
 * **IIT Madras** — [study.iitm.ac.in/ds](https://study.iitm.ac.in/ds/) (BS in Data Science and Applications, 2025–26).
-* **Harvard University** — [harvard-iacs.github.io](https://harvard-iacs.github.io/) (CS 109A/B), [stat110.hsites.harvard.edu](https://stat110.hsites.harvard.edu/) (STAT 110), [harvard-ml-courses.github.io/cs181-web/](https://harvard-ml-courses.github.io/cs181-web/) (CS 1810, Spring 2026), [cs50.harvard.edu/python](https://cs50.harvard.edu/python/) (CS50P).
+* **Harvard University** — [Harvard CS109A](https://harvard-iacs.github.io/2021-CS109A/pages/schedule.html) and [CS109B](https://harvard-iacs.github.io/2022-CS109B/), [stat110.hsites.harvard.edu](https://stat110.hsites.harvard.edu/) (STAT 110), [harvard-ml-courses.github.io/cs181-web/](https://harvard-ml-courses.github.io/cs181-web/) (CS 1810, Spring 2026), [cs50.harvard.edu/python](https://cs50.harvard.edu/python/) (CS50P).
 * **Massachusetts Institute of Technology** — [introml.mit.edu/spring26](https://introml.mit.edu/spring26) (6.390), [gradml.mit.edu](https://gradml.mit.edu/) (6.790), [**deeplearning6-7960.github.io**](https://deeplearning6-7960.github.io/) (6.7960 Fall 2025), [introtodeeplearning.com](https://introtodeeplearning.com/) (6.S191 2026), [micromasters.mit.edu/ds](https://micromasters.mit.edu/ds/) (Statistics & Data Science MicroMasters), [visionbook.mit.edu](https://visionbook.mit.edu/) (Foundations of Computer Vision 2024), [ocw.mit.edu](https://ocw.mit.edu/) (18.01/18.02/18.06/6.0001/6.0002/6.006), [ocw.mit.edu/14-387](https://ocw.mit.edu/courses/14-387-applied-econometrics-mostly-harmless-big-data-fall-2014/) (14.387 Applied Econometrics).
 * **University of Cambridge** — [cl.cam.ac.uk/teaching/2526](https://www.cl.cam.ac.uk/teaching/) (Part IA/IB/II), [mlmi.eng.cam.ac.uk](https://www.mlmi.eng.cam.ac.uk/) (MPhil MLMI 2026 entry).
 * **Stanford University** — [cs336.stanford.edu](https://cs336.stanford.edu/) (Language Modeling from Scratch, Spring 2026) · [cs246.stanford.edu](https://web.stanford.edu/class/cs246/) (Mining Massive Datasets) · [web.stanford.edu/~jurafsky/slp3](https://web.stanford.edu/~jurafsky/slp3/) (SLP 3rd ed. draft) · [web.stanford.edu/class/ee364a](https://web.stanford.edu/class/ee364a/) (Convex Optimization).
