@@ -1,6 +1,6 @@
 # Module 6½ — Causal Inference & Experimentation
 
-> **Status:** v2026.2 scaffold · full spec in the root [README.md § Module 6½](../../README.md#module-6-causal-inference--experimentation-new--v20262).
+> **Status:** v2026.3 Practitioner’s Pass · full spec in the root [README.md § Module 6½](../../README.md#module-6-half).
 >
 > This folder will hold problem sets, notebooks, and reading-group notes for Module 6½. The root README holds the authoritative topic list and resource links.
 
@@ -15,7 +15,7 @@ The April 2026 benchmark against Berkeley MIDS / MIT 6.390 / UC-industry DS job-
 | Brady Neal — *Introduction to Causal Inference* (Fall 2020, free) | Primary course | <https://www.bradyneal.com/causal-inference-course> |
 | MIT 14.387 — *Applied Econometrics (Mostly Harmless Big Data)* | Econometric track | <https://ocw.mit.edu/courses/14-387-applied-econometrics-mostly-harmless-big-data-fall-2014/> |
 | Matheus Facure — *Causal Inference for the Brave and True* | Runnable notebooks | <https://matheusfacure.github.io/python-causality-handbook/landing-page.html> |
-| Kohavi, Tang, Xu — *Trustworthy Online Controlled Experiments* (Cambridge 2020) | Industrial A/B-testing canon | <https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59> |
+| Kohavi, Tang, Xu — *Trustworthy Online Controlled Experiments* (Cambridge 2020) | Industrial A/B-testing canon | <https://doi.org/10.1017/9781108653985> |
 | Hernán & Robins — *Causal Inference: What If* (free 2024 revision) | Graduate text | <https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf> |
 | Berkeley MIDS DATA 241 — Causal Inference | University benchmark course | <https://www.ischool.berkeley.edu/courses/datasci/241> |
 | DoWhy (py-why) | End-to-end Python stack | <https://github.com/py-why/dowhy> |

@@ -314,3 +314,100 @@ Based on this verification, the following are **approved for use** in the new RE
 ## H) Verified-SAFE rule (anti-hallucination)
 
 **Every new URL that enters README.md in P3 will carry a footnote-style citation with a 2026-04-23 verification date.** Any resource not in this document will NOT be added.
+
+---
+
+# v2026.3 — Practitioner’s Pass Verification
+
+**Verified on:** 2026-08-01
+
+**Method:** `curl -ILs -A "Mozilla/5.0" --max-time 15` plus PyPI JSON for package versions.
+
+**Legend:** ✅ 2xx/3xx · ⚠️ 401/403/405/429 bot/access-gated · ❌ active 404/000 · 🔁 verified replacement.
+
+This section appends, rather than rewrites, the v2026.2 evidence above. It records every unique URL introduced into the authoritative README by the 2026.3 diff, plus pre-existing URLs newly relied on by the Practitioner Shelf.
+
+## I) Practitioner doctrine, Python pacing, and course matrix
+
+| Resource | URL | Status |
+|---|---|:---:|
+| ML Engineer practitioner video | `https://www.youtube.com/watch?v=UZ_rK9gzVSc` | ✅ 200 |
+| Career-transition practitioner video | `https://www.youtube.com/watch?v=FeQZmQMffzc` | ✅ 200 |
+| AI Engineer books/identity video | `https://www.youtube.com/watch?v=Pr9oRVtAqCM` | ✅ 200 |
+| Scrimba — best free Python courses 2026 | `https://scrimba.com/articles/best-free-python-courses-for-beginners-in-2026/` | ✅ 200 |
+| Scrimba — how to learn Python 2026 | `https://scrimba.com/articles/how-to-learn-python-a-beginners-guide-2026/` | ✅ 200 |
+| Scrimba Learn Python | `https://scrimba.com/learn-python-c03` | ✅ 200 |
+| Helsinki Python MOOC 2026 | `https://programming-26.mooc.fi/` | ✅ 200 |
+| freeCodeCamp Scientific Computing with Python | `https://www.freecodecamp.org/learn/scientific-computing-with-python/` | ✅ 200 |
+| freeCodeCamp Python curriculum | `https://www.freecodecamp.org/news/python-curriculum-is-live/` | ✅ 200 |
+| Python for Everybody | `https://www.coursera.org/specializations/python` | ✅ 200 |
+| Official Python tutorial | `https://docs.python.org/3/tutorial/` | ✅ 200 |
+| Google’s Python Class | `https://developers.google.com/edu/python` | ✅ 200 |
+| *Automate the Boring Stuff* free edition | `https://automatetheboringstuff.com/` | ✅ 200 |
+| 3Blue1Brown | `https://www.3blue1brown.com/` | ✅ 200 |
+| StatQuest channel | `https://www.youtube.com/@statquest` | ✅ 200 |
+
+## J) Practitioner Shelf
+
+| Resource | URL | Status |
+|---|---|:---:|
+| *Automate the Boring Stuff*, 3rd ed. | `https://nostarch.com/automate-boring-stuff-python-3rd-edition` | ✅ 200 |
+| *Software Engineering for Data Scientists* | `https://www.oreilly.com/library/view/software-engineering-for/9781098136192/` | ⚠️ 403 bot-gated |
+| *Manga Guide to Statistics* | `https://nostarch.com/releases/manga_statistics.html` | ✅ 200 |
+| *Manga Guide to Linear Algebra* | `https://nostarch.com/linearalgebra` | ✅ 200 |
+| *Manga Guide to Calculus* | `https://nostarch.com/releases/manga_calculus.html` | ✅ 200 |
+| StatQuest store | `https://statquest.org/statquest-store/` | ✅ 200 |
+| *Build a Large Language Model (From Scratch)* | `https://www.manning.com/books/build-a-large-language-model-from-scratch` | ✅ 200 |
+| *AI Engineering* | `https://www.oreilly.com/library/view/ai-engineering/9781098166298/` | ⚠️ 403 bot-gated on current check; resource pre-existed in v2026.2 |
+| *Generative AI System Design Interview* | `https://bytebytego.com/courses/genai-system-design-interview` | ✅ 200 |
+
+## K) 2026 job-posting sample
+
+| Role / organisation | URL | Status |
+|---|---|:---:|
+| Healx — Agentic AI Engineer | `https://jobs.lever.co/healx/c1dc1b43-066f-427f-a299-0a0b0dc4748f` | ✅ 200 |
+| Infinite PL — AI Engineer | `https://jobs.lever.co/infinitepl/3ce62a59-7e6c-45d2-a6c0-44a2893dbce1` | ✅ 200 |
+| Kobie — AI Engineer | `https://jobs.lever.co/kobie/d14582bd-64a2-439e-a7e3-a50ce7270a3d` | ✅ 200 |
+| Bumble — Machine Learning Engineer | `https://jobs.lever.co/bumbleinc/51d32f4a-e482-486d-aeab-62924c7c92d7` | ✅ 200 |
+| Spear AI — Machine Learning Engineer | `https://jobs.lever.co/spear-ai/e8994579-014e-4a11-a407-d50b843aac52` | ✅ 200 |
+| PayU — Machine Learning Engineer | `https://jobs.lever.co/payugpo/49975338-7270-422e-a3c1-e2375394cef4` | ✅ 200 |
+| HighLevel — Staff Data Scientist | `https://jobs.lever.co/gohighlevel/0129e5bc-74e4-4f7c-9983-891da20542e8` | ✅ 200 |
+| Foodsmart — Staff Data Scientist | `https://jobs.lever.co/foodsmart/c711b611-ac13-4167-8b60-5c0adb32af26` | ✅ 200 |
+| Airalo — Marketing Analytics Lead | `https://jobs.lever.co/airalo/7b05ec00-a5a6-4597-ac35-4f6baa64ea92` | ✅ 200 |
+| RAVL — Data Engineer | `https://jobs.lever.co/ravl_io/9e942ef6-d1c4-4404-84b7-de6cd6c94b21` | ✅ 200 |
+| Breakwater Technology — Senior Data Engineer | `https://jobs.lever.co/BreakwaterTech/45372c18-b24d-4a36-b05a-06e616b08450` | ✅ 200 |
+| SteerBridge — Data Engineer II | `https://jobs.lever.co/steerbridge/084800cd-1bae-4b31-b653-da05c521b2d6` | ✅ 200 |
+
+**Rejected/expired research candidates:** Luxury Presence was 404 during research; WHOOP later expired and was replaced by Airalo. Neither dead posting remains in active curriculum content.
+
+## L) Framework snapshots
+
+| Package | URL | Status | Version |
+|---|---|:---:|---:|
+| Streamlit PyPI JSON | `https://pypi.org/pypi/streamlit/json` | ✅ 200 | **1.60.0** |
+| CrewAI PyPI JSON | `https://pypi.org/pypi/crewai/json` | ✅ 200 | **1.15.5** |
+
+## M) Verified replacements and release metadata
+
+| Resource | URL | Status |
+|---|---|:---:|
+| 2026.3 edition badge | `https://img.shields.io/badge/2026.3-Practitioner's%20Pass-6f42c1` | ✅ 200 |
+| MIT 18.01 exams index | `https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/exams/` | ✅ 200 🔁 |
+| MIT 18.01SC course | `https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/` | ✅ 200 🔁 |
+| MIT 18.01SC final exam | `https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/final-exam/` | ✅ 200 🔁 |
+| Cambridge — *How to Prove It*, 3rd ed. | `https://www.cambridge.org/highereducation/books/how-to-prove-it/6D2965D625C6836CD4A785A2C843B3DA` | ✅ 200 🔁 |
+| DTU — *The Matrix Cookbook* record | `https://www2.compute.dtu.dk/pubdb/pubs/3274-full.html` | ✅ 200 🔁 |
+| Princeton COS 597G archive | `https://www.cs.princeton.edu/courses/archive/fall22/cos597G/` | ✅ 200 🔁 |
+| *Trustworthy Online Controlled Experiments* DOI | `https://doi.org/10.1017/9781108653985` | ✅ 200 🔁 |
+| MacKay ITILA author-released archive | `https://archive.org/details/MackayInformationTheoryFreeEbookReleasedByAuthor` | ✅ 200 🔁 |
+| Angrist–Krueger compulsory-schooling paper (NBER) | `https://www.nber.org/papers/w3572` | ✅ 200 🔁 |
+
+## N) v2026.3 totals
+
+- **Unique URLs introduced by the README diff:** 47.
+- **Introduced URL results:** 46 PASS, 1 WARN, 0 FAIL.
+- **Additional pre-existing shelf URL rechecked:** *AI Engineering* — WARN (403 automated access).
+- **Final active curriculum scan (`README.md` + seven coursepages):** 311 unique URLs — **299 HTTP 200, 1 HTTP 302, 11 HTTP 403, 0 active failures**.
+- **Historical audit failures intentionally retained:** incorrect CMU MADS URL, dead `mitaisafety.com`, and the literal-ellipsis Cambridge placeholder above. These are evidence records, not active recommendations.
+
+See [`AUDIT_v2026.3.md`](AUDIT_v2026.3.md) for research interpretation, timestamps, architecture preservation, deliberate non-changes, and release scoring.

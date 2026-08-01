@@ -1,6 +1,6 @@
 # Module 24 — MLOps + LLMOps + AgentOps
 
-> **Status:** v2026.2 scaffold · full spec in the root [README.md § Module 24](../../README.md#module-24-mlops--llmops--agentops-v20262--supersedes-old-m19).
+> **Status:** v2026.3 Practitioner’s Pass · full spec in the root [README.md § Module 24](../../README.md#module-24).
 >
 > Supersedes old Module 19 (MLOps / Systems / Responsible AI) by expanding into three operational tiers.
 
@@ -47,11 +47,21 @@ Closes Gap #3 of the benchmark PDF — the 2026 operational stack for (1) classi
 | SWE-bench | Software-engineering eval | <https://www.swebench.com/> |
 | E2B / Daytona / Modal | Sandboxing | <https://e2b.dev/> · <https://www.daytona.io/> · <https://modal.com/> |
 
+## Minimum Production Bar for Portfolio Projects
+
+- **Repository and quality:** typed `src/` package, pinned environment, lint/type checks, pytest unit/integration tests, reproducible data/model/prompt versions.
+- **Delivery:** non-root Docker image with health check; CI quality/test/eval gate; one deployed target; external secrets; documented and rehearsed rollback.
+- **Evidence:** MLflow/W&B or versioned prompt/eval artifacts; architecture diagram; model/system card; `README` with eval data, results, latency/cost, limitations, and failures.
+- **Operations:** structured logs/traces and correlation IDs; at least one SLI/SLO; dashboard and alert; drift checks; security/dependency scans; incident runbook.
+- **LLM/agent additions:** prompt-injection suite, source/tool ACLs, offline eval gate plus production sampling, human escalation, budgets, sandboxing, and kill switch.
+
 ## Mandatory mini-projects
 
 1. **MLOps:** Package a scikit-learn model with MLflow tracking + BentoML serving + Evidently drift dashboard.
 2. **LLMOps:** Instrument an LLM app with Langfuse traces + OTel GenAI semantic conventions + a promptfoo eval in CI.
 3. **AgentOps:** Trace a LangGraph agent with LangSmith or Phoenix; run GAIA-Level-1 as a regression suite.
+
+**Definition of done:** productionise one prior project until every bar above passes; include tests, `README`, and a short results memo. **Production stretch:** load test it and publish an operational SLO dashboard.
 
 ## Prerequisites
 
