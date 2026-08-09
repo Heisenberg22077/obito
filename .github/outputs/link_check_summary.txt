@@ -1,0 +1,44 @@
+Link Check Summary - 2026-08-09T11:14:05.349809
+==================================================
+Total URLs: 376
+✅ PASS: 324
+⚠️ WARN: 16
+❌ FAIL: 36
+
+FAILED LINKS:
+  [404] https://study.iitm.ac.in/ds/course_pages/BSCS3003.html)**
+  [404] https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html)**
+  [404] https://www.evidentlyai.com/)**
+  [404] https://altair-viz.github.io/)**
+  [404] https://plotly.com/python/)**
+  [404] https://greatexpectations.io/)**
+  [404] https://kafka.apache.org/)**
+  [404] https://flink.apache.org/)**
+  [404] https://materialize.com/)**
+  [404] https://docs.getdbt.com/)**
+  [ERROR] https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/exams/
+  [404] https://www.coursera.org/specializations/mathematics-machine-learning)**
+  [404] https://airflow.apache.org/)**
+  [404] https://www.prefect.io/)**
+  [404] https://streamlit.io/)**
+  [404] https://dagster.io/)**
+  [404] https://djvelleman.github.io/HTPIwL/)**
+  [404] https://duckdb.org/)**
+  [404] https://www.dask.org/)**
+  [404] https://pandera.readthedocs.io/)**
+  [404] https://risingwave.com/)**
+  [404] https://redpanda.com/)**
+  [404] https://archive.org/details/MackayInformationTheoryFreeEbookReleasedByAuthor)**
+  [404] https://pola.rs/)**
+  [404] https://beam.apache.org/)**
+  [404] https://docs.astral.sh/uv/)**
+  [404] https://www.gradio.app/)**
+  [404] https://github.com/stanford-futuredata/ColBERT)/ColPali
+  [404] https://cs145-fa22.github.io/
+  [ERROR] https://www.mitaisafety.com/
+  [404] https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/
+  [404] https://www.heinz.cmu.edu/programs/applied-data-science-master/
+  [404] http://www.cambridge.org/highereducation/isbn/9781009418140
+  [ERROR] https://www.cs.princeton.edu/courses/archive/fall22/cos597G/
+  [ERROR] https://hastie.su.domains/ElemStatLearn/
+  [ERROR] https://www.inference.org.uk/itila/
